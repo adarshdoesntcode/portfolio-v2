@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=sentient@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=kalam@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            serif: ["Sentient", "serif"],
+            kalam: ["Kalam", "sans"],
+          },
+        },
+      };
+    </script>
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="border-b border-gray-30">
+      <div
+        class="mx-auto grid max-w-7xl grid-cols-12 h-4 px-4 xl:h-10 xl:px-10"
+      >
+        <div class="col-span-10 border-x border-gray-30 md:col-span-3"></div>
+        <div class="col-span-2 border-r border-gray-30 md:col-span-3"></div>
+        <div
+          class="col-span-1 lg:col-span-2 hidden border-r border-gray-30 md:block"
+        ></div>
+        <div
+          class="col-span-6 hidden border-r border-gray-30 md:block md:col-span-5 lg:col-span-4"
+        ></div>
+      </div>
+    </div>
+    <header class="border-b border-gray-30">
+      <div class="mx-auto grid grid-cols-12 max-w-7xl px-4 xl:px-10">
+        <div class="col-span-10 md:col-span-3 border-x px-10 py-5">
+          <div class="w-fit relative">
+            <h1
+              class="text-6xl md:text-8xl lg:text-9xl font-kalam leading-none"
+            >
+              adarsh.
+            </h1>
+            <div
+              class="absolute translate-x-full -translate-y-1/4 md:-translate-y-0 inline-block right-0 top-0 rounded-full bg-green-500 px-4 py-3 text-xs md:text-sm font-bold leading-none text-white"
+              style="opacity: 1"
+            >
+              <span class="inline-block">Good afternoon!</span>
+              <svg
+                viewBox="0 0 22 18"
+                fill="none"
+                class="absolute -bottom-[9px] left-[7px] w-5 text-green-500"
+              >
+                <path
+                  d="M20.9991 8C17.4991 12.5 13.4991 16 7.69476 17.4776C8.49908 10.5 6.99908 8 0.939453 3.39334L1.79694 0L21.1874 4.8999L20.9991 8Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-2 border-r border-gray-30 md:col-span-3"></div>
+        <div
+          class="col-span-1 lg:col-span-2 hidden border-r border-gray-30 md:block"
+        ></div>
+        <div
+          class="hidden col-span-6 border-r border-gray-30 md:flex md:col-span-5 lg:col-span-4 p-5 flex-col justify-end items-end"
+        >
+          <div class="border-b py-2 w-full text-end">CURRENTLY PLAYING</div>
+          <div class="py-2">gbkjhn</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="border-b border-gray-30">
+      <div class="mx-auto grid grid-cols-12 max-w-7xl px-4 xl:px-10">
+        <div class="col-span-7 p-10 border-x font-serif">
+          <div class="flex items-center gap-5 mb-4">
+            <span class="text-5xl">i'm a</span>
+            <span class="keycaps"><p>click.</p></span>
+            <span class="keycaps"><p>clack.</p></span>
+            <span class="text-5xl">fullll</span>
+          </div>
+          <p class="text-5xl">stackkkkkkk.....</p>
+
+          <p>i am a</p>
+        </div>
+        <div class="col-span-5 px-10 pt-10 flex items-end">
+          <img src="sticker.png" alt="authors avatar image" />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
