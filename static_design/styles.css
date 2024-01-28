@@ -1,16 +1,14 @@
 .keycaps {
   position: relative;
   display: inline-block;
-  width: 130px;
-  height: 75px;
+  width: 100px;
+  height: 65px;
   padding: 8px 15px;
-
   background: linear-gradient(#e3e3e3, #ededed);
   border-radius: 10px;
   box-shadow: inset -8px 0 8px rgba(87, 87, 87, 0.25),
     inset 0px -8px 8px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(121, 121, 121, 0.1),
-    10px 20px 15px rgba(136, 136, 136, 0.15);
-  /* overflow: hidden; */
+    10px 10px 15px rgba(136, 136, 136, 0.15);
 }
 
 .keycaps::before {
@@ -27,12 +25,38 @@
   box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25),
     10px 5px 10px rgba(167, 167, 167, 0.15);
   border-radius: 10px;
-  /* border-left: 1px solid #0004;
-  border-top: 1px solid #0009;
-  border-bottom: 1px solid #0004; */
 }
 
 .keycaps > p {
   font-size: 1.2rem;
   position: relative;
+}
+
+.find-me-arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(-90deg) translate(75%, 30%);
+}
+
+.find-me-text {
+  position: absolute;
+  top: -120%;
+  right: -230%;
+  transform: rotate(5deg);
+}
+
+.hire-me-arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(230deg) translate(110%, 60%) scaleX(-1);
+}
+
+.hire-me-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 1;
+  transform: translate(-90%, -320%) rotate(-15deg);
 }
