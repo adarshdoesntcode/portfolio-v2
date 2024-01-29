@@ -74,15 +74,14 @@
 }
 
 .dot-matrix {
-  /* diameter of the circle */
-  --d: 1px;
+  --d: 0.1rem;
 
   background: radial-gradient(
       circle at var(--d) var(--d),
-      #000 calc(var(--d) - 1px),
-      #0000 var(--d)
+      #bebebe calc(var(--d) - 1px),
+      #bebebe00 var(--d)
     )
-    0 0 / 16px 16px;
+    0 0 / 1rem 1rem;
   background-position: center;
 }
 
@@ -93,4 +92,12 @@
   border-radius: 0.1rem;
   transform: rotate(1.6deg);
   box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+
+.spotify {
+  background: linear-gradient(135deg, #f9fafb, white);
+}
+
+.hero {
+  background: linear-gradient(270deg, #f9fafb, white);
 }
