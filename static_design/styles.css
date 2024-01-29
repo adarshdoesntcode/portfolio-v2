@@ -1,8 +1,8 @@
 .keycaps {
   position: relative;
   /* display: inline-block; */
-  width: 100px;
-  height: 65px;
+  width: 130px;
+  height: 70px;
   padding: 8px 15px;
   background: linear-gradient(#e3e3e3, #ededed);
   border-radius: 10px;
@@ -64,11 +64,33 @@
 .learning-text {
   top: 0;
   left: 0;
-  transform: translate(-65%, -150%) rotate(-15deg);
+  transform: translate(-55%, -150%) rotate(-10deg);
 }
 
 .learning-arrow {
   top: 40%;
   left: -40%;
   transform: scale(1.1) rotate(-15deg);
+}
+
+.dot-matrix {
+  /* diameter of the circle */
+  --d: 1px;
+
+  background: radial-gradient(
+      circle at var(--d) var(--d),
+      #000 calc(var(--d) - 1px),
+      #0000 var(--d)
+    )
+    0 0 / 16px 16px;
+  background-position: center;
+}
+
+.polaroid {
+  z-index: 1;
+  position: relative;
+  width: fit-content;
+  border-radius: 0.1rem;
+  transform: rotate(1.6deg);
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
 }
