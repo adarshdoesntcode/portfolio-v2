@@ -105,3 +105,11 @@
 .glass {
   background: linear-gradient(135deg, #f1f5f9, white, white, #f1f5f9);
 }
+
+.nightmode-arrow {
+  position: absolute;
+  right: -2%;
+  top: 27%;
+
+  transform: rotate(-10deg);
+}

@@ -105,9 +105,29 @@
             <div class="relative">
               <img
                 src="bulb.svg"
-                class="absolute -top-8 right-0 sm:right-5 lg:right-4 xl:right-7 w-10 sm:w-12"
-                alt=""
+                class="absolute -top-8 right-0 sm:right-5 lg:right-4 xl:right-6 w-10 sm:w-14"
+                alt="dark mode toggle bulb icon"
               />
+              <!-- <div class="nightmode-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="60">
+                  <g
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                  >
+                    <path
+                      d="M19.409 6.077C14.118 8.315 5.456 11.935 4.693 18.628c-.676 5.938 5.108 11.437 8.879 15.21 5.497 5.502 24.226 21.344 6.303 23.567-5.914.733-11.722-.262-17.337-2.13"
+                    />
+                    <path
+                      d="M19.307 13.743c.426-4.367 3.978-6.833 5.197-10.849-3.177.411-9.656.953-12.678-.541"
+                    />
+                  </g>
+                </svg>
+                <div class="font-cursive text-xl font-bold">too bright ?</div>
+              </div> -->
               <div class="flex items-center gap-5 pt-4 mb-0 sm:mb-4">
                 <span class="text-4xl sm:text-5xl">i'm a </span>
                 <span class="p-2 relative">
@@ -149,15 +169,16 @@
                 <span class="hidden lg:inline">Full</span> Stack Developer.
               </p>
               <div
-                class="font-serif text-md md:text-lg tracking-snug text-gray-500"
+                class="font-serif text-md md:text-lg tracking-wide text-gray-500"
               >
                 <p class="pb-3">
                   I’m from Kathmandu and doing my Bachelors
-                  <br class="hidden sm:inline" />
+                  <br class="hidden md:inline" />
                   in Software Engineering.
                 </p>
                 <p class="mb-12">
-                  I'm interested in Next, React, Node and <br />
+                  I'm interested in Next, React, Node and
+                  <br class="hidden md:inline" />
                   sometimes like to
                   <span
                     class="font-medium underline-offset-4 underline decoration-green-500 decoration-2 text-gray-800"
@@ -238,7 +259,7 @@
                   hire ??
                 </div>
                 <div
-                  class="bg-green-500 text-white tracking-wider font-serif px-8 py-2 rounded-full"
+                  class="bg-green-500 text-white tracking-wider font-serif px-8 py-2 rounded-lg"
                 >
                   Résumé
                 </div>
@@ -246,9 +267,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="col-span-12 place-content-center items-center border-r order-1 md:order-2 md:col-span-5"
-        >
+        <div class="col-span-12 border-r order-1 md:order-2 md:col-span-5">
           <div class="p-5 bg-white mx-auto polaroid">
             <img
               class="pt-5 bg-gray-100"
@@ -269,23 +288,23 @@
       <div class="mx-auto font-serif grid grid-cols-12 max-w-7xl px-4 xl:px-10">
         <div class="col-span-12 dot-matrix p-8 border-x">
           <h2
-            class="font-serif font-semibold text-xl uppercase leading-none tracking-wide text-gray-800"
+            class="font-serif font-semibold text-lg uppercase leading-none tracking-wide text-gray-800"
           >
             <i class="fas fa-laptop text-green-500 font-black"></i> Selected
             Projects
           </h2>
           <div class="grid grid-cols-6 mt-6 gap-6">
             <div
-              class="border glass rounded-xl col-span-6 md:col-span-3 lg:col-span-2 p-4 sm:p-7"
+              class="border glass rounded-xl col-span-6 md:col-span-3 lg:col-span-2 p-5 sm:p-7"
             >
               <div class="flex flex-col h-full justify-between">
                 <div>
                   <h2
-                    class="text-3xl text-gray-800 tracking-snug font-bold leading-none"
+                    class="text-3xl text-gray-800 tracking-tight font-bold leading-none"
                   >
                     CrowdFundr.
                   </h2>
-                  <p class="py-4 text-gray-500 mb-2">
+                  <p class="py-4 tracking-wide text-gray-500 mb-2">
                     A fund collection platform like Gofundme and Kickstarter
                     that uses Khalti payment gateaway.
                   </p>
@@ -361,16 +380,16 @@
               </div>
             </div>
             <div
-              class="border glass rounded-xl col-span-6 md:col-span-3 lg:col-span-2 p-4 sm:p-7"
+              class="border glass rounded-xl col-span-6 md:col-span-3 lg:col-span-2 p-5 sm:p-7"
             >
               <div class="flex flex-col h-full justify-between">
                 <div>
                   <h2
-                    class="text-3xl text-gray-800 tracking-snug font-bold leading-none"
+                    class="text-3xl text-gray-800 tracking-tight font-bold leading-none"
                   >
                     Facetime Clone.
                   </h2>
-                  <p class="py-4 text-gray-500 mb-2">
+                  <p class="py-4 tracking-wide text-gray-500 mb-2">
                     A simple group video conferencing webapp that is made with
                     webRTC and socket.
                   </p>
@@ -447,17 +466,17 @@
               </div>
             </div>
             <div
-              class="border glass rounded-xl col-span-6 lg:col-span-2 p-4 sm:p-7"
+              class="border glass rounded-xl col-span-6 lg:col-span-2 p-5 sm:p-7"
             >
               <div class="flex flex-col h-full justify-between">
                 <div>
                   <h2
-                    class="text-3xl tracking-snug text-gray-800 fon font-bold leading-none"
+                    class="text-3xl tracking-tight text-gray-800 fon font-bold leading-none"
                   >
                     Portfolio.
                   </h2>
 
-                  <p class="py-4 text-gray-500 mb-2">
+                  <p class="py-4 tracking-wide text-gray-500 mb-2">
                     A clean, simple and fun portfolio website that trys to show
                     off my design taste and skills.
                   </p>
