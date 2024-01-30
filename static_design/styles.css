@@ -78,10 +78,10 @@
 
   background: radial-gradient(
       circle at var(--d) var(--d),
-      #bebebe calc(var(--d) - 1px),
+      #d3d3d3 calc(var(--d) - 1px),
       #bebebe00 var(--d)
     )
-    0 0 / 1rem 1rem;
+    0 0 / 0.9rem 0.9rem;
   background-position: center;
 }
 
@@ -100,4 +100,8 @@
 
 .hero {
   background: linear-gradient(270deg, #f9fafb, white);
+}
+
+.glass {
+  background: linear-gradient(135deg, #f1f5f9, white, white, #f1f5f9);
 }

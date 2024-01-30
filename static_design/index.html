@@ -17,16 +17,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://api.fontshare.com/v2/css?f[]=general-sans@200,500,300,600,400,700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=kalam@700,400,300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=zodiak@700,800,400,900,300&f[]=tanker@400&display=swap"
+      href="https://api.fontshare.com/v2/css?f[]=tanker@400&f[]=satoshi@900,700,500,300,400&display=swap"
       rel="stylesheet"
     />
 
@@ -37,9 +28,8 @@
       tailwind.config = {
         theme: {
           fontFamily: {
-            serif: ["General Sans", "sans-serif"],
-            kalam: ["Kalam", "sans"],
-            pally: ["Pally", "sans-serif"],
+            serif: ["Satoshi", "sans-serif"],
+
             cursive: ["Reenie Beanie", "cursive"],
 
             tanker: ["Tanker", "sans-serif"],
@@ -153,23 +143,23 @@
                 <span class="hidden lg:inline">Full</span> Stack Developer.
               </p>
               <div
-                class="font-serif text-md md:text-lg font-normal tracking-wide text-gray-500"
+                class="font-serif text-md md:text-lg tracking-snug text-gray-500"
               >
                 <p class="pb-3">
-                  I’m from Kathmandu and doing my Bacholres
+                  I’m from Kathmandu and doing my Bachelors
                   <br class="hidden sm:inline" />
                   in Software Engineering.
                 </p>
-                <p class="mb-9">
-                  I'm interested in Next, React, Node and <br />sometimes like
-                  to
+                <p class="mb-12">
+                  I'm interested in Next, React, Node and <br />
+                  sometimes like to
                   <span
-                    class="font-medium underline decoration-green-500 text-gray-800"
+                    class="font-medium underline-offset-4 underline decoration-green-500 decoration-2 text-gray-800"
                     >sketch</span
                   >
                   and
                   <span
-                    class="font-medium underline decoration-green-500 text-gray-800"
+                    class="font-medium underline underline-offset-4 decoration-green-500 decoration-2 text-gray-800"
                     >read books.</span
                   >
                 </p>
@@ -242,9 +232,9 @@
                   hire ??
                 </div>
                 <div
-                  class="bg-green-500 text-white tracking-widest font-serif text-lg font-medium px-12 py-2 rounded-full"
+                  class="bg-green-500 text-white tracking-wider font-serif px-8 py-2 rounded-full"
                 >
-                  CV
+                  Résumé
                 </div>
               </div>
             </div>
@@ -270,27 +260,265 @@
     </main>
 
     <div class="border-b">
-      <div class="mx-auto grid grid-cols-12 max-w-7xl px-4 xl:px-10">
-        <div class="col-span-12 md:col-span-3  p-8 border-x">
-          <div>
-            <h2
-              class="font-serif font-semibold text-lg uppercase tracking-wider text-gray-800"
+      <div class="mx-auto font-serif grid grid-cols-12 max-w-7xl px-4 xl:px-10">
+        <div class="col-span-12 dot-matrix p-8 border-x">
+          <h2
+            class="font-serif font-semibold text-xl uppercase leading-none tracking-wide text-gray-800"
+          >
+            <i class="fas fa-laptop text-green-500 font-black"></i> Selected
+            Projects
+          </h2>
+          <div class="grid grid-cols-6 mt-8 gap-6">
+            <div
+              class="border glass rounded-xl col-span-6 md:col-span-3 lg:col-span-2 p-7"
             >
-              <i class="far fa-heart text-green-500 font-black"></i> I like
-              working with
-            </h2>
-          </div>
+              <div class="flex flex-col h-full justify-between">
+                <div>
+                  <h2
+                    class="text-3xl text-gray-800 tracking-snug font-bold leading-none"
+                  >
+                    CrowdFundr.
+                  </h2>
+                  <p class="py-4 text-gray-500">
+                    A fund collection platform like Gofundme and Kickstarter
+                    that uses Khalti payment gateaway.
+                  </p>
+                </div>
+                <div>
+                  <div class="flex gap-2">
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="node.svg"
+                        alt="node icon"
+                        title="NodeJS"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="mongodb.svg"
+                        alt="node icon"
+                        title="NodeJS"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="javascript.svg"
+                        alt="javascript icon"
+                        title="Javascript"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="html.svg"
+                        alt="html icon"
+                        title="HTML"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="css.svg"
+                        alt="css icon"
+                        title="CSS"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex mt-1 ml-auto w-fit items-center gap-2 rounded-lg py-2 pl-2.5 pr-2"
+                  >
+                    <div class="text-sm font-bold leading-none text-gray-800">
+                      View More
+                    </div>
+                    <div
+                      class="flex p-2 items-center justify-center rounded-full border border-2 border-green-500"
+                    >
+                      <svg
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        class="h-2 w-2 text-gray-800"
+                      >
+                        <path
+                          d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border glass rounded-xl col-span-6 md:col-span-3 lg:col-span-2 p-7"
+            >
+              <div class="flex flex-col h-full justify-between">
+                <div>
+                  <h2
+                    class="text-3xl text-gray-800 tracking-snug font-bold leading-none"
+                  >
+                    Facetime Clone.
+                  </h2>
+                  <p class="py-4 text-gray-500">
+                    A simple group video conferencing webapp that is made with
+                    webRTC and socket.
+                  </p>
+                </div>
+                <div>
+                  <div class="flex gap-2">
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="html.svg"
+                        alt="html icon"
+                        title="HTML"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
 
-          <div class="flex flex-wrap"></div>
-        </div>
-        <div class="col-span-12 md:col-span-9  p-8 border-r">
-        <h2 class="font-serif font-semibold text-lg uppercase tracking-wider text-gray-800">
-          <i class="fas fa-laptop text-green-500 font-black"></i> Selected Projects
-        </h2>
-        <div class="grid grid-cols-6 mt-4  gap-6">
-          <div class="border col-span-2 p-4"><h2 class="text-xl">CrowdFundr.</h2></div>
-          <div class="border col-span-2 "><h2>Asstime</h2></div>
-          <div class="border col-span-2"><h2>Portfolio</h2></div>
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="css.svg"
+                        alt="css icon"
+                        title="CSS"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="node.svg"
+                        alt="Node icon"
+                        title="NodeJS"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="rtc.svg"
+                        alt="WebRTC icon"
+                        title="WebRTC"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="socket.svg"
+                        alt="Socket icon"
+                        title="Socket"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="flex mt-1 ml-auto w-fit items-center gap-2 rounded-lg py-2 pl-2.5 pr-2"
+                  >
+                    <div class="text-sm font-bold leading-none text-gray-800">
+                      View More
+                    </div>
+                    <div
+                      class="flex p-2 items-center justify-center rounded-full border border-2 border-green-500"
+                    >
+                      <svg
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        class="h-2 w-2 text-gray-800"
+                      >
+                        <path
+                          d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border glass rounded-xl col-span-6 lg:col-span-2 p-7">
+              <div class="flex flex-col h-full justify-between">
+                <div>
+                  <h2
+                    class="text-3xl tracking-snug text-gray-800 fon font-bold leading-none"
+                  >
+                    Portfolio.
+                  </h2>
+
+                  <p class="py-4 text-gray-500 mb-4">
+                    A clean, simple and fun portfolio website that trys to show
+                    off my design taste and skills.
+                  </p>
+                </div>
+                <div>
+                  <div class="flex gap-2">
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="next.svg"
+                        alt="next icon"
+                        title="NextJS"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="tailwind.svg"
+                        alt="tailwind css icon"
+                        title="TailwindCSS"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="framer-motion.svg"
+                        alt="framer-motion icon"
+                        title="Framer Motion"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+                    <div class="aspect-square bg-white rounded-lg w-fit">
+                      <img
+                        src="vercel.svg"
+                        alt="vercel icon"
+                        title="Vercel"
+                        class="w-5 grayscale hover:grayscale-0 aspect-square"
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="flex mt-1 ml-auto w-fit items-center gap-2 rounded-lg py-2 pl-2.5 pr-2"
+                  >
+                    <div class="text-sm font-bold leading-none text-gray-800">
+                      View More
+                    </div>
+                    <div
+                      class="flex p-2 items-center justify-center rounded-full border border-2 border-green-500"
+                    >
+                      <svg
+                        viewBox="0 0 8 8"
+                        fill="none"
+                        class="h-2 w-2 text-gray-800"
+                      >
+                        <path
+                          d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
