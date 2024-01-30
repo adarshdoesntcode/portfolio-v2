@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 130" class="lamp">
+<!--bulb-->
+  <g>
+    <circle class="bulb" style="fill:white; stroke:black;stroke-width:1" cx="30" cy="109.3" r="10.7"/>
+   </g>
+  <g class="switch">
+    <line style="fill:none;stroke:#2D2D2F;stroke-width:1;stroke-miterlimit:10;" x1="49" y1="100" x2="49" y2="123"/>
+    <circle style="fill:none;stroke:#2D2D2F;stroke-width:1;stroke-miterlimit:10;" cx="49" cy="125" r="1.6"/>
+  </g>
+<!--/cover-->
+  <rect x="20.7" y="66.7" style="fill:#374151;" width="18.6" height="15.6"/>
+  <rect x="30" y="0" style="fill:#d1d5db;" width="1" height="66.7"/>
+  <path style="fill:#4b5563;" d="M30,80.3c-16.6,0-30,13.4-30,30h60C60,93.8,46.6,80.3,30,80.3z"/>
+  <path style="fill:#6b7280;" d="M30,80.3c-16.6,0-30,13.4-30,30h60C60,93.8,46.6,80.3,30,80.3z"/>
+  <!-- switch -->
+</svg>
