@@ -99,7 +99,7 @@
 }
 
 .hero {
-  background: linear-gradient(270deg, #f9fafb, white);
+  background: linear-gradient(220deg, #f9fafb, white);
 }
 
 .glass {
@@ -112,4 +112,16 @@
   top: 27%;
 
   transform: rotate(-10deg);
+}
+
+.resume {
+  box-shadow: 0px 10px 25px #22c55e5f;
+}
+
+.blog {
+  background: linear-gradient(220deg, white, #f9fafb);
+}
+
+.footer {
+  background: radial-gradient(white, #f9fafb);
 }

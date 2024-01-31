@@ -56,7 +56,7 @@
     </div>
     <header class="border-b">
       <div class="mx-auto grid grid-cols-12 max-w-7xl px-4 xl:px-10">
-        <div class="col-span-10 md:col-span-3 border-x px-8 py-5">
+        <div class="col-span-10 md:col-span-3 border-x px-4 sm:px-8 py-5">
           <div class="w-fit relative">
             <h1
               class="text-5xl md:text-8xl text-gray-800 font-tanker tracking-wider font-bold leading-none"
@@ -99,7 +99,7 @@
     <main class="border-b">
       <div class="mx-auto grid grid-cols-12 max-w-7xl px-4 xl:px-10">
         <div
-          class="col-span-12 hero order-2 md:order-1 md:col-span-7 lg:pr-12 p-8 border-l border-r font-tanker tracking-wider text-gray-700"
+          class="col-span-12 hero order-2 md:order-1 md:col-span-7 lg:pr-12 p-4 pt-8 sm:p-8 border-l border-r font-tanker tracking-wider text-gray-700"
         >
           <div class="flex flex-col justify-between h-full">
             <div class="relative">
@@ -184,11 +184,13 @@
                     class="font-medium underline-offset-4 underline decoration-green-500 decoration-2 text-gray-800"
                     >sketch</span
                   >
-                  and
+                  ,
                   <span
                     class="font-medium underline underline-offset-4 decoration-green-500 decoration-2 text-gray-800"
-                    >read books.</span
+                    >read books</span
                   >
+                  <br class="hidden md:inline" />
+                  and nerd over supercars.
                 </p>
               </div>
             </div>
@@ -259,7 +261,7 @@
                   hire ??
                 </div>
                 <div
-                  class="bg-green-500 text-white tracking-wider font-serif px-8 py-2 rounded-lg"
+                  class="bg-green-500 text-white tracking-wider font-serif px-8 py-2 rounded-lg resume"
                 >
                   Résumé
                 </div>
@@ -286,12 +288,11 @@
 
     <div class="border-b">
       <div class="mx-auto font-serif grid grid-cols-12 max-w-7xl px-4 xl:px-10">
-        <div class="col-span-12 dot-matrix p-8 border-x">
+        <div class="col-span-12 dot-matrix p-4 sm:p-8 border-x">
           <h2
             class="font-serif font-semibold text-lg uppercase leading-none tracking-wide text-gray-800"
           >
-            <i class="fas fa-laptop text-green-500 font-black"></i> Selected
-            Projects
+            <i class="fas fa-laptop text-green-500"></i> Selected Projects
           </h2>
           <div class="grid grid-cols-6 mt-6 gap-6">
             <div
@@ -304,7 +305,7 @@
                   >
                     CrowdFundr.
                   </h2>
-                  <p class="py-4 tracking-wide text-gray-500 mb-2">
+                  <p class="py-4 font-serif tracking-wide text-gray-500 mb-2">
                     A fund collection platform like Gofundme and Kickstarter
                     that uses Khalti payment gateaway.
                   </p>
@@ -322,8 +323,8 @@
                     <div class="aspect-square bg-white rounded-lg w-fit">
                       <img
                         src="mongodb.svg"
-                        alt="node icon"
-                        title="NodeJS"
+                        alt="mongodb icon"
+                        title="MongoDB"
                         class="w-5 grayscale hover:grayscale-0 aspect-square"
                       />
                     </div>
@@ -389,7 +390,7 @@
                   >
                     Facetime Clone.
                   </h2>
-                  <p class="py-4 tracking-wide text-gray-500 mb-2">
+                  <p class="py-4 font-serif tracking-wide text-gray-500 mb-2">
                     A simple group video conferencing webapp that is made with
                     webRTC and socket.
                   </p>
@@ -476,7 +477,7 @@
                     Portfolio.
                   </h2>
 
-                  <p class="py-4 tracking-wide text-gray-500 mb-2">
+                  <p class="py-4 font-serif tracking-wide text-gray-500 mb-2">
                     A clean, simple and fun portfolio website that trys to show
                     off my design taste and skills.
                   </p>
@@ -555,6 +556,102 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="border-b">
+      <div class="mx-auto grid grid-cols-12 max-w-7xl px-4 xl:px-10">
+        <div
+          class="col-span-12 md:col-span-6 order-2 md:order-1 p-8 border-x md:border-r-0 font-serif blog"
+        >
+          <h2
+            class="font-semibold text-lg uppercase leading-none tracking-wide text-gray-800"
+          >
+            <i class="far fa-comment text-green-500"></i>
+            How it all started.
+          </h2>
+          <p class="py-4 font-serif tracking-wide text-gray-500">
+            A short personal history as it relates to design and development,
+            and how I've found value in the cross-section between both
+            disciplines.
+          </p>
+          <div class="flex mt-1 ml-auto w-fit items-center gap-2 rounded-lg">
+            <div class="text-sm font-bold leading-none text-gray-800">
+              Read More
+            </div>
+            <div
+              class="flex p-2 items-center justify-center rounded-full border border-2 border-green-500"
+            >
+              <svg viewBox="0 0 8 8" fill="none" class="h-2 w-2 text-gray-800">
+                <path
+                  d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-span-12 md:col-span-6 order-1 md:order-2 border-x border-b md:border-b-0 p-8 font-serif blog"
+        >
+          <h2
+            class="font-semibold text-lg uppercase leading-none tracking-wide text-gray-800"
+          >
+            <i class="fas fa-code text-green-500"></i>
+            skill set roadmap.
+          </h2>
+          <p class="py-4 font-serif tracking-wide text-gray-500">
+            A short personal history as it relates to design and development,
+            and how I've found value in the cross-section between both
+            disciplines.
+          </p>
+          <div class="flex mt-1 ml-auto w-fit items-center gap-2 rounded-lg">
+            <div class="text-sm font-bold leading-none text-gray-800">
+              Read More
+            </div>
+            <div
+              class="flex p-2 items-center justify-center rounded-full border border-2 border-green-500"
+            >
+              <svg viewBox="0 0 8 8" fill="none" class="h-2 w-2 text-gray-800">
+                <path
+                  d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-b">
+      <div class="mx-auto grid grid-cols-12 max-w-7xl px-4 xl:px-10">
+        <div class="col-span-12 p-8 border-x font-serif footer">
+          <div
+            class="max-w-md text-gray-400 text-xs py-12 sm:text-sm text-center mx-auto"
+          >
+            Design inspired by weeks of exploring, Coded in VS Code, Built with
+            Next.js and Tailwind CSS, Animated with Framer Motion, Deployed with
+            Vercel, Typeface from FontShare and <br />Made by
+            <span
+              class="underline text-gray-700 underline-offset-2 decoration-green-500 mt-4"
+              >Adarsh Das</span
+            >
+            &#169; 2024
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-b">
+      <div
+        class="mx-auto grid max-w-7xl grid-cols-12 h-4 px-4 xl:h-10 xl:px-10"
+      >
+        <div class="col-span-12 border-x dot-matrix"></div>
       </div>
     </div>
   </body>
