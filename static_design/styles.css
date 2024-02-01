@@ -1,3 +1,6 @@
+:root {
+}
+
 .keycaps {
   position: relative;
   /* display: inline-block; */
@@ -81,7 +84,7 @@
       #d3d3d3 calc(var(--d) - 1px),
       #bebebe00 var(--d)
     )
-    0 0 / 0.9rem 0.9rem;
+    0 0 / 0.8rem 0.8rem;
   background-position: center;
 }
 
@@ -99,7 +102,7 @@
 }
 
 .hero {
-  background: linear-gradient(220deg, #f9fafb, white);
+  background: linear-gradient(220deg, #f1f5f9, white, white);
 }
 
 .glass {
@@ -119,7 +122,7 @@
 }
 
 .blog {
-  background: linear-gradient(220deg, white, #f9fafb);
+  background: linear-gradient(200deg, white, white, #f1f5f9);
 }
 
 .footer {

@@ -31,7 +31,6 @@
             serif: ["Satoshi", "sans-serif"],
 
             cursive: ["Reenie Beanie", "cursive"],
-
             tanker: ["Tanker", "sans-serif"],
           },
         },
@@ -59,7 +58,7 @@
         <div class="col-span-10 md:col-span-3 border-x px-4 sm:px-8 py-5">
           <div class="w-fit relative">
             <h1
-              class="text-5xl md:text-8xl text-gray-800 font-tanker tracking-wider font-bold leading-none"
+              class="text-5xl md:text-8xl text-gray-800 font-tanker tracking-wide sm:tracking-wider font-bold leading-none"
             >
               adarsh.
             </h1>
@@ -99,7 +98,7 @@
     <main class="border-b">
       <div class="mx-auto grid grid-cols-12 max-w-7xl px-4 xl:px-10">
         <div
-          class="col-span-12 hero order-2 md:order-1 md:col-span-7 lg:pr-12 p-4 pt-8 sm:p-8 border-l border-r font-tanker tracking-wider text-gray-700"
+          class="col-span-12 hero order-2 md:order-1 md:col-span-7 lg:pr-12 p-4 py-8 sm:p-8 border-l border-r font-tanker tracking-wider text-gray-700"
         >
           <div class="flex flex-col justify-between h-full">
             <div class="relative">
@@ -108,6 +107,7 @@
                 class="absolute -top-8 right-0 sm:right-5 lg:right-4 xl:right-6 w-10 sm:w-14"
                 alt="dark mode toggle bulb icon"
               />
+
               <!-- <div class="nightmode-arrow">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="60">
                   <g
@@ -288,7 +288,9 @@
 
     <div class="border-b">
       <div class="mx-auto font-serif grid grid-cols-12 max-w-7xl px-4 xl:px-10">
-        <div class="col-span-12 dot-matrix p-4 sm:p-8 border-x">
+        <div
+          class="col-span-12 dot-matrix p-4 pt-8 pb-6 sm:px-8 sm:pt-8 sm:pb-6 border-x"
+        >
           <h2
             class="font-serif font-semibold text-lg uppercase leading-none tracking-wide text-gray-800"
           >
@@ -484,7 +486,7 @@
                 </div>
                 <div>
                   <div class="flex gap-2">
-                    <div class="aspect-square bg-white rounded-lg w-fit">
+                    <div class="aspect-square bg-white rounded-lg w-5">
                       <img
                         src="next.svg"
                         alt="next icon"
@@ -555,6 +557,24 @@
               </div>
             </div>
           </div>
+          <div class="flex mt-5 ml-auto w-fit items-center gap-1">
+            <div
+              class="text-sm font-bold leading-none text-gray-800 underline decoration-green-500 underline-offset-4"
+            >
+              View Full Project Archive
+            </div>
+            <div class="flex p-2 items-center justify-center">
+              <svg viewBox="0 0 8 8" fill="none" class="h-2 w-2 text-gray-800">
+                <path
+                  d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -568,7 +588,7 @@
             class="font-semibold text-lg uppercase leading-none tracking-wide text-gray-800"
           >
             <i class="far fa-comment text-green-500"></i>
-            How it all started.
+            How it started.
           </h2>
           <p class="py-4 font-serif tracking-wide text-gray-500">
             A short personal history as it relates to design and development,
@@ -633,7 +653,7 @@
       <div class="mx-auto grid grid-cols-12 max-w-7xl px-4 xl:px-10">
         <div class="col-span-12 p-8 border-x font-serif footer">
           <div
-            class="max-w-md text-gray-400 text-xs py-12 sm:text-sm text-center mx-auto"
+            class="max-w-md text-gray-400 text-xs py-8 sm:text-sm text-center mx-auto"
           >
             Design inspired by weeks of exploring, Coded in VS Code, Built with
             Next.js and Tailwind CSS, Animated with Framer Motion, Deployed with
@@ -651,7 +671,7 @@
       <div
         class="mx-auto grid max-w-7xl grid-cols-12 h-4 px-4 xl:h-10 xl:px-10"
       >
-        <div class="col-span-12 border-x dot-matrix"></div>
+        <div class="col-span-12 border-x sm:dot-matrix"></div>
       </div>
     </div>
   </body>
