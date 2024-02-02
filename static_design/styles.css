@@ -1,9 +1,13 @@
 :root {
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
 }
 
 .keycaps {
   position: relative;
-  /* display: inline-block; */
   width: 130px;
   height: 70px;
   padding: 8px 15px;
@@ -17,7 +21,6 @@
 .keycaps::before {
   content: "";
   position: absolute;
-
   width: 85%;
   top: 8%;
   left: 50%;
@@ -78,10 +81,9 @@
 
 .dot-matrix {
   --d: 0.1rem;
-
   background: radial-gradient(
       circle at var(--d) var(--d),
-      #d3d3d3 calc(var(--d) - 1px),
+      var(--gray-300) calc(var(--d) - 1px),
       #bebebe00 var(--d)
     )
     0 0 / 0.8rem 0.8rem;
@@ -98,15 +100,21 @@
 }
 
 .spotify {
-  background: linear-gradient(135deg, #f9fafb, white);
+  background: linear-gradient(135deg, var(--gray-50), white);
 }
 
 .hero {
-  background: linear-gradient(220deg, #f1f5f9, white, white);
+  background: linear-gradient(220deg, var(--gray-100), white, white);
 }
 
 .glass {
-  background: linear-gradient(135deg, #f1f5f9, white, white, #f1f5f9);
+  background: linear-gradient(
+    135deg,
+    var(--gray-100),
+    white,
+    white,
+    var(--gray-100)
+  );
 }
 
 .nightmode-arrow {
@@ -122,9 +130,9 @@
 }
 
 .blog {
-  background: linear-gradient(200deg, white, white, #f1f5f9);
+  background: linear-gradient(200deg, white, white, var(--gray-100));
 }
 
 .footer {
-  background: radial-gradient(white, #f9fafb);
+  background: radial-gradient(white, var(--gray-50));
 }
