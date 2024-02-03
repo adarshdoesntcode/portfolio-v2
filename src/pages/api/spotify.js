@@ -77,7 +77,7 @@ async function handler(req, res) {
   res.json(data);
 }
 
-const getPlayerState = async () => {
+export async function getPlayerState() {
   await getTokens();
   let responseData;
   let current_response;
@@ -144,6 +144,6 @@ const getPlayerState = async () => {
   } finally {
     return responseData;
   }
-};
+}
 
 export default handler;
