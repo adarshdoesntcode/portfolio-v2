@@ -28,6 +28,7 @@ function Spotify({ track }) {
           alt="spotify track album art"
           width={track.trackImage.width}
           height={track.trackImage.height}
+          priority
         />
       </a>
     </div>
