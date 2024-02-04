@@ -13,6 +13,10 @@
   --gray-700: #374151;
   --gray-800: #1f2937;
 }
+::selection {
+  color: white;
+  background: #22c55e;
+}
 
 .keycaps {
   position: relative;

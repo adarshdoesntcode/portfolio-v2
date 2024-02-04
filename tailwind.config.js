@@ -7,13 +7,14 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      // serif: ["Satoshi", "sans-serif"],
       serif: ["var(--font-serif)"],
-      // cursive: ["Reenie Beanie", "cursive"],
       cursive: ["var(--font-cursive)"],
-
-      // tanker: ["Tanker", "sans-serif"],
       tanker: ["var(--font-tanker)"],
+    },
+    extend: {
+      cursor: {
+        draw: "url(./assets/marker.svg),pointer",
+      },
     },
   },
   plugins: [],

@@ -5,6 +5,8 @@ import Projects from "./components/Projects/Projects";
 import { useEffect, useState } from "react";
 import Loader from "./components/PreLoader/Loader";
 import { AnimatePresence } from "framer-motion";
+import Blogs from "./components/Blogs/Blogs";
+import Footer from "./components/Footer/Footer";
 
 export default function Home({ track }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +23,8 @@ export default function Home({ track }) {
       <Header track={track} />
       <Hero />
       <Projects />
+      <Blogs />
+      <Footer />
     </>
   );
 }

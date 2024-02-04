@@ -9,7 +9,7 @@ function Title() {
           className="absolute translate-x-full -translate-y-1/4 md:-translate-y-0 inline-block right-0 top-0 rounded-full bg-green-500 px-4 py-3 text-xs md:text-sm font-bold leading-none text-white"
           style={{ opacity: "1" }}
         >
-          <span className="inline-block">Good afternoon!</span>
+          <span className="inline-block">{getGreeting()}</span>
           <svg
             viewBox="0 0 22 18"
             fill="none"
@@ -25,5 +25,19 @@ function Title() {
     </div>
   );
 }
+
+const getGreeting = () => {
+  const currentHour = new Date().getHours();
+
+  if (currentHour >= 5 && currentHour < 12) {
+    return "Good morning!";
+  } else if (currentHour >= 12 && currentHour < 17) {
+    return "Good afternoon!";
+  } else if (currentHour >= 17 && currentHour < 22) {
+    return "Good evening!";
+  } else {
+    return "Good night!";
+  }
+};
 
 export default Title;

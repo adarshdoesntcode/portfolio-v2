@@ -1,9 +1,11 @@
+import { motion } from "framer-motion";
+
 function BannerText() {
   return (
     <div className="col-span-12 hero order-2 md:order-1 md:col-span-7 lg:pr-12 p-4 py-8 sm:p-8 border-l border-r font-tanker tracking-wider text-gray-700">
       <div className="flex flex-col justify-between h-full">
         <div className="relative">
-          <div className="absolute -top-8 right-0 sm:right-5 lg:right-4 xl:right-6 w-10 sm:w-14">
+          <div className="absolute -top-8 right-0 cursor-pointer sm:right-5 lg:right-4 xl:right-6 w-10 sm:w-14">
             <Bulb />
           </div>
 
@@ -16,12 +18,18 @@ function BannerText() {
 
               <LearnArrow className="absolute learning-arrow" />
             </span>
-            <span className="keycaps hidden lg:inline-block">
+            <motion.span
+              whileTap={{ scale: 0.9, y: 8 }}
+              className="keycaps hidden select-none cursor-pointer lg:inline-block"
+            >
               <p>click.</p>
-            </span>
-            <span className="keycaps hidden lg:inline-block">
+            </motion.span>
+            <motion.span
+              whileTap={{ scale: 0.9, y: 8 }}
+              className="keycaps hidden select-none cursor-pointer lg:inline-block"
+            >
               <p>clack.</p>
-            </span>
+            </motion.span>
             <span className="inline text-4xl sm:text-5xl lg:hidden">Full</span>
           </div>
           <p className="text-4xl sm:text-5xl pb-5 inline-block">

@@ -17,6 +17,10 @@ function Loader() {
       y: 0,
       transition: { duration: 0.8, delay: 0.2 },
     },
+    exit: {
+      opacity: 0,
+      y: 10,
+    },
   };
 
   return (
@@ -30,6 +34,7 @@ function Loader() {
         variants={text}
         initial="initial"
         animate="enter"
+        exit="exit"
         className="font-serif tracking-tighter leading-10 uppercase text-5xl font-extrabold text-gray-500"
       >
         Adarsh Das
@@ -38,6 +43,7 @@ function Loader() {
         variants={text}
         initial="initial"
         animate="enter"
+        exit="exit"
         className="font-serif tracking-tight leading-10 uppercase text-2xl text-gray-400"
       >
         © Folio 2024
