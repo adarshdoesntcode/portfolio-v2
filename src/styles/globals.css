@@ -102,17 +102,32 @@
   background-position: center;
 }
 
+.dark .dot-matrix {
+  --d: 0.1rem;
+  background: radial-gradient(
+      circle at var(--d) var(--d),
+      var(--gray-700) calc(var(--d) - 1px),
+      #bebebe00 var(--d)
+    )
+    0 0 / 0.8rem 0.8rem;
+  background-position: center;
+}
+
 .polaroid {
   z-index: 1;
   position: relative;
   width: fit-content;
-  border-radius: 0.1rem;
+  border-radius: 0.2rem;
   transform: rotate(1.6deg);
   box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
 }
 
 .spotify {
   background: linear-gradient(120deg, var(--gray-100), white, white);
+}
+
+.spotify-dark {
+  background: linear-gradient(120deg, var(--gray-600), black, black);
 }
 
 .hero {
@@ -137,9 +152,9 @@
   transform: rotate(-10deg);
 }
 
-.resume {
+/* .resume {
   box-shadow: 0px 10px 25px #22c55e5f;
-}
+} */
 
 .blog {
   background: linear-gradient(200deg, white, white, var(--gray-100));

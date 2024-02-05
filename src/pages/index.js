@@ -14,7 +14,7 @@ export default function Home({ track }) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 1800);
+    }, 1200);
   }, []);
 
   return (

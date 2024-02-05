@@ -1,12 +1,12 @@
 function Title() {
   return (
-    <div className="col-span-10 md:col-span-3 border-x px-4 sm:px-8 py-5">
-      <div className="w-fit relative">
-        <h1 className="text-5xl md:text-8xl text-gray-800 font-tanker tracking-wide sm:tracking-wider font-bold leading-none">
+    <div className="col-span-10 border-x px-4 py-5  dark:border-gray-800 sm:px-8 md:col-span-3">
+      <div className="relative w-fit">
+        <h1 className="select-none font-tanker text-5xl font-bold leading-none tracking-wide text-gray-800 dark:text-gray-200 sm:tracking-wider md:text-8xl">
           adarsh.
         </h1>
         <div
-          className="absolute translate-x-full -translate-y-1/4 md:-translate-y-0 inline-block right-0 top-0 rounded-full bg-green-500 px-4 py-3 text-xs md:text-sm font-bold leading-none text-white"
+          className="absolute right-0 top-0 inline-block -translate-y-1/4 translate-x-full rounded-full bg-green-500 px-4 py-3 text-xs font-bold leading-none text-white md:-translate-y-0 md:text-sm"
           style={{ opacity: "1" }}
         >
           <span className="inline-block">{getGreeting()}</span>

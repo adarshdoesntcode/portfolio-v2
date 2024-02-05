@@ -6,7 +6,7 @@ function Loader() {
     exit: {
       opacity: 1,
       top: "-100vh",
-      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 1.3, ease: [0.83, 0, 0.17, 1] },
     },
   };
 
@@ -15,11 +15,11 @@ function Loader() {
     enter: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, delay: 0.2 },
+      transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] },
     },
     exit: {
       opacity: 0,
-      y: 10,
+      transition: { duration: 0.5 },
     },
   };
 
@@ -28,14 +28,14 @@ function Loader() {
       variants={slide}
       initial="initial"
       exit="exit"
-      className="fixed flex flex-col items-center  justify-center h-svh w-svw bg-gray-200 z-50 text-center"
+      className="fixed z-50 flex h-svh  w-svw flex-col items-center justify-center bg-gray-100 text-center"
     >
       <motion.h1
         variants={text}
         initial="initial"
         animate="enter"
         exit="exit"
-        className="font-serif tracking-tighter leading-10 uppercase text-5xl font-extrabold text-gray-500"
+        className="font-serif text-4xl font-extrabold uppercase leading-10 tracking-tighter text-gray-600 sm:text-5xl"
       >
         Adarsh Das
       </motion.h1>
@@ -44,7 +44,7 @@ function Loader() {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="font-serif tracking-tight leading-10 uppercase text-2xl text-gray-400"
+        className="font-serif text-xl uppercase leading-10 tracking-tight  text-gray-400 sm:text-2xl"
       >
         © Folio 2024
       </motion.h2>

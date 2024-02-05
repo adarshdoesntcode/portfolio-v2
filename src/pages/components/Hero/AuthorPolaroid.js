@@ -48,33 +48,33 @@ function AuthorPolaroid() {
   };
 
   return (
-    <div className="col-span-12 border-r order-1 md:order-2 md:col-span-5 ">
-      <div className="p-5 bg-white mx-auto polaroid relative">
+    <div className="order-1 col-span-12 border-r dark:border-gray-800 md:order-2 md:col-span-5 ">
+      <div className="polaroid relative mx-auto select-none bg-white p-5 dark:bg-gray-200">
         {hasDrawn ? (
           <Image
-            className="pt-5 bg-gray-100"
+            className="bg-gray-100 pt-5 dark:bg-gray-900"
             src={polaroid2}
             alt="authors avatar image"
           />
         ) : (
           <Image
-            className="pt-5 bg-gray-100"
+            className="bg-gray-100 pt-5  dark:bg-gray-900"
             src={polaroid}
             alt="authors avatar image"
           />
         )}
 
-        <div className="polaroid-text hidden min-[1139px]:block bg-white p-5 text-center font-cursive text-2xl pb-0">
+        <div className="polaroid-text hidden bg-white p-5  pb-0 text-center font-cursive text-2xl dark:bg-gray-200 min-[1139px]:block">
           {hasDrawn ? "Picasso great 👍🏼 " : "plz don't scribble on it !!"}
         </div>
-        <div className="polaroid-text min-[1139px]:hidden bg-white p-5 text-center font-cursive text-2xl pb-0">
+        <div className="polaroid-text bg-white p-5  pb-0 text-center font-cursive text-2xl dark:bg-gray-200 min-[1139px]:hidden">
           hello there!!
         </div>
         <canvas
           onMouseDown={startDrawig}
           onMouseUp={finishDrawing}
           onMouseMove={draw}
-          className="absolute hidden min-[1139px]:block inset-0 cursor-draw  z-10 w-full h-full"
+          className="absolute inset-0 z-10 hidden h-full  w-full cursor-draw min-[1139px]:block"
           ref={canvasRef}
         ></canvas>
       </div>
