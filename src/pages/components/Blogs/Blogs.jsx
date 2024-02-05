@@ -3,8 +3,8 @@ import Roadmap from "./Roadmap";
 
 function Blogs() {
   return (
-    <div className="border-b">
-      <div className="mx-auto grid grid-cols-12 max-w-7xl px-4 xl:px-10">
+    <div className="border-b dark:border-gray-800 dark:bg-black">
+      <div className="mx-auto grid max-w-7xl grid-cols-12 px-4 xl:px-10">
         <BackStory />
         <Roadmap />
       </div>

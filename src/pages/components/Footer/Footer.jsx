@@ -1,25 +1,25 @@
 function Footer() {
   return (
     <>
-      <div className="border-b">
-        <div className="mx-auto grid grid-cols-12 max-w-7xl px-4 xl:px-10">
-          <div className="col-span-12 p-8 border-x font-serif footer">
-            <div className="max-w-md text-gray-400 text-xs py-8 sm:text-sm text-center mx-auto">
+      <div className="border-b dark:border-gray-800 dark:bg-black">
+        <div className="mx-auto grid max-w-7xl grid-cols-12 px-4 xl:px-10">
+          <div className="footer col-span-12 border-x p-8 font-serif dark:border-gray-800">
+            <div className="mx-auto max-w-md py-8 text-center text-xs text-gray-400 dark:text-gray-600 sm:text-sm">
               Design inspired by weeks of exploring, Coded in VS Code, Built
               with Next.js and Tailwind CSS, Animated with Framer Motion,
               Deployed with Vercel, Typeface from FontShare and <br />
               Made by{" "}
-              <span className="underline text-gray-700 underline-offset-2 decoration-green-500 mt-4">
-                Adarsh Das
+              <span className="mt-4 text-gray-700 underline decoration-green-500 underline-offset-2 dark:text-gray-400">
+                <a href="mailto:adarsh.191605@ncit.edu.np">Adarsh Das</a>
               </span>{" "}
               &#169; 2024
             </div>
           </div>
         </div>
       </div>
-      <div className="border-b">
-        <div className="mx-auto grid max-w-7xl grid-cols-12 h-4 px-4 xl:h-10 xl:px-10">
-          <div className="col-span-12 border-x sm:dot-matrix"></div>
+      <div className="dark:bg-black">
+        <div className="mx-auto grid h-4 max-w-7xl grid-cols-12 px-4 xl:h-10 xl:px-10">
+          <div className="sm:dot-matrix col-span-12 border-x dark:border-gray-800"></div>
         </div>
       </div>
     </>

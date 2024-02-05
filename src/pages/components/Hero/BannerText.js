@@ -109,7 +109,7 @@ function BannerText() {
               wanna <br />
               hire ??
             </div>
-            <div className="resume flex cursor-pointer items-center gap-1 rounded-lg bg-green-500 px-8 py-2 font-serif tracking-wider text-white transition-all hover:bg-green-400">
+            <div className="resume flex cursor-pointer items-center gap-1 rounded-lg bg-green-500 px-8 py-2 font-serif tracking-wider text-white transition-all hover:bg-green-400 dark:bg-green-600">
               Resume{" "}
               <svg
                 viewBox="0 0 8 8"
