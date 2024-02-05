@@ -8,6 +8,7 @@ function Title() {
           <h1 className="select-none font-tanker text-5xl font-bold leading-none tracking-wide text-gray-800 dark:text-gray-200 sm:tracking-wider md:text-8xl">
             adarsh.
           </h1>
+
           <div
             className="absolute right-0 top-0 inline-block -translate-y-1/4 translate-x-full rounded-full bg-green-500 px-4 py-3 text-xs leading-none tracking-wider text-white dark:bg-green-600 md:-translate-y-0 md:text-sm"
             style={{ opacity: "1" }}

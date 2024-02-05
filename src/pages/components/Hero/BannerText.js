@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import useSound from "use-sound";
+import Reveal from "../Reveal/Reveal";
 
 function BannerText() {
   const [playkey] = useSound("/key.mp3");
@@ -20,57 +21,63 @@ function BannerText() {
             <Bulb />
           </div>
 
-          <div className="mb-2 flex select-none items-center gap-5 pt-4 dark:text-gray-200 sm:mb-4">
-            <span className="text-4xl sm:text-5xl ">i'm a </span>
-            <span className="relative p-2">
-              <p className="learning-text absolute font-cursive text-2xl tracking-tight dark:text-gray-200  sm:text-3xl">
-                learning
-              </p>
+          <Reveal delay={0.3} duration={0.8}>
+            <div className="mb-2 flex select-none items-center gap-5 pt-4 dark:text-gray-200 sm:mb-4">
+              <span className="text-4xl sm:text-5xl ">i'm a </span>
+              <span className="relative p-2">
+                <p className="learning-text absolute font-cursive text-2xl tracking-tight dark:text-gray-200  sm:text-3xl">
+                  learning
+                </p>
 
-              <LearnArrow />
-            </span>
-            <motion.span
-              onClick={playkey}
-              whileTap={{ scale: 0.95, y: 3 }}
-              className="keycaps hidden cursor-pointer select-none text-black lg:inline-block"
-            >
-              <p>click.</p>
-            </motion.span>
-            <motion.span
-              onClick={playkey}
-              whileTap={{ scale: 0.95, y: 3 }}
-              className="keycaps hidden cursor-pointer select-none text-black lg:inline-block"
-            >
-              <p>clack.</p>
-            </motion.span>
-            <span className="offset inline  text-4xl decoration-green-500 decoration-2  underline-offset-8 dark:underline sm:text-5xl lg:hidden">
-              Full
-            </span>
-          </div>
-          <p className="offset inline-block select-none pb-5 text-4xl decoration-green-500 decoration-2 underline-offset-8 dark:text-gray-200 dark:underline sm:text-5xl">
-            <span className="hidden lg:inline">Full</span> Stack Developer.
-          </p>
-          <div className="text-md  font-serif tracking-wide text-gray-500 dark:text-gray-400 md:text-lg">
-            <p className="pb-3">
-              I’m from Kathmandu and doing my Bachelors
-              <br className="hidden md:inline" />
-              in Software Engineering.
-            </p>
-            <p className="mb-12">
-              I'm interested in Next, React, Node and
-              <br className="hidden md:inline" />
-              sometimes like to{" "}
-              <span className="font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300">
-                sketch
+                <LearnArrow />
               </span>
-              ,{" "}
-              <span className="font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300">
-                read books
+              <motion.span
+                onClick={playkey}
+                whileTap={{ scale: 0.95, y: 3 }}
+                className="keycaps hidden cursor-pointer select-none text-black lg:inline-block"
+              >
+                <p>click.</p>
+              </motion.span>
+              <motion.span
+                onClick={playkey}
+                whileTap={{ scale: 0.95, y: 3 }}
+                className="keycaps hidden cursor-pointer select-none text-black lg:inline-block"
+              >
+                <p>clack.</p>
+              </motion.span>
+              <span className="offset inline  text-4xl decoration-green-500 decoration-2  underline-offset-8 dark:underline sm:text-5xl lg:hidden">
+                Full
               </span>
-              <br className="hidden  md:inline" />
-              and nerd over supercars.
+            </div>
+          </Reveal>
+          <Reveal delay={0.4} duration={0.8}>
+            <p className="offset inline-block select-none pb-5 text-4xl decoration-green-500 decoration-2 underline-offset-8 dark:text-gray-200 dark:underline sm:text-5xl">
+              <span className="hidden lg:inline">Full</span> Stack Developer.
             </p>
-          </div>
+          </Reveal>
+          <Reveal delay={0.5} duration={0.8}>
+            <div className="text-md  font-serif tracking-wide text-gray-500 dark:text-gray-400 md:text-lg">
+              <p className="pb-3">
+                I’m from Kathmandu and doing my Bachelors
+                <br className="hidden md:inline" />
+                in Software Engineering.
+              </p>
+              <p className="mb-12">
+                I'm interested in Next, React, Node and
+                <br className="hidden md:inline" />
+                sometimes like to{" "}
+                <span className="font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300">
+                  sketch
+                </span>
+                ,{" "}
+                <span className="font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300">
+                  read books
+                </span>
+                <br className="hidden  md:inline" />
+                and nerd over supercars.
+              </p>
+            </div>
+          </Reveal>
         </div>
 
         <div className="flex flex-row items-center justify-between sm:items-end">

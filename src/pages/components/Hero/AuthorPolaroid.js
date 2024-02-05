@@ -2,6 +2,7 @@ import Image from "next/image";
 import polaroid from "@/styles/assets/sticker.png";
 import polaroid2 from "@/styles/assets/sticker2.png";
 import { useEffect, useRef, useState } from "react";
+import Reveal from "../Reveal/Reveal";
 
 function AuthorPolaroid() {
   const [isDrawing, setIsDrawing] = useState(false);
@@ -49,35 +50,37 @@ function AuthorPolaroid() {
 
   return (
     <div className="order-1 col-span-12 border-r dark:border-gray-800 md:order-2 md:col-span-5 ">
-      <div className="polaroid relative mx-auto select-none bg-white p-5 dark:bg-gray-200">
-        {hasDrawn ? (
-          <Image
-            className="bg-gray-100 pt-5 dark:bg-gray-900"
-            src={polaroid2}
-            alt="authors avatar image"
-          />
-        ) : (
-          <Image
-            className="bg-gray-100 pt-5  dark:bg-gray-900"
-            src={polaroid}
-            alt="authors avatar image"
-          />
-        )}
+      <Reveal delay={0.4} duration={0.8}>
+        <div className="polaroid relative mx-auto select-none bg-white p-5 dark:bg-gray-200">
+          {hasDrawn ? (
+            <Image
+              className="bg-gray-100 pt-5 dark:bg-gray-900"
+              src={polaroid2}
+              alt="authors avatar image"
+            />
+          ) : (
+            <Image
+              className="bg-gray-100 pt-5  dark:bg-gray-900"
+              src={polaroid}
+              alt="authors avatar image"
+            />
+          )}
 
-        <div className="polaroid-text hidden bg-white p-5  pb-0 text-center font-cursive text-2xl dark:bg-gray-200 min-[1139px]:block">
-          {hasDrawn ? "Picasso great 👍🏼 " : "plz don't scribble on it !!"}
+          <div className="polaroid-text hidden bg-white p-5  pb-0 text-center font-cursive text-2xl dark:bg-gray-200 min-[1139px]:block">
+            {hasDrawn ? "Picasso great 👍🏼 " : "plz don't scribble on it !!"}
+          </div>
+          <div className="polaroid-text bg-white p-5  pb-0 text-center font-cursive text-2xl dark:bg-gray-200 min-[1139px]:hidden">
+            hello there!!
+          </div>
+          <canvas
+            onMouseDown={startDrawig}
+            onMouseUp={finishDrawing}
+            onMouseMove={draw}
+            className="absolute inset-0 z-10 hidden h-full  w-full cursor-draw min-[1139px]:block"
+            ref={canvasRef}
+          ></canvas>
         </div>
-        <div className="polaroid-text bg-white p-5  pb-0 text-center font-cursive text-2xl dark:bg-gray-200 min-[1139px]:hidden">
-          hello there!!
-        </div>
-        <canvas
-          onMouseDown={startDrawig}
-          onMouseUp={finishDrawing}
-          onMouseMove={draw}
-          className="absolute inset-0 z-10 hidden h-full  w-full cursor-draw min-[1139px]:block"
-          ref={canvasRef}
-        ></canvas>
-      </div>
+      </Reveal>
     </div>
   );
 }

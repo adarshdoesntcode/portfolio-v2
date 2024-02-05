@@ -1,3 +1,5 @@
+import Reveal from "../Reveal/Reveal";
+
 function Projects() {
   return (
     <div className="border-b dark:border-gray-800 dark:bg-black">
@@ -21,102 +23,106 @@ function Projects() {
               target="_blank"
               className="group col-span-6 cursor-pointer rounded-xl border bg-gradient-to-br from-gray-100 via-white to-gray-100 p-5  hover:from-gray-200 hover:via-white  hover:to-gray-200 dark:border-gray-800 dark:from-gray-900 dark:via-black dark:to-gray-900 hover:dark:from-gray-800 hover:dark:via-black hover:dark:to-gray-800 sm:p-7 lg:col-span-2"
             >
-              <div className="flex h-full flex-col justify-between">
-                <div>
-                  <h2 className="text-3xl font-bold leading-none  tracking-tight text-gray-800 dark:text-gray-200">
-                    CrowdFundr.
-                  </h2>
-                  <p className="mb-2 py-4 font-serif tracking-wide text-gray-500">
-                    A fund collection platform like Gofundme and Kickstarter
-                    that uses Khalti payment gateaway.
-                  </p>
-                </div>
-                <div>
-                  <div className="flex gap-1">
-                    <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1  text-xs font-medium leading-5 tracking-wide text-green-600">
-                      Node.js
-                    </div>
-                    <div className="flex items-center rounded-full bg-green-500/10 px-3  text-xs font-medium leading-5 tracking-wide text-green-600">
-                      Express.js
-                    </div>
+              <Reveal delay={0.5} duration={1}>
+                <div className="flex h-full flex-col justify-between">
+                  <div>
+                    <h2 className="text-3xl font-bold leading-none  tracking-tight text-gray-800 dark:text-gray-200">
+                      CrowdFundr.
+                    </h2>
+                    <p className="mb-2 py-4 font-serif tracking-wide text-gray-500">
+                      A fund collection platform like Gofundme and Kickstarter
+                      that uses Khalti payment gateaway.
+                    </p>
+                  </div>
+                  <div>
+                    <div className="flex gap-1">
+                      <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1  text-xs font-medium leading-5 tracking-wide text-green-600">
+                        Node.js
+                      </div>
+                      <div className="flex items-center rounded-full bg-green-500/10 px-3  text-xs font-medium leading-5 tracking-wide text-green-600">
+                        Express.js
+                      </div>
 
-                    <div className="flex items-center rounded-full bg-green-500/10 px-3  text-xs font-medium leading-5 tracking-wide text-green-600">
-                      MongoDB
+                      <div className="flex items-center rounded-full bg-green-500/10 px-3  text-xs font-medium leading-5 tracking-wide text-green-600">
+                        MongoDB
+                      </div>
                     </div>
-                  </div>
-                  <div className="ml-auto mt-3 flex w-fit  items-center gap-2 rounded-lg">
-                    <div className="text-sm font-bold leading-none text-gray-800 dark:text-gray-200">
-                      View More
-                    </div>
-                    <div className="flex items-center justify-center rounded-full border-2 border-green-500 p-2  transition-all group-hover:bg-green-500">
-                      <svg
-                        viewBox="0 0 8 8"
-                        fill="none"
-                        className="h-2 w-2 text-gray-800 group-hover:text-white dark:text-white"
-                      >
-                        <path
-                          d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
-                          stroke="currentColor"
-                          strokeWidth={1.5}
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></path>
-                      </svg>
+                    <div className="ml-auto mt-3 flex w-fit  items-center gap-2 rounded-lg">
+                      <div className="text-sm font-bold leading-none text-gray-800 dark:text-gray-200">
+                        View More
+                      </div>
+                      <div className="flex items-center justify-center rounded-full border-2 border-green-500 p-2  transition-all group-hover:bg-green-500">
+                        <svg
+                          viewBox="0 0 8 8"
+                          fill="none"
+                          className="h-2 w-2 text-gray-800 group-hover:text-white dark:text-white"
+                        >
+                          <path
+                            d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                            stroke="currentColor"
+                            strokeWidth={1.5}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Reveal>
             </a>
             <a
               href="https://github.com/adarshdoesntcode/asstime-webRTC"
               target="_blank"
               className="group col-span-6 cursor-pointer rounded-xl border bg-gradient-to-br from-gray-100 via-white to-gray-100 p-5  hover:from-gray-200 hover:via-white  hover:to-gray-200 dark:border-gray-800 dark:from-gray-900 dark:via-black dark:to-gray-900 hover:dark:from-gray-800 hover:dark:via-black hover:dark:to-gray-800 sm:p-7 lg:col-span-2"
             >
-              <div className="flex h-full flex-col justify-between">
-                <div>
-                  <h2 className="text-3xl font-bold leading-none  tracking-tight text-gray-800 dark:text-gray-200">
-                    Facetime Clone.
-                  </h2>
-                  <p className="mb-2 py-4 font-serif tracking-wide  text-gray-500">
-                    A simple group video conferencing webapp that is made with
-                    webRTC and socket.
-                  </p>
-                </div>
-                <div>
-                  <div className="flex gap-1">
-                    <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1  text-xs font-medium leading-5 tracking-wide text-green-600">
-                      Node.js
-                    </div>
-                    <div className="flex items-center rounded-full bg-green-500/10 px-3  text-xs font-medium leading-5 tracking-wide text-green-600">
-                      WebRTC
-                    </div>
+              <Reveal delay={0.55} duration={1}>
+                <div className="flex h-full flex-col justify-between">
+                  <div>
+                    <h2 className="text-3xl font-bold leading-none  tracking-tight text-gray-800 dark:text-gray-200">
+                      Facetime Clone.
+                    </h2>
+                    <p className="mb-2 py-4 font-serif tracking-wide  text-gray-500">
+                      A simple group video conferencing webapp that is made with
+                      webRTC and socket.
+                    </p>
+                  </div>
+                  <div>
+                    <div className="flex gap-1">
+                      <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1  text-xs font-medium leading-5 tracking-wide text-green-600">
+                        Node.js
+                      </div>
+                      <div className="flex items-center rounded-full bg-green-500/10 px-3  text-xs font-medium leading-5 tracking-wide text-green-600">
+                        WebRTC
+                      </div>
 
-                    <div className="flex items-center rounded-full bg-green-500/10 px-3  text-xs font-medium leading-5 tracking-wide text-green-600">
-                      Socket.io
+                      <div className="flex items-center rounded-full bg-green-500/10 px-3  text-xs font-medium leading-5 tracking-wide text-green-600">
+                        Socket.io
+                      </div>
                     </div>
-                  </div>
-                  <div className="ml-auto mt-3 flex w-fit  items-center gap-2 rounded-lg">
-                    <div className="text-sm font-bold leading-none text-gray-800 dark:text-gray-200">
-                      View More
-                    </div>
-                    <div className="flex items-center justify-center rounded-full border-2 border-green-500 p-2  transition-all group-hover:bg-green-500">
-                      <svg
-                        viewBox="0 0 8 8"
-                        fill="none"
-                        className="h-2 w-2 text-gray-800 group-hover:text-white dark:text-white"
-                      >
-                        <path
-                          d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
-                          stroke="currentColor"
-                          strokeWidth={1.5}
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></path>
-                      </svg>
+                    <div className="ml-auto mt-3 flex w-fit  items-center gap-2 rounded-lg">
+                      <div className="text-sm font-bold leading-none text-gray-800 dark:text-gray-200">
+                        View More
+                      </div>
+                      <div className="flex items-center justify-center rounded-full border-2 border-green-500 p-2  transition-all group-hover:bg-green-500">
+                        <svg
+                          viewBox="0 0 8 8"
+                          fill="none"
+                          className="h-2 w-2 text-gray-800 group-hover:text-white dark:text-white"
+                        >
+                          <path
+                            d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                            stroke="currentColor"
+                            strokeWidth={1.5}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Reveal>
             </a>
 
             <a
@@ -124,53 +130,55 @@ function Projects() {
               target="_blank"
               className="group col-span-6 cursor-pointer rounded-xl border bg-gradient-to-br from-gray-100 via-white to-gray-100 p-5  hover:from-gray-200 hover:via-white  hover:to-gray-200 dark:border-gray-800 dark:from-gray-900 dark:via-black dark:to-gray-900 hover:dark:from-gray-800 hover:dark:via-black hover:dark:to-gray-800 sm:p-7 lg:col-span-2"
             >
-              <div className="flex h-full flex-col justify-between">
-                <div>
-                  <h2 className="text-3xl font-bold leading-none  tracking-tight text-gray-800 dark:text-gray-200">
-                    Portfolio.
-                  </h2>
+              <Reveal delay={0.6} duration={1}>
+                <div className="flex h-full flex-col justify-between">
+                  <div>
+                    <h2 className="text-3xl font-bold leading-none  tracking-tight text-gray-800 dark:text-gray-200">
+                      Portfolio.
+                    </h2>
 
-                  <p className="mb-2 py-4 font-serif tracking-wide  text-gray-500">
-                    A clean, simple and fun portfolio website that trys to show
-                    off my design taste and skills.
-                  </p>
-                </div>
-                <div>
-                  <div className="flex gap-1">
-                    <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1  text-xs font-medium leading-5 tracking-wide text-green-600">
-                      Next
-                    </div>
-                    <div className="flex items-center rounded-full bg-green-500/10 px-3  text-xs font-medium leading-5 tracking-wide text-green-600">
-                      Tailwind
+                    <p className="mb-2 py-4 font-serif tracking-wide  text-gray-500">
+                      A clean, simple and fun portfolio website that trys to
+                      show off my design taste and skills.
+                    </p>
+                  </div>
+                  <div>
+                    <div className="flex gap-1">
+                      <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1  text-xs font-medium leading-5 tracking-wide text-green-600">
+                        Next
+                      </div>
+                      <div className="flex items-center rounded-full bg-green-500/10 px-3  text-xs font-medium leading-5 tracking-wide text-green-600">
+                        Tailwind
+                      </div>
+
+                      <div className="flex items-center rounded-full bg-green-500/10 px-3  text-xs font-medium leading-5 tracking-wide text-green-600">
+                        Framer Motion
+                      </div>
                     </div>
 
-                    <div className="flex items-center rounded-full bg-green-500/10 px-3  text-xs font-medium leading-5 tracking-wide text-green-600">
-                      Framer Motion
+                    <div className="ml-auto mt-3 flex w-fit  items-center gap-2 ">
+                      <div className="text-sm font-bold leading-none text-gray-800 dark:text-gray-200">
+                        View More
+                      </div>
+                      <div className="flex items-center justify-center rounded-full border-2 border-green-500 p-2  transition-all group-hover:bg-green-500">
+                        <svg
+                          viewBox="0 0 8 8"
+                          fill="none"
+                          className="h-2 w-2 text-gray-800 group-hover:text-white dark:text-white"
+                        >
+                          <path
+                            d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                            stroke="currentColor"
+                            strokeWidth={1.5}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
                     </div>
                   </div>
-
-                  <div className="ml-auto mt-3 flex w-fit  items-center gap-2 ">
-                    <div className="text-sm font-bold leading-none text-gray-800 dark:text-gray-200">
-                      View More
-                    </div>
-                    <div className="flex items-center justify-center rounded-full border-2 border-green-500 p-2  transition-all group-hover:bg-green-500">
-                      <svg
-                        viewBox="0 0 8 8"
-                        fill="none"
-                        className="h-2 w-2 text-gray-800 group-hover:text-white dark:text-white"
-                      >
-                        <path
-                          d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
-                          stroke="currentColor"
-                          strokeWidth={1.5}
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
                 </div>
-              </div>
+              </Reveal>
             </a>
           </div>
           <div className="group ml-auto mt-5 flex w-fit items-center transition-all ">

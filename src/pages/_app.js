@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import localFont from "next/font/local";
+import Reveal from "./components/Reveal/Reveal";
 
 const reenie = localFont({
   src: "../styles/fonts/reenie.ttf",
