@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import localFont from "next/font/local";
+import Head from "next/head";
 
 import { useEffect } from "react";
 
@@ -18,16 +19,14 @@ const satoshi = localFont({
 });
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    if (localStorage.getItem("theme") !== "dark") {
-      document.documentElement.classList.remove("dark");
-    }
-  }, []);
-
   return (
     <main
       className={`${reenie.variable} ${tanker.variable} ${satoshi.variable}`}
     >
+      <Head>
+        <title>Adarsh Das - Developer</title>
+        <link rel="shortcut icon" href="favicon.png" />
+      </Head>
       <Component {...pageProps} />
     </main>
   );
