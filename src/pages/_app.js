@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }) {
   }, []);
   return (
     <main
-      className={`${reenie.variable} ${tanker.variable} ${satoshi.variable}`}
+      className={`${reenie.variable} ${tanker.variable} ${satoshi.variable} `}
     >
       <Head>
         <title>Adarsh Das - Developer</title>

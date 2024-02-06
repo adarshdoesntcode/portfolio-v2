@@ -4,6 +4,7 @@ import Reveal from "../Reveal/Reveal";
 import RevealBulb from "../Reveal/RevealBulb";
 import Link from "next/link";
 import { useState } from "react";
+import BookModal from "../Modal/BookModal";
 
 const animate = {
   initial: {
@@ -12,14 +13,9 @@ const animate = {
   },
   tap: { scale: 0.95, y: 3, transition: { duration: 0.05 } },
 };
-const initialState = {
-  isHovered: false,
-  top: 0,
-  left: 0,
-};
+
 function BannerText({ theme, setTheme }) {
-  const [hovered, setHovered] = useState(initialState);
-  const [booksClass, setBooksClass] = useState(["absolute"]);
+  const [bookHovered, setBookHovered] = useState(false);
   const [play] = useSound("/key.mp3");
   const [playswitch] = useSound("/switch.mp3");
   const clickControls = useAnimationControls();
@@ -49,159 +45,162 @@ function BannerText({ theme, setTheme }) {
     await clackControls.start("initial");
   };
 
-  const setState = (e) => {
-    console.log(e);
-  };
-
   return (
-    <div className="order-2 col-span-12 border-l border-r bg-gradient-to-bl from-gray-100 to-white p-4 py-8 font-tanker tracking-wider text-gray-700 dark:border-gray-800 dark:from-gray-900 dark:to-black sm:p-8 md:order-1 md:col-span-7 lg:pr-12">
-      <div className="flex h-full flex-col justify-between">
-        <div className="relative">
-          <div className="absolute -top-8 right-0 w-10  sm:right-5 sm:w-14 lg:right-4 xl:right-6">
-            <RevealBulb>
-              <Bulb toggleDarkMode={toggleDarkMode} />
+    <>
+      <div className="order-2 col-span-12 border-l border-r bg-gradient-to-bl from-gray-100 to-white p-4 py-8 font-tanker tracking-wider text-gray-700 dark:border-gray-800 dark:from-gray-900 dark:to-black sm:p-8 md:order-1 md:col-span-7 lg:pr-12">
+        <div className="flex h-full flex-col justify-between">
+          <div className="relative">
+            <div className="absolute -top-8 right-0 w-10  sm:right-5 sm:w-14 lg:right-4 xl:right-6">
+              <RevealBulb>
+                <Bulb toggleDarkMode={toggleDarkMode} />
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="75"
-                height="55"
-                className="mt-4 hidden rotate-[-55deg] select-none stroke-gray-800 dark:stroke-gray-400 lg:block"
-              >
-                <g
-                  fill="none"
-                  strokeWidth={1.5}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeMiterlimit={10}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="75"
+                  height="55"
+                  className="mt-4 hidden rotate-[-55deg] select-none stroke-gray-800 dark:stroke-gray-400 lg:block"
                 >
-                  <path d="M2.682 52.074c13.744 5.461 33.286-2.781 36.734-17.97.904-3.985 2.262-11.811-2.116-14.288-9.604-5.432-14.071 19.662 1.59 16.363 6.477-1.365 11.752-7.415 15.898-12.193 4.924-5.671 9.156-11.901 14.08-17.571" />
-                  <path d="M72.318 13.251c-1.697-4.046.258-7.902-.576-12.016-2.6 1.869-8.045 5.422-11.414 5.542" />
-                </g>
-              </svg>
-              <div className="hidden  select-none font-cursive text-xl font-bold leading-5 text-gray-800 dark:text-gray-400 lg:block">
-                {theme === "dark" ? "too dark??" : "too bright??"}
+                  <g
+                    fill="none"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeMiterlimit={10}
+                  >
+                    <path d="M2.682 52.074c13.744 5.461 33.286-2.781 36.734-17.97.904-3.985 2.262-11.811-2.116-14.288-9.604-5.432-14.071 19.662 1.59 16.363 6.477-1.365 11.752-7.415 15.898-12.193 4.924-5.671 9.156-11.901 14.08-17.571" />
+                    <path d="M72.318 13.251c-1.697-4.046.258-7.902-.576-12.016-2.6 1.869-8.045 5.422-11.414 5.542" />
+                  </g>
+                </svg>
+                <div className="hidden  select-none font-cursive text-xl font-bold leading-5 text-gray-800 dark:text-gray-400 lg:block">
+                  {theme === "dark" ? "too dark??" : "too bright??"}
+                </div>
+              </RevealBulb>
+            </div>
+
+            <Reveal>
+              <div className="mb-2 flex select-none items-center gap-5 pt-4 dark:text-gray-200 sm:mb-4">
+                <span className="text-4xl sm:text-5xl ">i'm a </span>
+                <span className="relative p-2">
+                  <p className=" absolute left-0 top-0 translate-x-[-45%] translate-y-[-140%] rotate-[-4deg] font-cursive text-2xl tracking-tight dark:text-gray-400   sm:text-3xl md:translate-x-[-55%] md:translate-y-[-160%] md:rotate-[-10deg]">
+                    learning
+                  </p>
+
+                  <LearnArrow />
+                </span>
+                <motion.span
+                  onMouseDown={playkeyClick}
+                  variants={animate}
+                  initial="initial"
+                  animate={clickControls}
+                  className="keycaps hidden cursor-pointer select-none text-black lg:inline-block"
+                >
+                  <p>click.</p>
+                </motion.span>
+                <motion.span
+                  onMouseDown={playkeyClack}
+                  variants={animate}
+                  initial="initial"
+                  animate={clackControls}
+                  className="keycaps hidden cursor-pointer select-none text-black lg:inline-block"
+                >
+                  <p>clack.</p>
+                </motion.span>
+                <span className="offset inline  text-4xl underline decoration-green-500  decoration-2 underline-offset-8 sm:text-5xl lg:hidden">
+                  Full
+                </span>
               </div>
-            </RevealBulb>
+            </Reveal>
+            <Reveal>
+              <p className="offset inline-block select-none pb-5 text-4xl underline decoration-green-500 decoration-2 underline-offset-8 dark:text-gray-200 sm:text-5xl">
+                <span className="hidden lg:inline">Full</span> Stack Developer.
+              </p>
+            </Reveal>
+            <Reveal>
+              <div className="text-md select-none  font-serif tracking-wide text-gray-500 dark:text-gray-500 md:text-lg">
+                <p className="pb-3">
+                  I’m from Kathmandu and doing my Bachelors
+                  <br className="hidden md:inline" />
+                  in Software Engineering.
+                </p>
+                <p className="mb-12">
+                  I'm interested in Next, React, Node and
+                  <br className="hidden md:inline" />
+                  sometimes like to{" "}
+                  <span className="font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300">
+                    sketch
+                  </span>
+                  ,{" "}
+                  <span
+                    onMouseEnter={() => setBookHovered(true)}
+                    onMouseLeave={() => setBookHovered(false)}
+                    className=" hidden cursor-none font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300 lg:inline"
+                  >
+                    read books
+                  </span>
+                  <span className=" inline  font-medium text-gray-800  decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300 lg:hidden">
+                    read books
+                  </span>
+                  <br className="hidden  md:inline" />
+                  and nerd over supercars.
+                </p>
+              </div>
+            </Reveal>
           </div>
 
           <Reveal>
-            <div className="mb-2 flex select-none items-center gap-5 pt-4 dark:text-gray-200 sm:mb-4">
-              <span className="text-4xl sm:text-5xl ">i'm a </span>
-              <span className="relative p-2">
-                <p className=" absolute left-0 top-0 translate-x-[-45%] translate-y-[-140%] rotate-[-4deg] font-cursive text-2xl tracking-tight dark:text-gray-400   sm:text-3xl md:translate-x-[-55%] md:translate-y-[-160%] md:rotate-[-10deg]">
-                  learning
-                </p>
+            <div className="flex flex-row items-center justify-between sm:items-end">
+              <div className="relative flex w-fit items-center gap-4 text-3xl text-gray-500 transition-all">
+                <div className="w-7 ">
+                  <a href="https://github.com/adarshdoesntcode" target="_blank">
+                    <Github />
+                  </a>
+                </div>
+                <div className="w-7">
+                  <a href="mailto:adarsh.191605@ncit.edu.np" target="_top">
+                    <Envelope />
+                  </a>
+                </div>
+                <div className="w-7">
+                  <a
+                    href="https://www.linkedin.com/in/adarsh-undefined-59859b243/"
+                    target="_blank"
+                  >
+                    <Linkedin />
+                  </a>
+                </div>
 
-                <LearnArrow />
-              </span>
-              <motion.span
-                onMouseDown={playkeyClick}
-                variants={animate}
-                initial="initial"
-                animate={clickControls}
-                className="keycaps hidden cursor-pointer select-none text-black lg:inline-block"
-              >
-                <p>click.</p>
-              </motion.span>
-              <motion.span
-                onMouseDown={playkeyClack}
-                variants={animate}
-                initial="initial"
-                animate={clackControls}
-                className="keycaps hidden cursor-pointer select-none text-black lg:inline-block"
-              >
-                <p>clack.</p>
-              </motion.span>
-              <span className="offset inline  text-4xl underline decoration-green-500  decoration-2 underline-offset-8 sm:text-5xl lg:hidden">
-                Full
-              </span>
-            </div>
-          </Reveal>
-          <Reveal>
-            <p className="offset inline-block select-none pb-5 text-4xl underline decoration-green-500 decoration-2 underline-offset-8 dark:text-gray-200 sm:text-5xl">
-              <span className="hidden lg:inline">Full</span> Stack Developer.
-            </p>
-          </Reveal>
-          <Reveal>
-            <div className="text-md select-none  font-serif tracking-wide text-gray-500 dark:text-gray-500 md:text-lg">
-              <p className="pb-3">
-                I’m from Kathmandu and doing my Bachelors
-                <br className="hidden md:inline" />
-                in Software Engineering.
-              </p>
-              <p className="mb-12">
-                I'm interested in Next, React, Node and
-                <br className="hidden md:inline" />
-                sometimes like to{" "}
-                <span className="font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300">
-                  sketch
-                </span>
-                ,{" "}
-                <span
-                  onMouseOver={setState}
-                  className="font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300"
-                >
-                  read books
-                </span>
-                <br className="hidden  md:inline" />
-                and nerd over supercars.
-              </p>
+                <div className="relative hidden p-4 sm:block ">
+                  <div className="find-me-text select-none font-cursive text-xl text-gray-800 dark:text-gray-400 ">
+                    find me !!
+                  </div>
+                  <FindArrow />
+                </div>
+              </div>
+              <div className="relative">
+                <Link href="/resume">
+                  <div className="group flex cursor-pointer items-center gap-1 rounded-full bg-green-500 px-7 py-3 font-serif tracking-wider text-white transition-all hover:bg-green-400 dark:bg-green-600 hover:dark:bg-green-500">
+                    Resume{" "}
+                    <svg
+                      viewBox="0 0 8 8"
+                      fill="none"
+                      className="h-3 w-3 stroke-gray-200 transition-transform duration-200 group-hover:-translate-y-[3px] group-hover:translate-x-[3px]"
+                    >
+                      <path
+                        d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                        strokeWidth={1.5}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></path>
+                    </svg>
+                  </div>
+                </Link>
+              </div>
             </div>
           </Reveal>
         </div>
-
-        <Reveal>
-          <div className="flex flex-row items-center justify-between sm:items-end">
-            <div className="relative flex w-fit items-center gap-4 text-3xl text-gray-500 transition-all">
-              <div className="w-7 ">
-                <a href="https://github.com/adarshdoesntcode" target="_blank">
-                  <Github />
-                </a>
-              </div>
-              <div className="w-7">
-                <a href="mailto:adarsh.191605@ncit.edu.np" target="_top">
-                  <Envelope />
-                </a>
-              </div>
-              <div className="w-7">
-                <a
-                  href="https://www.linkedin.com/in/adarsh-undefined-59859b243/"
-                  target="_blank"
-                >
-                  <Linkedin />
-                </a>
-              </div>
-
-              <div className="relative hidden p-4 sm:block ">
-                <div className="find-me-text select-none font-cursive text-xl text-gray-800 dark:text-gray-400 ">
-                  find me !!
-                </div>
-                <FindArrow />
-              </div>
-            </div>
-            <div className="relative">
-              <Link href="/resume">
-                <div className="group flex cursor-pointer items-center gap-1 rounded-full bg-green-500 px-7 py-3 font-serif tracking-wider text-white transition-all hover:bg-green-400 dark:bg-green-600 hover:dark:bg-green-500">
-                  Resume{" "}
-                  <svg
-                    viewBox="0 0 8 8"
-                    fill="none"
-                    className="h-3 w-3 stroke-gray-200 transition-transform duration-200 group-hover:-translate-y-[3px] group-hover:translate-x-[3px]"
-                  >
-                    <path
-                      d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
-                      strokeWidth={1.5}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </Reveal>
       </div>
-    </div>
+      {bookHovered && <BookModal active={bookHovered} />}
+    </>
   );
 }
 
