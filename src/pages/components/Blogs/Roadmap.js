@@ -5,7 +5,7 @@ function Roadmap() {
   return (
     <div className="blog group order-1 col-span-12  cursor-pointer border-x border-b p-8 font-serif dark:border-gray-800 md:order-2 md:col-span-6 md:border-b-0">
       <Link href="/roadmap">
-        <Reveal delay={0.3} duration={1}>
+        <Reveal>
           <h2 className="flex items-center gap-2 font-serif text-lg font-semibold uppercase leading-none tracking-wide text-gray-800 dark:text-gray-200">
             <div className="w-6 ">
               <svg
@@ -18,10 +18,9 @@ function Roadmap() {
             </div>{" "}
             Skill set roadmap.
           </h2>
-          <p className="py-4 font-serif tracking-wide text-gray-500">
-            A short personal history as it relates to design and development,
-            and how I've found value in the cross-section between both
-            disciplines.
+          <p className="py-4 font-serif text-base tracking-wide text-gray-500">
+            I am constantly trying to improve my skills and find new things to
+            learn to keep myself interested. I have the next two years planned.
           </p>
 
           <div className=" mt-3 flex w-full items-center justify-between  ">

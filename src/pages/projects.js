@@ -1,60 +1,71 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const animate = {
+  initial: {
+    opacity: 0,
+    y: 30,
+  },
+
+  final: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: 0.1,
+      ease: [0.65, 0, 0.35, 1],
+    },
+  },
+};
 
 function ProjectsPage() {
   return (
-    <article className="bg-gray-100">
+    <article className="bg-gray-100 dark:bg-gray-900">
       <div className="mx-auto max-w-4xl p-8 px-6 tracking-wider text-gray-500">
         <div className="flex justify-end pb-12 pt-0 sm:justify-center sm:py-12">
           <Link href="/">
-            <div className="rounded-full bg-white p-4">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="rounded-full bg-white p-4 shadow-lg transition-[margin] duration-500  hover:mb-12"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="11.644"
-                height="11.385"
-                viewBox="0 0 11.644 11.385"
+                width={11.644}
+                height={11.385}
               >
-                <g
-                  id="Group_40"
-                  dataname="Group 40"
-                  transform="translate(-954.372 -59.349)"
-                >
+                <g dataname="Group 40">
                   <g
-                    id="Group_39"
                     dataname="Group 39"
-                    transform="translate(-6035.801 -1683.588)"
+                    fill="none"
+                    stroke="#0D1117"
+                    strokeLinecap="round"
+                    strokeWidth={2}
                   >
-                    <line
-                      id="Line_6"
-                      dataname="Line 6"
-                      y2={12.101}
-                      transform="translate(7000.403 1744.351) rotate(45)"
-                      fill="none"
-                      stroke="#0D1117"
-                      strokeLinecap="round"
-                      strokeWidth={2}
-                    ></line>
-                    <line
-                      id="Line_7"
-                      dataname="Line 7"
-                      y2={12.101}
-                      transform="translate(7000.144 1752.908) rotate(135)"
-                      fill="none"
-                      stroke="#0D1117"
-                      strokeLinecap="round"
-                      strokeWidth={2}
-                    ></line>
+                    <path dataname="Line 6" d="M10.23 1.414 1.673 9.971" />
+                    <path dataname="Line 7" d="M9.971 9.971 1.414 1.414" />
                   </g>
                 </g>
               </svg>
-            </div>
+            </motion.div>
           </Link>
         </div>
 
-        <h1 className="font-serif text-5xl font-bold tracking-tighter text-gray-800">
+        <motion.h1
+          variants={animate}
+          initial="initial"
+          animate="final"
+          className="font-serif text-5xl font-bold tracking-tighter text-gray-800 dark:text-gray-200"
+        >
           All Projects
-        </h1>
-        <table className="mt-12 w-full text-left font-serif">
-          <thead className="sticky top-0 z-10 border-b bg-gray-100 px-6 py-5">
+        </motion.h1>
+        <motion.table
+          variants={animate}
+          initial="initial"
+          animate="final"
+          className="mt-12 w-full text-left font-serif"
+        >
+          <thead className="sticky top-0 z-10 border-b bg-gray-100 px-6 py-5 dark:bg-gray-900">
             <tr>
               <th className="py-4 pr-8 text-sm font-semibold">Year</th>
               <th className="py-4 pr-8 text-sm font-semibold">Project</th>
@@ -186,7 +197,7 @@ function ProjectsPage() {
               </td>
             </tr>
           </tbody>
-        </table>
+        </motion.table>
       </div>
     </article>
   );

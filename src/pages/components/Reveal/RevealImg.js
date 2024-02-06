@@ -13,7 +13,7 @@ function RevealImg({ children }) {
   }, [isInView]);
 
   const slide = {
-    initial: { opacity: 0, rotate: -1.6 },
+    initial: { opacity: 0, rotate: 3.2 },
     enter: {
       opacity: 1,
       rotate: 1.6,

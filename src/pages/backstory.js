@@ -11,7 +11,7 @@ const animate = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.6,
       delay: 0.1,
       ease: [0.65, 0, 0.35, 1],
     },
@@ -20,11 +20,15 @@ const animate = {
 
 function Backstory() {
   return (
-    <article className="bg-gray-100">
+    <article className="bg-gray-100 dark:bg-gray-900">
       <div className="mx-auto max-w-2xl px-2 sm:px-4">
         <div className="sticky top-0 flex justify-end  px-8 py-12 sm:justify-center sm:px-8">
           <Link href="/">
-            <div className="rounded-full bg-white p-4 transition-all duration-500  hover:mb-12">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="rounded-full bg-white p-4 shadow-lg transition-[margin] duration-500  hover:mb-12"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={11.644}
@@ -43,19 +47,19 @@ function Backstory() {
                   </g>
                 </g>
               </svg>
-            </div>
+            </motion.div>
           </Link>
         </div>
         <motion.div
           variants={animate}
           initial="initial"
           animate="final"
-          className="p-8 tracking-wider text-gray-500"
+          className="p-8 tracking-wider text-gray-500 "
         >
-          <h1 className="font-serif text-5xl font-bold tracking-tighter text-gray-800">
+          <h1 className="font-serif text-5xl font-bold tracking-tighter text-gray-800 dark:text-gray-200">
             How it Started.
           </h1>
-          <div className="my-10 w-fit rounded-full bg-white px-4 py-2 text-xs font-bold tracking-tight">
+          <div className="my-10 w-fit rounded-full bg-white px-4 py-2 text-xs font-bold tracking-tight  dark:bg-gray-800 dark:text-gray-400 ">
             Feb 1, 2024
           </div>
           <p className="py-4">
@@ -79,9 +83,7 @@ function Backstory() {
             My teacher's words—beyond expectations from an 8th grader—planted
             the seed of confidence and passion for coding.
           </p>
-          <div className="mb-4 rounded-lg bg-white p-5">
-            {/* <img src="how1.png" alt="" /> */}
-          </div>
+
           <p className="py-4">
             In 11th grade, a Sony Xperia Android phone entered the scene.
             Rooting the phone, exploring boot-loaders, and installing custom OSs

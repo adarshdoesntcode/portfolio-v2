@@ -22,13 +22,11 @@ export default function App({ Component, pageProps }) {
   const [theme, setTheme] = useState("");
   useEffect(() => {
     if (!localStorage.getItem("theme")) {
-      console.log("wheme nai chaina");
       localStorage.setItem("theme", "dark");
       setTheme("dark");
     } else {
-      console.log(localStorage.getItem("theme"));
-      setTheme(localStorage.getItem("theme"));
       document.documentElement.className = localStorage.getItem("theme");
+      setTheme(localStorage.getItem("theme"));
     }
   }, []);
   return (

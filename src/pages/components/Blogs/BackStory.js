@@ -5,7 +5,7 @@ function BackStory() {
   return (
     <div className="blog group order-2 col-span-12 cursor-pointer border-x p-8 font-serif dark:border-gray-800  md:order-1 md:col-span-6 md:border-r-0">
       <Link href="/backstory">
-        <Reveal delay={0.2} duration={1}>
+        <Reveal>
           <h2 className="flex items-center gap-2 font-serif text-lg font-semibold uppercase leading-none tracking-wide text-gray-800 dark:text-gray-200">
             <div className="w-6 ">
               <svg
@@ -18,10 +18,10 @@ function BackStory() {
             </div>{" "}
             How it Started.
           </h2>
-          <p className="py-4 font-serif tracking-wide text-gray-500  ">
-            A short personal history as it relates to design and development,
-            and how I've found value in the cross-section between both
-            disciplines.
+          <p className="py-4 font-serif text-base tracking-wide text-gray-500  ">
+            A short personal story related to how I got into computers and
+            software and discovered joy amid countless hours of frustration
+            while coding.
           </p>
 
           <div className=" mt-3 flex w-full items-center justify-between  ">

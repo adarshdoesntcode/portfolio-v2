@@ -16,7 +16,6 @@ function AuthorPolaroid() {
     const canvas = canvasRef.current;
     canvas.width = 460;
     canvas.height = 532;
-    console.log(window.innerWidth);
     canvas.style.width = "460px";
     canvas.style.height = "532px";
     const context = canvas.getContext("2d");
@@ -50,9 +49,8 @@ function AuthorPolaroid() {
   };
 
   return (
-    <div className="order-1 col-span-12 border-r dark:border-gray-800 md:order-2 md:col-span-5 ">
+    <div className="order-1 col-span-12 border-x border-b dark:border-gray-800 md:order-2 md:col-span-5 md:border-b-0 md:border-l-0 md:border-r ">
       <RevealImg>
-        {/* <div className="polaroid relative mx-auto select-none bg-white p-5 dark:bg-gray-200"> */}
         {hasDrawn ? (
           <Image
             className="bg-gray-100 pt-5 dark:bg-gray-900"
@@ -80,7 +78,6 @@ function AuthorPolaroid() {
           className="absolute inset-0 z-10 hidden h-full  w-full cursor-draw min-[1139px]:block"
           ref={canvasRef}
         ></canvas>
-        {/* </div> */}
       </RevealImg>
     </div>
   );
