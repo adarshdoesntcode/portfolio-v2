@@ -2,6 +2,7 @@ import { motion, useAnimationControls } from "framer-motion";
 import useSound from "use-sound";
 import Reveal from "../Reveal/Reveal";
 import RevealBulb from "../Reveal/RevealBulb";
+import Link from "next/link";
 
 const animate = {
   initial: {
@@ -21,8 +22,8 @@ function BannerText({ theme, setTheme }) {
     playswitch();
     if (localStorage.getItem("theme") === "dark") {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", null);
-      setTheme("");
+      localStorage.setItem("theme", "light");
+      setTheme("light");
     } else {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
@@ -66,7 +67,7 @@ function BannerText({ theme, setTheme }) {
                   <path d="M72.318 13.251c-1.697-4.046.258-7.902-.576-12.016-2.6 1.869-8.045 5.422-11.414 5.542" />
                 </g>
               </svg>
-              <div class="hidden rotate-[10deg] select-none font-cursive text-xl font-bold leading-5 text-gray-800 dark:text-gray-400 lg:block">
+              <div class="hidden  select-none font-cursive text-xl font-bold leading-5 text-gray-800 dark:text-gray-400 lg:block">
                 {theme === "dark" ? "too dark??" : "too bright??"}
               </div>
             </RevealBulb>
@@ -76,7 +77,7 @@ function BannerText({ theme, setTheme }) {
             <div className="mb-2 flex select-none items-center gap-5 pt-4 dark:text-gray-200 sm:mb-4">
               <span className="text-4xl sm:text-5xl ">i'm a </span>
               <span className="relative p-2">
-                <p className="learning-text absolute font-cursive text-2xl tracking-tight underline decoration-2 underline-offset-4 dark:text-gray-400  sm:text-3xl">
+                <p className=" absolute left-0 top-0 translate-x-[-45%] translate-y-[-140%] rotate-[-4deg] font-cursive text-2xl tracking-tight dark:text-gray-400   sm:text-3xl md:translate-x-[-55%] md:translate-y-[-160%] md:rotate-[-10deg]">
                   learning
                 </p>
 
@@ -165,28 +166,23 @@ function BannerText({ theme, setTheme }) {
               </div>
             </div>
             <div className="relative">
-              {/* <div className="hidden lg:block">
-                <HireArrow />
-              </div>
-              <div className="hire-me-text hidden select-none font-cursive text-2xl leading-none text-gray-800 dark:text-gray-200 lg:block">
-                wanna <br />
-                hire ??
-              </div> */}
-              <div className="resume flex cursor-pointer items-center gap-1 rounded-lg bg-green-500 px-8 py-2 font-serif tracking-wider text-white transition-all hover:bg-green-400 dark:bg-green-600">
-                Resume{" "}
-                <svg
-                  viewBox="0 0 8 8"
-                  fill="none"
-                  className="h-3 w-3 stroke-gray-200"
-                >
-                  <path
-                    d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
-                    strokeWidth={1.5}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></path>
-                </svg>
-              </div>
+              <Link href="/resume">
+                <div className="group flex cursor-pointer items-center gap-1 rounded-full bg-green-500 px-7 py-3 font-serif tracking-wider text-white transition-all hover:bg-green-400 dark:bg-green-600 hover:dark:bg-green-500">
+                  Resume{" "}
+                  <svg
+                    viewBox="0 0 8 8"
+                    fill="none"
+                    className="h-3 w-3 stroke-gray-200 transition-transform duration-200 group-hover:-translate-y-[3px] group-hover:translate-x-[3px]"
+                  >
+                    <path
+                      d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                      strokeWidth={1.5}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+              </Link>
             </div>
           </div>
         </Reveal>
@@ -322,26 +318,6 @@ const FindArrow = () => (
       strokeLinejoin="round"
       strokeMiterlimit={10}
     />
-  </svg>
-);
-
-const HireArrow = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={75}
-    height={55}
-    className="hire-me-arrow stroke-gray-800 dark:stroke-gray-200 "
-  >
-    <g
-      fill="none"
-      strokeWidth={1.5}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeMiterlimit={10}
-    >
-      <path d="M2.682 52.074c13.744 5.461 33.286-2.781 36.734-17.97.904-3.985 2.262-11.811-2.116-14.288-9.604-5.432-14.071 19.662 1.59 16.363 6.477-1.365 11.752-7.415 15.898-12.193 4.924-5.671 9.156-11.901 14.08-17.571" />
-      <path d="M72.318 13.251c-1.697-4.046.258-7.902-.576-12.016-2.6 1.869-8.045 5.422-11.414 5.542" />
-    </g>
   </svg>
 );
 

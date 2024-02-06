@@ -193,7 +193,7 @@ function Projects() {
               <svg
                 viewBox="0 0 8 8"
                 fill="none"
-                className="h-3 w-3 stroke-gray-800 group-hover:stroke-green-500 dark:stroke-gray-200"
+                className="h-3 w-3 stroke-gray-800 duration-200 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:stroke-green-500 dark:stroke-gray-200"
               >
                 <path
                   d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"

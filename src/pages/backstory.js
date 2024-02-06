@@ -11,7 +11,7 @@ const animate = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.8,
       delay: 0.1,
       ease: [0.65, 0, 0.35, 1],
     },
@@ -24,7 +24,7 @@ function Backstory() {
       <div className="mx-auto max-w-2xl px-2 sm:px-4">
         <div className="sticky top-0 flex justify-end  px-8 py-12 sm:justify-center sm:px-8">
           <Link href="/">
-            <div className="rounded-full bg-white p-4 transition-all hover:mb-12">
+            <div className="rounded-full bg-white p-4 transition-all duration-500  hover:mb-12">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={11.644}

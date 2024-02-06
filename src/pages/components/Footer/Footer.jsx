@@ -12,7 +12,7 @@ function Footer() {
                 with Next.js and Tailwind CSS, Animated with Framer Motion,
                 Deployed with Vercel, Typeface from FontShare and <br />
                 Made by{" "}
-                <span className="mt-4 text-gray-700 underline decoration-green-500 underline-offset-2 dark:text-gray-400">
+                <span className="mt-4 text-gray-700 underline decoration-green-500 underline-offset-2 dark:text-gray-300">
                   <a href="mailto:adarsh.191605@ncit.edu.np">Adarsh Das</a>
                 </span>{" "}
                 &#169; 2024

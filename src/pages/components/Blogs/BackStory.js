@@ -23,24 +23,30 @@ function BackStory() {
             and how I've found value in the cross-section between both
             disciplines.
           </p>
-          <div className="ml-auto mt-3 flex w-fit  items-center gap-2 ">
-            <div className="text-sm font-bold leading-none text-gray-800 dark:text-gray-200">
-              Read More
+
+          <div className=" mt-3 flex w-full items-center justify-between  ">
+            <div className=" w-fit rounded-full bg-white px-4 py-2 text-xs font-bold tracking-tight dark:bg-gray-900 dark:text-gray-400 ">
+              Feb 1, 2024
             </div>
-            <div className="flex items-center justify-center rounded-full border-2 border-green-500 p-2  transition-all group-hover:bg-green-500">
-              <svg
-                viewBox="0 0 8 8"
-                fill="none"
-                className="h-2 w-2 text-gray-800 group-hover:text-white dark:text-white"
-              >
-                <path
-                  d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
-                  stroke="currentColor"
-                  strokeWidth={1.5}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>
-              </svg>
+            <div className="flex w-fit items-center gap-2">
+              <div className="text-sm font-bold leading-none text-gray-800 dark:text-gray-200">
+                Read More
+              </div>
+              <div className="flex items-center justify-center rounded-full border-2 border-green-500 p-2  transition-all group-hover:bg-green-500">
+                <svg
+                  viewBox="0 0 8 8"
+                  fill="none"
+                  className="h-2 w-2 text-gray-800 group-hover:text-white dark:text-white"
+                >
+                  <path
+                    d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </svg>
+              </div>
             </div>
           </div>
         </Reveal>

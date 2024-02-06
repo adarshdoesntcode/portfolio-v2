@@ -24,7 +24,7 @@
   position: relative;
   width: 130px;
   height: 70px;
-  padding: 8px 15px;
+  padding: 8px 20px;
   background: linear-gradient(#e3e3e3, #ededed);
   border-radius: 10px;
   box-shadow:
@@ -37,10 +37,10 @@
 .keycaps::before {
   content: "";
   position: absolute;
-  width: 85%;
-  top: 8%;
+  width: 82%;
+  top: 9%;
   left: 50%;
-  transform: translateX(-52%);
+  transform: translateX(-50%);
   bottom: 14px;
   right: 12px;
   background: linear-gradient(90deg, #d6d6d6, #ffffff);
@@ -54,7 +54,7 @@
   position: relative;
   width: 130px;
   height: 70px;
-  padding: 8px 15px;
+  padding: 8px 20px;
   background: linear-gradient(#282828, #202020);
   border-radius: 10px;
   box-shadow: none;
@@ -63,15 +63,15 @@
 .dark .keycaps::before {
   content: "";
   position: absolute;
-  width: 85%;
-  top: 8%;
+  width: 82%;
+  top: 9%;
   left: 50%;
-  transform: translateX(-52%);
+  transform: translateX(-50%);
   bottom: 14px;
   right: 12px;
-  background: linear-gradient(90deg, #232323, #4a4a4a);
+  background: linear-gradient(90deg, #262626, #4a4a4a);
   box-shadow:
-    -5px -5px 10px rgba(255, 255, 255, 0.25),
+    -5px -5px 10px rgba(255, 255, 255, 0.15),
     10px 5px 10px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
@@ -79,12 +79,13 @@
 .keycaps > p {
   letter-spacing: 2.5px;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   position: relative;
 }
 .dark .keycaps > p {
+  letter-spacing: 2.5px;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   position: relative;
 }
 
@@ -100,27 +101,6 @@
   top: -120%;
   right: -230%;
   transform: rotate(5deg);
-}
-
-.hire-me-arrow {
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: rotate(230deg) translate(110%, 60%) scaleX(-1);
-}
-
-.hire-me-text {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  transform: translate(-90%, -320%) rotate(-15deg);
-}
-
-.learning-text {
-  top: 0;
-  left: 0;
-  transform: translate(-55%, -150%) rotate(-10deg);
 }
 
 .learning-arrow {
