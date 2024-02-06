@@ -3,6 +3,7 @@ import useSound from "use-sound";
 import Reveal from "../Reveal/Reveal";
 import RevealBulb from "../Reveal/RevealBulb";
 import Link from "next/link";
+import { useState } from "react";
 
 const animate = {
   initial: {
@@ -11,8 +12,14 @@ const animate = {
   },
   tap: { scale: 0.95, y: 3, transition: { duration: 0.05 } },
 };
-
+const initialState = {
+  isHovered: false,
+  top: 0,
+  left: 0,
+};
 function BannerText({ theme, setTheme }) {
+  const [hovered, setHovered] = useState(initialState);
+  const [booksClass, setBooksClass] = useState(["absolute"]);
   const [play] = useSound("/key.mp3");
   const [playswitch] = useSound("/switch.mp3");
   const clickControls = useAnimationControls();
@@ -42,6 +49,10 @@ function BannerText({ theme, setTheme }) {
     await clackControls.start("initial");
   };
 
+  const setState = (e) => {
+    console.log(e);
+  };
+
   return (
     <div className="order-2 col-span-12 border-l border-r bg-gradient-to-bl from-gray-100 to-white p-4 py-8 font-tanker tracking-wider text-gray-700 dark:border-gray-800 dark:from-gray-900 dark:to-black sm:p-8 md:order-1 md:col-span-7 lg:pr-12">
       <div className="flex h-full flex-col justify-between">
@@ -58,16 +69,16 @@ function BannerText({ theme, setTheme }) {
               >
                 <g
                   fill="none"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
+                  strokeWidth={1.5}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeMiterlimit={10}
                 >
                   <path d="M2.682 52.074c13.744 5.461 33.286-2.781 36.734-17.97.904-3.985 2.262-11.811-2.116-14.288-9.604-5.432-14.071 19.662 1.59 16.363 6.477-1.365 11.752-7.415 15.898-12.193 4.924-5.671 9.156-11.901 14.08-17.571" />
                   <path d="M72.318 13.251c-1.697-4.046.258-7.902-.576-12.016-2.6 1.869-8.045 5.422-11.414 5.542" />
                 </g>
               </svg>
-              <div class="hidden  select-none font-cursive text-xl font-bold leading-5 text-gray-800 dark:text-gray-400 lg:block">
+              <div className="hidden  select-none font-cursive text-xl font-bold leading-5 text-gray-800 dark:text-gray-400 lg:block">
                 {theme === "dark" ? "too dark??" : "too bright??"}
               </div>
             </RevealBulb>
@@ -126,7 +137,10 @@ function BannerText({ theme, setTheme }) {
                   sketch
                 </span>
                 ,{" "}
-                <span className="font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300">
+                <span
+                  onMouseOver={setState}
+                  className="font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300"
+                >
                   read books
                 </span>
                 <br className="hidden  md:inline" />

@@ -100,7 +100,7 @@ function ProjectsPage() {
                           viewBox="0 0 20 20"
                           fill="currentColor"
                           className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
-                          ariaHidden="true"
+                          aria-hidden="true"
                         >
                           <path
                             fillRule="evenodd"

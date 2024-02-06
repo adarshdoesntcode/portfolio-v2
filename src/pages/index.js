@@ -20,5 +20,5 @@ export default function Home({ track, theme, setTheme }) {
 
 export async function getStaticProps() {
   const track = await getPlayerState();
-  return { props: { track }, revalidate: 1 };
+  return { props: { track }, revalidate: 30 };
 }

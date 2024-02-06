@@ -7,14 +7,14 @@ function Spotify({ track }) {
   }
   return (
     <div className="col-span-6 hidden  flex-col items-end justify-end overflow-hidden border-r bg-gradient-to-br from-gray-100  to-white px-5 pb-2 pt-5 dark:border-gray-800 dark:bg-black dark:from-gray-900 dark:to-black md:col-span-5 md:flex lg:col-span-4">
-      <Reveal delay={0.2} duration={1}>
-        <div className="w-full border-b py-2 text-end text-sm text-gray-400 dark:border-gray-800  dark:text-gray-500">
-          {track.isPlaying ? "Currently Playing" : "Last Played"}
-        </div>
+      <div className="w-full border-b py-2 text-end text-sm text-gray-400 dark:border-gray-800  dark:text-gray-500">
+        {track.isPlaying ? "Currently Playing" : "Last Played"}
+      </div>
+      <Reveal>
         <a
           href={track.trackLink}
           target="_blank"
-          className="flex items-center gap-3 py-2 text-right"
+          className=" flex items-center gap-3 py-2 text-right"
         >
           <div>
             <h2 className="pb-1 text-lg leading-none tracking-wide text-gray-500  dark:text-gray-200">
