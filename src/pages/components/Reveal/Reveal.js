@@ -1,17 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimationControls } from "framer-motion";
 
 function Reveal({ children }) {
-  const [hasAnimated, setHasAnimated] = useState(false);
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimationControls();
 
   useEffect(() => {
-    if (isInView && !hasAnimated) {
+    if (isInView) {
       mainControls.start("enter");
-      setHasAnimated(true);
     }
   }, [isInView]);
 

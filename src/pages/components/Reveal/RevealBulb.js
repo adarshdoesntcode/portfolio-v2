@@ -26,6 +26,7 @@ function RevealBulb({ children }) {
       variants={slide}
       initial="initial"
       animate={mainControls}
+      className="relative flex flex-col gap-5"
     >
       {children}
     </motion.div>

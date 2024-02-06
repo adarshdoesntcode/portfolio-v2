@@ -11,7 +11,7 @@ const animate = {
   tap: { scale: 0.95, y: 3, transition: { duration: 0.05 } },
 };
 
-function BannerText() {
+function BannerText({ theme, setTheme }) {
   const [play] = useSound("/key.mp3");
   const [playswitch] = useSound("/switch.mp3");
   const clickControls = useAnimationControls();
@@ -22,9 +22,11 @@ function BannerText() {
     if (localStorage.getItem("theme") === "dark") {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", null);
+      setTheme("");
     } else {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
+      setTheme("dark");
     }
   };
 
@@ -43,12 +45,30 @@ function BannerText() {
     <div className="order-2 col-span-12 border-l border-r bg-gradient-to-bl from-gray-100 to-white p-4 py-8 font-tanker tracking-wider text-gray-700 dark:border-gray-800 dark:from-gray-900 dark:to-black sm:p-8 md:order-1 md:col-span-7 lg:pr-12">
       <div className="flex h-full flex-col justify-between">
         <div className="relative">
-          <div
-            onClick={toggleDarkMode}
-            className="absolute -top-8 right-0 w-10 cursor-pointer sm:right-5 sm:w-14 lg:right-4 xl:right-6"
-          >
+          <div className="absolute -top-8 right-0 w-10  sm:right-5 sm:w-14 lg:right-4 xl:right-6">
             <RevealBulb>
-              <Bulb />
+              <Bulb toggleDarkMode={toggleDarkMode} />
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="75"
+                height="55"
+                className="mt-4 hidden rotate-[-55deg] select-none stroke-gray-800 dark:stroke-gray-400 lg:block"
+              >
+                <g
+                  fill="none"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                >
+                  <path d="M2.682 52.074c13.744 5.461 33.286-2.781 36.734-17.97.904-3.985 2.262-11.811-2.116-14.288-9.604-5.432-14.071 19.662 1.59 16.363 6.477-1.365 11.752-7.415 15.898-12.193 4.924-5.671 9.156-11.901 14.08-17.571" />
+                  <path d="M72.318 13.251c-1.697-4.046.258-7.902-.576-12.016-2.6 1.869-8.045 5.422-11.414 5.542" />
+                </g>
+              </svg>
+              <div class="hidden rotate-[10deg] select-none font-cursive text-xl font-bold leading-5 text-gray-800 dark:text-gray-400 lg:block">
+                {theme === "dark" ? "too dark??" : "too bright??"}
+              </div>
             </RevealBulb>
           </div>
 
@@ -56,7 +76,7 @@ function BannerText() {
             <div className="mb-2 flex select-none items-center gap-5 pt-4 dark:text-gray-200 sm:mb-4">
               <span className="text-4xl sm:text-5xl ">i'm a </span>
               <span className="relative p-2">
-                <p className="learning-text absolute font-cursive text-2xl tracking-tight dark:text-gray-200  sm:text-3xl">
+                <p className="learning-text absolute font-cursive text-2xl tracking-tight underline decoration-2 underline-offset-4 dark:text-gray-400  sm:text-3xl">
                   learning
                 </p>
 
@@ -80,18 +100,18 @@ function BannerText() {
               >
                 <p>clack.</p>
               </motion.span>
-              <span className="offset inline  text-4xl decoration-green-500 decoration-2  underline-offset-8 dark:underline sm:text-5xl lg:hidden">
+              <span className="offset inline  text-4xl underline decoration-green-500  decoration-2 underline-offset-8 sm:text-5xl lg:hidden">
                 Full
               </span>
             </div>
           </Reveal>
           <Reveal>
-            <p className="offset inline-block select-none pb-5 text-4xl decoration-green-500 decoration-2 underline-offset-8 dark:text-gray-200 dark:underline sm:text-5xl">
+            <p className="offset inline-block select-none pb-5 text-4xl underline decoration-green-500 decoration-2 underline-offset-8 dark:text-gray-200 sm:text-5xl">
               <span className="hidden lg:inline">Full</span> Stack Developer.
             </p>
           </Reveal>
           <Reveal>
-            <div className="text-md select-none  font-serif tracking-wide text-gray-500 dark:text-gray-400 md:text-lg">
+            <div className="text-md select-none  font-serif tracking-wide text-gray-500 dark:text-gray-500 md:text-lg">
               <p className="pb-3">
                 I’m from Kathmandu and doing my Bachelors
                 <br className="hidden md:inline" />
@@ -138,20 +158,20 @@ function BannerText() {
               </div>
 
               <div className="relative hidden p-4 sm:block ">
-                <div className="find-me-text select-none font-cursive text-xl text-gray-800 dark:text-gray-200 ">
+                <div className="find-me-text select-none font-cursive text-xl text-gray-800 dark:text-gray-400 ">
                   find me !!
                 </div>
                 <FindArrow />
               </div>
             </div>
             <div className="relative">
-              <div className="hidden lg:block">
+              {/* <div className="hidden lg:block">
                 <HireArrow />
               </div>
               <div className="hire-me-text hidden select-none font-cursive text-2xl leading-none text-gray-800 dark:text-gray-200 lg:block">
                 wanna <br />
                 hire ??
-              </div>
+              </div> */}
               <div className="resume flex cursor-pointer items-center gap-1 rounded-lg bg-green-500 px-8 py-2 font-serif tracking-wider text-white transition-all hover:bg-green-400 dark:bg-green-600">
                 Resume{" "}
                 <svg
@@ -175,12 +195,13 @@ function BannerText() {
   );
 }
 
-function Bulb() {
+function Bulb({ toggleDarkMode }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 60 130"
-      className="lamp"
+      onClick={toggleDarkMode}
+      className="lamp cursor-pointer"
     >
       <defs>
         <radialGradient id="b" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
@@ -290,7 +311,7 @@ const FindArrow = () => (
     xmlns="http://www.w3.org/2000/svg"
     width={35}
     height={70}
-    className="find-me-arrow stroke-gray-800 dark:stroke-gray-200"
+    className="find-me-arrow stroke-gray-800 dark:stroke-gray-400"
   >
     <path
       d="M9.22 7.263c-11.097 23.205-5.71 57.354 24 61M1.78 9.232c4.16-1.394 5.768-5.407 9.408-7.495.312 3.188 1.234 9.623 3.367 12.234"
@@ -329,7 +350,7 @@ const LearnArrow = () => (
     xmlns="http://www.w3.org/2000/svg"
     width={35}
     height={15}
-    className="learning-arrow absolute stroke-gray-800 dark:stroke-gray-200"
+    className="learning-arrow absolute stroke-gray-800 dark:stroke-gray-400"
   >
     <path
       strokeLinejoin="round"

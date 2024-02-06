@@ -10,7 +10,6 @@ function Spotify({ track }) {
       <Reveal delay={0.2} duration={1}>
         <div className="w-full border-b py-2 text-end text-sm text-gray-400 dark:border-gray-800  dark:text-gray-500">
           {track.isPlaying ? "Currently Playing" : "Last Played"}
-          <i className="fab fa-spotify text-lg text-green-500"></i>
         </div>
         <a
           href={track.trackLink}

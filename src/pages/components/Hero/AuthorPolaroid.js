@@ -2,7 +2,7 @@ import Image from "next/image";
 import polaroid from "@/styles/assets/sticker.png";
 import polaroid2 from "@/styles/assets/sticker2.png";
 import { useEffect, useRef, useState } from "react";
-import Reveal from "../Reveal/Reveal";
+
 import RevealImg from "../Reveal/RevealImg";
 
 function AuthorPolaroid() {

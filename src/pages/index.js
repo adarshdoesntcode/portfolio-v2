@@ -6,11 +6,11 @@ import Projects from "./components/Projects/Projects";
 import Blogs from "./components/Blogs/Blogs";
 import Footer from "./components/Footer/Footer";
 
-export default function Home({ track }) {
+export default function Home({ track, theme, setTheme }) {
   return (
     <>
       <Header track={track} />
-      <Hero />
+      <Hero theme={theme} setTheme={setTheme} />
       <Projects />
       <Blogs />
       <Footer />
