@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import localFont from "next/font/local";
-import Reveal from "./components/Reveal/Reveal";
+
+import { useEffect } from "react";
 
 const reenie = localFont({
   src: "../styles/fonts/reenie.ttf",
@@ -17,6 +18,12 @@ const satoshi = localFont({
 });
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    if (localStorage.getItem("theme") !== "dark") {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
   return (
     <main
       className={`${reenie.variable} ${tanker.variable} ${satoshi.variable}`}

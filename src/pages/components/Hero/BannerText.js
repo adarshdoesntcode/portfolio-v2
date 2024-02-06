@@ -1,13 +1,41 @@
-import { motion } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
 import useSound from "use-sound";
 import Reveal from "../Reveal/Reveal";
 
+const animate = {
+  initial: {
+    scale: 1,
+    y: 0,
+  },
+  tap: { scale: 0.95, y: 3, transition: { duration: 0.05 } },
+};
+
 function BannerText() {
-  const [playkey] = useSound("/key.mp3");
+  const [play] = useSound("/key.mp3");
   const [playswitch] = useSound("/switch.mp3");
+  const clickControls = useAnimationControls();
+  const clackControls = useAnimationControls();
+
   const toggleDarkMode = () => {
     playswitch();
-    document.documentElement.classList.toggle("dark");
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", null);
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  };
+
+  const playkeyClick = async () => {
+    play();
+    await clickControls.start("tap");
+    await clickControls.start("initial");
+  };
+  const playkeyClack = async () => {
+    play();
+    await clackControls.start("tap");
+    await clackControls.start("initial");
   };
 
   return (
@@ -21,7 +49,7 @@ function BannerText() {
             <Bulb />
           </div>
 
-          <Reveal delay={0.3} duration={0.8}>
+          <Reveal>
             <div className="mb-2 flex select-none items-center gap-5 pt-4 dark:text-gray-200 sm:mb-4">
               <span className="text-4xl sm:text-5xl ">i'm a </span>
               <span className="relative p-2">
@@ -32,15 +60,19 @@ function BannerText() {
                 <LearnArrow />
               </span>
               <motion.span
-                onClick={playkey}
-                whileTap={{ scale: 0.95, y: 3 }}
+                onMouseDown={playkeyClick}
+                variants={animate}
+                initial="initial"
+                animate={clickControls}
                 className="keycaps hidden cursor-pointer select-none text-black lg:inline-block"
               >
                 <p>click.</p>
               </motion.span>
               <motion.span
-                onClick={playkey}
-                whileTap={{ scale: 0.95, y: 3 }}
+                onMouseDown={playkeyClack}
+                variants={animate}
+                initial="initial"
+                animate={clackControls}
                 className="keycaps hidden cursor-pointer select-none text-black lg:inline-block"
               >
                 <p>clack.</p>
@@ -50,13 +82,13 @@ function BannerText() {
               </span>
             </div>
           </Reveal>
-          <Reveal delay={0.4} duration={0.8}>
+          <Reveal>
             <p className="offset inline-block select-none pb-5 text-4xl decoration-green-500 decoration-2 underline-offset-8 dark:text-gray-200 dark:underline sm:text-5xl">
               <span className="hidden lg:inline">Full</span> Stack Developer.
             </p>
           </Reveal>
-          <Reveal delay={0.5} duration={0.8}>
-            <div className="text-md  font-serif tracking-wide text-gray-500 dark:text-gray-400 md:text-lg">
+          <Reveal>
+            <div className="text-md select-none  font-serif tracking-wide text-gray-500 dark:text-gray-400 md:text-lg">
               <p className="pb-3">
                 I’m from Kathmandu and doing my Bachelors
                 <br className="hidden md:inline" />
@@ -80,59 +112,61 @@ function BannerText() {
           </Reveal>
         </div>
 
-        <div className="flex flex-row items-center justify-between sm:items-end">
-          <div className="relative flex w-fit items-center gap-4 text-3xl text-gray-500 transition-all">
-            <div className="w-7 ">
-              <a href="https://github.com/adarshdoesntcode" target="_blank">
-                <Github />
-              </a>
-            </div>
-            <div className="w-7">
-              <a href="mailto:adarsh.191605@ncit.edu.np" target="_top">
-                <Envelope />
-              </a>
-            </div>
-            <div className="w-7">
-              <a
-                href="https://www.linkedin.com/in/adarsh-undefined-59859b243/"
-                target="_blank"
-              >
-                <Linkedin />
-              </a>
-            </div>
-
-            <div className="relative hidden p-4 sm:block ">
-              <div className="find-me-text select-none font-cursive text-xl text-gray-800 dark:text-gray-200 ">
-                find me !!
+        <Reveal>
+          <div className="flex flex-row items-center justify-between sm:items-end">
+            <div className="relative flex w-fit items-center gap-4 text-3xl text-gray-500 transition-all">
+              <div className="w-7 ">
+                <a href="https://github.com/adarshdoesntcode" target="_blank">
+                  <Github />
+                </a>
               </div>
-              <FindArrow />
+              <div className="w-7">
+                <a href="mailto:adarsh.191605@ncit.edu.np" target="_top">
+                  <Envelope />
+                </a>
+              </div>
+              <div className="w-7">
+                <a
+                  href="https://www.linkedin.com/in/adarsh-undefined-59859b243/"
+                  target="_blank"
+                >
+                  <Linkedin />
+                </a>
+              </div>
+
+              <div className="relative hidden p-4 sm:block ">
+                <div className="find-me-text select-none font-cursive text-xl text-gray-800 dark:text-gray-200 ">
+                  find me !!
+                </div>
+                <FindArrow />
+              </div>
+            </div>
+            <div className="relative">
+              <div className="hidden lg:block">
+                <HireArrow />
+              </div>
+              <div className="hire-me-text hidden select-none font-cursive text-2xl leading-none text-gray-800 dark:text-gray-200 lg:block">
+                wanna <br />
+                hire ??
+              </div>
+              <div className="resume flex cursor-pointer items-center gap-1 rounded-lg bg-green-500 px-8 py-2 font-serif tracking-wider text-white transition-all hover:bg-green-400 dark:bg-green-600">
+                Resume{" "}
+                <svg
+                  viewBox="0 0 8 8"
+                  fill="none"
+                  className="h-3 w-3 stroke-gray-200"
+                >
+                  <path
+                    d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </svg>
+              </div>
             </div>
           </div>
-          <div className="relative">
-            <div className="hidden lg:block">
-              <HireArrow />
-            </div>
-            <div className="hire-me-text hidden select-none font-cursive text-2xl leading-none text-gray-800 dark:text-gray-200 lg:block">
-              wanna <br />
-              hire ??
-            </div>
-            <div className="resume flex cursor-pointer items-center gap-1 rounded-lg bg-green-500 px-8 py-2 font-serif tracking-wider text-white transition-all hover:bg-green-400 dark:bg-green-600">
-              Resume{" "}
-              <svg
-                viewBox="0 0 8 8"
-                fill="none"
-                className="h-3 w-3 stroke-gray-200"
-              >
-                <path
-                  d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
-                  strokeWidth={1.5}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>
-              </svg>
-            </div>
-          </div>
-        </div>
+        </Reveal>
       </div>
     </div>
   );
