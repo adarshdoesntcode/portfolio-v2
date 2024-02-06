@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "../Reveal/Reveal";
 
 function Projects() {
@@ -181,25 +182,27 @@ function Projects() {
               </Reveal>
             </a>
           </div>
-          <div className="group ml-auto mt-5 flex w-fit items-center transition-all ">
-            <div className="cursor-pointer text-sm font-bold leading-none text-gray-800 underline decoration-green-500 underline-offset-4 dark:text-gray-200 group-hover:dark:text-white">
-              View Full Project Archive
+          <Link href="/projects">
+            <div className="group ml-auto mt-5 flex w-fit items-center transition-all ">
+              <div className="cursor-pointer text-sm font-bold leading-none text-gray-800 underline decoration-green-500 underline-offset-4 dark:text-gray-200 group-hover:dark:text-white">
+                View Full Project Archive
+              </div>
+              <div className="flex items-center justify-center p-2">
+                <svg
+                  viewBox="0 0 8 8"
+                  fill="none"
+                  className="h-3 w-3 stroke-gray-800 group-hover:stroke-green-500 dark:stroke-gray-200"
+                >
+                  <path
+                    d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </svg>
+              </div>
             </div>
-            <div className="flex items-center justify-center p-2">
-              <svg
-                viewBox="0 0 8 8"
-                fill="none"
-                className="h-3 w-3 stroke-gray-800 group-hover:stroke-green-500 dark:stroke-gray-200"
-              >
-                <path
-                  d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
-                  strokeWidth={1.5}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></path>
-              </svg>
-            </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

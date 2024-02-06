@@ -50,7 +50,40 @@
   border-radius: 10px;
 }
 
+.dark .keycaps {
+  position: relative;
+  width: 130px;
+  height: 70px;
+  padding: 8px 15px;
+  background: linear-gradient(#282828, #202020);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.dark .keycaps::before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-52%);
+  bottom: 14px;
+  right: 12px;
+  background: linear-gradient(90deg, #232323, #4a4a4a);
+  box-shadow:
+    -5px -5px 10px rgba(255, 255, 255, 0.25),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
 .keycaps > p {
+  letter-spacing: 2.5px;
+  color: black;
+  font-size: 1.2rem;
+  position: relative;
+}
+.dark .keycaps > p {
+  color: white;
   font-size: 1.2rem;
   position: relative;
 }

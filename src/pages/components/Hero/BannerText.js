@@ -1,6 +1,7 @@
 import { motion, useAnimationControls } from "framer-motion";
 import useSound from "use-sound";
 import Reveal from "../Reveal/Reveal";
+import RevealBulb from "../Reveal/RevealBulb";
 
 const animate = {
   initial: {
@@ -46,7 +47,9 @@ function BannerText() {
             onClick={toggleDarkMode}
             className="absolute -top-8 right-0 w-10 cursor-pointer sm:right-5 sm:w-14 lg:right-4 xl:right-6"
           >
-            <Bulb />
+            <RevealBulb>
+              <Bulb />
+            </RevealBulb>
           </div>
 
           <Reveal>

@@ -19,6 +19,11 @@ const satoshi = localFont({
 });
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    if (localStorage.getItem("theme") !== "dark") {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
   return (
     <main
       className={`${reenie.variable} ${tanker.variable} ${satoshi.variable}`}

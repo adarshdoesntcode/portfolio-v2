@@ -1,15 +1,20 @@
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const animate = {
   initial: {
     opacity: 0,
-    y: 50,
+    y: 30,
   },
 
   final: {
     opacity: 1,
     y: 0,
+    transition: {
+      duration: 0.6,
+      delay: 0.1,
+      ease: [0.65, 0, 0.35, 1],
+    },
   },
 };
 
