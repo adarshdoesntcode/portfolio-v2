@@ -18,6 +18,84 @@ const animate = {
   },
 };
 
+const projects = [
+  {
+    name: "Portfolio Website",
+    stack: [
+      "Next.js",
+      "Tailwind",
+      "Framer Motion",
+      "Redis",
+      "Notion API",
+      "Spotify API",
+    ],
+    link: "https://github.com/adarshdoesntcode/portfolio-v2",
+    year: "2024",
+  },
+  {
+    name: "Portfolio API",
+    stack: ["Node.js", "Express", "Redis", "Strava API"],
+    link: "https://github.com/adarshdoesntcode/Portfolio_API",
+    year: "2023",
+  },
+  {
+    name: "WorldWise",
+    stack: ["React", "CSS Modules", "Context API"],
+    link: "https://github.com/adarshdoesntcode/worldwise",
+    year: "2023",
+  },
+  {
+    name: "usePopcorn",
+    stack: ["React", "CSS", "IMDb API"],
+    link: "https://github.com/adarshdoesntcode/usePopcorn",
+    year: "2023",
+  },
+  {
+    name: "Bloodlink API",
+    stack: [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Chart.js",
+      "Khalti API",
+      "SendGrid",
+    ],
+    link: "https://github.com/adarshdoesntcode/bloodlink",
+    year: "2023",
+  },
+  {
+    name: "Facetime Clone",
+    stack: ["Node.js", "Express", "WebRTC", "Socket.io"],
+    link: "https://github.com/adarshdoesntcode/asstime-webRTC",
+    year: "2023",
+  },
+  {
+    name: "Crowdfundr.",
+    stack: ["Node.js", "Express", "Khalti API", "MongoDB"],
+    link: "https://github.com/adarshdoesntcode/crowdfundr",
+    year: "2022",
+  },
+  {
+    name: "RentAWheel",
+    stack: ["Node.js", "Express", "MongoDB"],
+    link: "https://github.com/adarshdoesntcode/rentawheel-nodejs",
+    year: "2022",
+  },
+  {
+    name: "COVID19WORLD.",
+    stack: ["HTML", "CSS", "JS"],
+    link: "https://github.com/adarshdoesntcode/COVID19WORLD.",
+    year: "2021",
+  },
+
+  {
+    name: "Planets.",
+    stack: ["HTML", "CSS", "JS"],
+    link: "https://github.com/adarshdoesntcode/basic-planets",
+    year: "2021",
+  },
+];
+
 function ProjectsPage() {
   return (
     <article className="bg-gray-100 dark:bg-gray-900">
@@ -63,9 +141,9 @@ function ProjectsPage() {
           variants={animate}
           initial="initial"
           animate="final"
-          className="mt-12 w-full text-left font-serif"
+          className="mt-12 w-full text-left font-serif dark:text-gray-300"
         >
-          <thead className="sticky top-0 z-10 border-b bg-gray-100 px-6 py-5 dark:bg-gray-900">
+          <thead className="sticky top-0 z-10 border-b bg-gray-100 px-6 py-5 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200">
             <tr>
               <th className="py-4 pr-8 text-sm font-semibold">Year</th>
               <th className="py-4 pr-8 text-sm font-semibold">Project</th>
@@ -79,127 +157,108 @@ function ProjectsPage() {
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b">
-              <td className="py-4 pr-4 align-top text-sm">
-                <div>2023</div>
-              </td>
-              <td className="py-4 pr-4 align-top font-semibold leading-snug">
-                <div className="block sm:hidden">
-                  <a
-                    className="hover: group/link inline-flex items-baseline text-base font-medium leading-tight hover:text-green-500 focus-visible:text-green-500 focus-visible:text-green-500 sm:hidden"
-                    href="https://apps.apple.com/app/apple-store/id1550995547?pt=122219983&amp;ct=threadablebooks.com%20header&amp;mt=8"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    aria-label="Threadable (opens in a new tab)"
-                  >
-                    <span>
-                      <span className="inline-block">
-                        Threadable
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                            clipRule="evenodd"
-                          ></path>
-                        </svg>
-                      </span>
-                    </span>
-                  </a>
-                </div>
-                <div className="hidden sm:block">Threadable</div>
-                <div className="block pt-4 lg:hidden">
-                  <ul className="flex -translate-y-1.5 flex-wrap">
-                    <li className="my-1 mr-1.5">
-                      <div className="flex items-center rounded-full bg-green-400/10 px-3 py-1 text-xs font-medium leading-5 text-green-500">
-                        Next.js
-                      </div>
-                    </li>
-                    <li className="my-1 mr-1.5">
-                      <div className="flex items-center rounded-full bg-green-400/10 px-3 py-1 text-xs font-medium leading-5 text-green-500">
-                        TypeScript
-                      </div>
-                    </li>
-                    <li className="my-1 mr-1.5">
-                      <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-green-500">
-                        SCSS
-                      </div>
-                    </li>
-                    <li className="my-1 mr-1.5">
-                      <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-green-500">
-                        Contentful
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </td>
-
-              <td className="hidden py-4 pr-4 align-top lg:table-cell">
-                <ul className="flex -translate-y-1.5 flex-wrap">
-                  <li className="my-1 mr-1.5">
-                    <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-green-500">
-                      Next.js
-                    </div>
-                  </li>
-                  <li className="my-1 mr-1.5">
-                    <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-green-500">
-                      TypeScript
-                    </div>
-                  </li>
-                  <li className="my-1 mr-1.5">
-                    <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-green-500">
-                      SCSS
-                    </div>
-                  </li>
-                  <li className="my-1 mr-1.5">
-                    <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-green-500">
-                      Contentful
-                    </div>
-                  </li>
-                </ul>
-              </td>
-              <td className="hidden py-4 align-top sm:table-cell">
-                <ul>
-                  <li className="mb-1 flex items-center">
-                    <a
-                      className="hover: group/link inline-flex items-baseline text-sm text-sm font-medium leading-tight text-slate-400 hover:text-green-500 focus-visible:text-green-500 focus-visible:text-green-500"
-                      href="https://www.emersoncollective.com/"
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      aria-label="emersoncollective.com (opens in a new tab)"
-                    >
-                      <span>
-                        <span className="inline-block">
-                          emersoncollective.com
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            className="ml-0.5 inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                              clipRule="evenodd"
-                            ></path>
-                          </svg>
-                        </span>
-                      </span>
-                    </a>
-                  </li>
-                </ul>
-              </td>
-            </tr>
+            {projects.map((project) => (
+              <TableRows key={project.link} project={project} />
+            ))}
           </tbody>
         </motion.table>
       </div>
     </article>
+  );
+}
+
+function TableRows({ project }) {
+  return (
+    <tr className="border-b dark:border-gray-800 dark:text-gray-400">
+      <td className="py-4 pr-4 align-top text-sm">
+        <div>{project.year}</div>
+      </td>
+      <td className="py-4 pr-4 align-top font-semibold leading-snug">
+        <div className="block sm:hidden">
+          <a
+            className="hover: group/link inline-flex items-baseline text-base font-medium leading-tight hover:text-green-500  focus-visible:text-green-500 sm:hidden"
+            href={project.link}
+            target="_blank"
+          >
+            <span>
+              <span className="inline-block">
+                {project.name}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="ml-1 inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+            </span>
+          </a>
+        </div>
+        <div className="hidden sm:block">{project.name}</div>
+        <div className="block pt-4 lg:hidden">
+          <ul className="flex -translate-y-1.5 flex-wrap">
+            {project.stack.map((tech) => (
+              <li key={tech} className="my-1 mr-1.5">
+                <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+                  {tech}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </td>
+
+      <td className="hidden py-4 pr-4 align-top lg:table-cell">
+        <ul className="flex -translate-y-1.5 flex-wrap">
+          {project.stack.map((tech) => (
+            <li className="my-1 mr-1.5">
+              <div
+                key={tech}
+                className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600"
+              >
+                {tech}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </td>
+      <td className="hidden py-4 align-top sm:table-cell">
+        <ul>
+          <li className="mb-1 flex items-center">
+            <a
+              className="hover: group/link inline-flex items-baseline text-sm  font-medium leading-tight text-slate-400 hover:text-green-500  focus-visible:text-green-500"
+              href={project.link}
+              target="_blank"
+            >
+              <span>
+                <span className="inline-block">
+                  github
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="ml-0.5 inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </td>
+    </tr>
   );
 }
 

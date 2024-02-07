@@ -10,9 +10,8 @@ const anim = {
 
 function SketchModal({ sketch, active }) {
   const [isLoading, setIsLoading] = useState(true);
-  if (!sketch) return <div></div>;
-
   const modalRef = useRef(null);
+  if (!sketch) return <div></div>;
 
   useEffect(() => {
     function movement({ clientX, clientY }) {

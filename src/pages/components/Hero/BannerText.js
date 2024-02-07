@@ -107,13 +107,13 @@ function BannerText({ sketch, book, theme, setTheme }) {
                 >
                   <p>clack.</p>
                 </motion.span>
-                <span className="offset inline  text-4xl underline decoration-green-500  decoration-2 underline-offset-8 sm:text-5xl lg:hidden">
+                <span className=" inline  text-4xl underline decoration-green-500  decoration-2 underline-offset-8 sm:text-5xl lg:hidden">
                   Full
                 </span>
               </div>
             </Reveal>
             <Reveal>
-              <p className="offset inline-block select-none pb-5 text-4xl underline decoration-green-500 decoration-2 underline-offset-8 dark:text-gray-200 sm:text-5xl">
+              <p className=" inline-block select-none pb-5 text-4xl underline decoration-green-500 decoration-2 underline-offset-8 dark:text-gray-200 sm:text-5xl">
                 <span className="hidden lg:inline">Full</span> Stack Developer.
               </p>
             </Reveal>
