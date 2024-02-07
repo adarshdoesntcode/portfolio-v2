@@ -16,11 +16,11 @@ function Roadmap() {
                 <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
               </svg>
             </div>{" "}
-            Skill set roadmap.
+            Skill set.
           </h2>
           <p className="py-4 font-serif text-base tracking-wide text-gray-500">
             I am constantly trying to improve my skills and find new things to
-            learn to keep myself interested. I have the next two years planned.
+            learn to keep myself interested. Checkout my this years goals.
           </p>
 
           <div className=" mt-3 flex w-full items-center justify-between  ">

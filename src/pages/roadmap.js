@@ -57,14 +57,123 @@ function RoadmapPage() {
           className="p-8 tracking-wider text-gray-500 "
         >
           <h1 className="font-serif text-5xl font-bold tracking-tighter text-gray-800 dark:text-gray-200">
-            Skillset Roadmap.
+            Skill Set.
           </h1>
           <div className="my-10 w-fit rounded-full bg-white px-4 py-2 text-xs font-bold tracking-tight  dark:bg-gray-800 dark:text-gray-400">
-            Feb 1, 2024
+            Feb 6, 2024
           </div>
           <p className="py-4">
             Throughout all these years i think i have made web development my
-            strongest skill
+            strongest skill. I can comfortably work my way around
+          </p>
+
+          <div className="wrap flex flex-wrap gap-4 py-2">
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              ReactJS
+            </div>
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              NextJS
+            </div>
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              Tailwind CSS
+            </div>
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              NodeJS
+            </div>
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              MongoDB
+            </div>
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              Postman
+            </div>
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              Terminal
+            </div>
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              FlexBox
+            </div>
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              Grid
+            </div>
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              Framer Motion
+            </div>
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              Socket.io
+            </div>
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              Supabase
+            </div>
+            <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
+              Redux
+            </div>
+          </div>
+
+          <p className="py-4">
+            I've gained a solid comprehension of web application functioning and
+            feel confident in my ability to swiftly grasp and learn new
+            concepts.
+          </p>
+
+          <p className="py-4">
+            These courses have played a crucial role in laying the foundation
+            for my understanding.
+          </p>
+          <div className="py-4">
+            <ul>
+              <li className="pb-1 text-gray-700 underline decoration-green-500 underline-offset-4 dark:text-gray-400">
+                <a
+                  href="https://www.udemy.com/course/nextjs-react-the-complete-guide/"
+                  target="_blank"
+                >
+                  Next.js 14 & React - The Complete Guide
+                </a>
+              </li>
+              <li className="pb-1 text-gray-700 underline decoration-green-500 underline-offset-4 dark:text-gray-400">
+                <a
+                  href="https://www.udemy.com/course/the-ultimate-react-course/"
+                  target="_blank"
+                >
+                  The Ultimate React Course 2024: React, Redux & More
+                </a>
+              </li>
+              <li className="pb-1 text-gray-700 underline decoration-green-500 underline-offset-4 dark:text-gray-400">
+                <a
+                  href="https://www.udemy.com/course/the-complete-nodejs-developer-course-2/"
+                  target="_blank"
+                >
+                  The Complete Node.js Developer Course (3rd Edition)
+                </a>
+              </li>
+              <li className="pb-1 text-gray-700 underline decoration-green-500 underline-offset-4 dark:text-gray-400">
+                <a
+                  href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
+                  target="_blank"
+                >
+                  The Complete 2024 Web Development Bootcamp
+                </a>
+              </li>
+            </ul>
+            and many more..
+          </div>
+          <div className="py-4">
+            <h1 className="pb-2 font-serif text-xl font-bold text-gray-800 dark:text-gray-200">
+              2024 Plans.
+            </h1>
+            This year, I aim to explore into 3D websites, gain a comprehensive
+            understanding of Docker, and get myself fluent in Python
+            programming.
+          </div>
+
+          <p className="py-4">
+            <li>ThreeJS</li>
+            <li>ThreeJS Fiber</li>
+            <li>Docker</li>
+            <li>Python</li>
+          </p>
+          <p className="py-4">
+            I will still be working on my Web development skills, maybe trying
+            out TypeScript and GSAP
           </p>
         </motion.div>
       </div>

@@ -203,7 +203,7 @@ function TableRows({ project }) {
         <div className="hidden sm:block">{project.name}</div>
         <div className="block pt-4 lg:hidden">
           <ul className="flex -translate-y-1.5 flex-wrap">
-            {project.stack.map((tech) => (
+            {project.stack.map((tech, i) => (
               <li key={tech} className="my-1 mr-1.5">
                 <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
                   {tech}
@@ -216,12 +216,9 @@ function TableRows({ project }) {
 
       <td className="hidden py-4 pr-4 align-top lg:table-cell">
         <ul className="flex -translate-y-1.5 flex-wrap">
-          {project.stack.map((tech) => (
-            <li className="my-1 mr-1.5">
-              <div
-                key={tech}
-                className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600"
-              >
+          {project.stack.map((tech, i) => (
+            <li key={tech} className="my-1 mr-1.5">
+              <div className="flex items-center rounded-full bg-green-500/10 px-3 py-1 text-xs font-medium leading-5 text-green-600">
                 {tech}
               </div>
             </li>

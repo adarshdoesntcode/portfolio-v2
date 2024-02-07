@@ -43,10 +43,10 @@ function SketchModal({ sketch, active }) {
       variants={anim}
       initial="initial"
       animate={active ? "enter" : "exit"}
-      className="pointer-events-none fixed  border bg-gradient-to-br from-gray-100 to-white p-6 shadow-xl dark:border-gray-800   dark:from-gray-900 dark:to-black"
+      className="pointer-events-none fixed   border bg-gradient-to-br from-gray-100 to-white p-6 shadow-xl dark:border-gray-800   dark:from-gray-900 dark:to-black"
     >
       {isLoading && (
-        <div className="flex h-full items-center justify-center">
+        <div className="flex h-full items-center justify-center text-gray-800 dark:text-gray-200">
           Loading...
         </div>
       )}

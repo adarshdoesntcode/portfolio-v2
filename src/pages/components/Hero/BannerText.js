@@ -18,8 +18,8 @@ const animate = {
 function BannerText({ sketch, book, theme, setTheme }) {
   const [bookHovered, setBookHovered] = useState(false);
   const [sketchHovered, setSketchHovered] = useState(false);
-  const [play] = useSound("/key.mp3", { volume: 0.5 });
-  const [playswitch] = useSound("/switch.mp3", { volume: 0.5 });
+  const [play] = useSound("/key.mp3");
+  const [playswitch] = useSound("/switch.mp3");
   const clickControls = useAnimationControls();
   const clackControls = useAnimationControls();
 
