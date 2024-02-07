@@ -56,12 +56,14 @@ function AuthorPolaroid() {
             className="bg-gray-100 pt-5 dark:bg-gray-900"
             src={polaroid2}
             alt="authors avatar image"
+            priority={true}
           />
         ) : (
           <Image
             className="bg-gray-100 pt-5  dark:bg-gray-900"
             src={polaroid}
             alt="authors avatar image"
+            priority={true}
           />
         )}
 
