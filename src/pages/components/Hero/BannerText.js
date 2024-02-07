@@ -14,7 +14,7 @@ const animate = {
   tap: { scale: 0.95, y: 3, transition: { duration: 0.05 } },
 };
 
-function BannerText({ theme, setTheme }) {
+function BannerText({ book, theme, setTheme }) {
   const [bookHovered, setBookHovered] = useState(false);
   const [play] = useSound("/key.mp3");
   const [playswitch] = useSound("/switch.mp3");
@@ -199,7 +199,7 @@ function BannerText({ theme, setTheme }) {
           </Reveal>
         </div>
       </div>
-      {bookHovered && <BookModal active={bookHovered} />}
+      <BookModal book={book} active={bookHovered} />
     </>
   );
 }

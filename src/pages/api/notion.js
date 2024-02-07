@@ -4,6 +4,15 @@ const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
 async function handler(req, res) {
   try {
+    const response = await getCurrentlyReading();
+    res.json(response);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const getCurrentlyReading = async () => {
+  try {
     const response = await notion.databases.query({
       database_id: process.env.NOTION_DATABASE_ID,
       filter: {
@@ -21,23 +30,23 @@ async function handler(req, res) {
     });
 
     if (response.results.length === 0) {
-      res.status(404).json({
+      return {
         status: "Not Found",
-      });
+      };
     } else {
       const data = response.results[0].properties;
-      res.status(200).json({
+      return {
         status: "success",
         bookTitle: data["Name"].title[0].plain_text,
         bookAuthor: data["Author"].rich_text[0].plain_text,
         totalPages: data["Total Pages"].number,
         currentPage: data["Current Page"].number,
         coverUrl: data["Cover"].files[0].external.url,
-      });
+      };
     }
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 export default handler;
