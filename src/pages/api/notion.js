@@ -4,8 +4,9 @@ const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
 async function handler(req, res) {
   try {
-    const response = await getCurrentlyReading();
-    res.json(response);
+    const book = await getCurrentlyReading();
+    // const sketch = await getLatestSketch();
+    res.json(book);
   } catch (error) {
     console.log(error);
   }
@@ -43,6 +44,31 @@ export const getCurrentlyReading = async () => {
         currentPage: data["Current Page"].number,
         coverUrl: data["Cover"].files[0].external.url,
       };
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getLatestSketch = async () => {
+  try {
+    const response = await notion.databases.query({
+      database_id: "599cc4e4509343dc8622d1346c9c981f",
+    });
+
+    if (response.results.length === 0) {
+      return {
+        status: "Not Found",
+      };
+    } else {
+      const data = response.results[0].properties;
+      let filterdData = {
+        width: data.width.number,
+        height: data.height.number,
+        Image: data.Image.files[0].file.url,
+      };
+
+      return filterdData;
     }
   } catch (error) {
     console.log(error);

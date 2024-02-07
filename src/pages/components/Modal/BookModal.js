@@ -13,12 +13,12 @@ function BookModal({ book, active }) {
   const modalRef = useRef(null);
 
   useEffect(() => {
-    function movement({ pageX, pageY }) {
+    function movement({ clientX, clientY }) {
       if (!modalRef.current) {
         return;
       }
-      modalRef.current.style.top = `${pageY}px`;
-      modalRef.current.style.left = `${pageX}px`;
+      modalRef.current.style.top = `${clientY}px`;
+      modalRef.current.style.left = `${clientX}px`;
     }
     window.addEventListener("mousemove", movement);
     return () => window.removeEventListener("mousemove", movement);

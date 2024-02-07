@@ -15,11 +15,11 @@ const animate = {
   tap: { scale: 0.95, y: 3, transition: { duration: 0.05 } },
 };
 
-function BannerText({ book, theme, setTheme }) {
+function BannerText({ sketch, book, theme, setTheme }) {
   const [bookHovered, setBookHovered] = useState(false);
   const [sketchHovered, setSketchHovered] = useState(false);
-  const [play] = useSound("/key.mp3");
-  const [playswitch] = useSound("/switch.mp3");
+  const [play] = useSound("/key.mp3", { volume: 0.5 });
+  const [playswitch] = useSound("/switch.mp3", { volume: 0.5 });
   const clickControls = useAnimationControls();
   const clackControls = useAnimationControls();
 
@@ -128,7 +128,14 @@ function BannerText({ book, theme, setTheme }) {
                   I'm interested in Next, React, Node and
                   <br className="hidden md:inline" />
                   sometimes like to{" "}
-                  <span className="font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300">
+                  <span className="inline cursor-none font-medium text-gray-800  decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300 lg:hidden ">
+                    sketch
+                  </span>{" "}
+                  <span
+                    onMouseEnter={() => setSketchHovered(true)}
+                    onMouseLeave={() => setSketchHovered(false)}
+                    className="hidden cursor-none font-medium text-gray-800  underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300 lg:inline"
+                  >
                     sketch
                   </span>
                   ,{" "}
@@ -138,10 +145,10 @@ function BannerText({ book, theme, setTheme }) {
                     className=" hidden cursor-none font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300 lg:inline"
                   >
                     read books
-                  </span>
+                  </span>{" "}
                   <span className=" inline  font-medium text-gray-800  decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300 lg:hidden">
                     read books
-                  </span>
+                  </span>{" "}
                   <br className="hidden  md:inline" />
                   and nerd over supercars.
                 </p>
@@ -202,7 +209,7 @@ function BannerText({ book, theme, setTheme }) {
         </div>
       </div>
       <BookModal book={book} active={bookHovered} />
-      <SketchModal active={sketchHovered} />
+      <SketchModal sketch={sketch} active={sketchHovered} />
     </>
   );
 }
