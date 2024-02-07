@@ -9,6 +9,7 @@ const anim = {
 };
 
 function BookModal({ book, active }) {
+  if (!book) return <div></div>;
   const modalRef = useRef(null);
 
   useEffect(() => {
@@ -35,7 +36,7 @@ function BookModal({ book, active }) {
         <div className="relative h-full w-1/3">
           <Image
             src={book.coverUrl}
-            width={352}
+            width={380}
             height={450}
             alt="currently reading book cover photo"
           />

@@ -5,6 +5,7 @@ import RevealBulb from "../Reveal/RevealBulb";
 import Link from "next/link";
 import { useState } from "react";
 import BookModal from "../Modal/BookModal";
+import SketchModal from "../Modal/SketchModal";
 
 const animate = {
   initial: {
@@ -16,6 +17,7 @@ const animate = {
 
 function BannerText({ book, theme, setTheme }) {
   const [bookHovered, setBookHovered] = useState(false);
+  const [sketchHovered, setSketchHovered] = useState(false);
   const [play] = useSound("/key.mp3");
   const [playswitch] = useSound("/switch.mp3");
   const clickControls = useAnimationControls();
@@ -200,6 +202,7 @@ function BannerText({ book, theme, setTheme }) {
         </div>
       </div>
       <BookModal book={book} active={bookHovered} />
+      <SketchModal active={sketchHovered} />
     </>
   );
 }
