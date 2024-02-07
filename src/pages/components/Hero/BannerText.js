@@ -3,7 +3,7 @@ import useSound from "use-sound";
 import Reveal from "../Reveal/Reveal";
 import RevealBulb from "../Reveal/RevealBulb";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BookModal from "../Modal/BookModal";
 import SketchModal from "../Modal/SketchModal";
 
@@ -45,6 +45,14 @@ function BannerText({ sketch, book, theme, setTheme }) {
     play();
     await clackControls.start("tap");
     await clackControls.start("initial");
+  };
+
+  const handleClick = (buttonId) => {
+    setButtonClicks((prevClicks) => [...prevClicks, buttonId]);
+  };
+
+  const yourFunction = () => {
+    console.log("Buttons clicked in order within 1 second!");
   };
 
   return (
@@ -121,8 +129,7 @@ function BannerText({ sketch, book, theme, setTheme }) {
               <div className="text-md select-none  font-serif tracking-wide text-gray-500 dark:text-gray-500 md:text-lg">
                 <p className="pb-3">
                   I’m from Kathmandu and doing my Bachelors
-                  <br className="hidden md:inline" />
-                  in Software Engineering.
+                  <br className="hidden md:inline" /> in Software Engineering.
                 </p>
                 <p className="mb-12">
                   I'm interested in Next, React, Node and
@@ -130,7 +137,7 @@ function BannerText({ sketch, book, theme, setTheme }) {
                   sometimes like to{" "}
                   <span className="inline cursor-none font-medium text-gray-800  decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300 lg:hidden ">
                     sketch
-                  </span>{" "}
+                  </span>
                   <span
                     onMouseEnter={() => setSketchHovered(true)}
                     onMouseLeave={() => setSketchHovered(false)}
