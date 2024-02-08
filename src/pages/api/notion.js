@@ -5,7 +5,7 @@ const notion = new Client({ auth: process.env.NOTION_API_KEY });
 async function handler(req, res) {
   try {
     const book = await getCurrentlyReading();
-    // const sketch = await getLatestSketch();
+
     res.json(book);
   } catch (error) {
     console.log(error);
@@ -15,7 +15,7 @@ async function handler(req, res) {
 export const getCurrentlyReading = async () => {
   try {
     const response = await notion.databases.query({
-      database_id: process.env.NOTION_DATABASE_ID,
+      database_id: process.env.BOOK_DATABASE_ID,
       filter: {
         property: "Status",
         status: {
@@ -53,7 +53,7 @@ export const getCurrentlyReading = async () => {
 export const getLatestSketch = async () => {
   try {
     const response = await notion.databases.query({
-      database_id: "599cc4e4509343dc8622d1346c9c981f",
+      database_id: process.env.SKETCH_DATABASE_ID,
     });
 
     if (response.results.length === 0) {
@@ -70,6 +70,33 @@ export const getLatestSketch = async () => {
 
       return filterdData;
     }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getLatestProjects = async () => {
+  try {
+    const response = await notion.databases.query({
+      database_id: process.env.PROJECT_DATABASE_ID,
+      sorts: [
+        {
+          timestamp: "last_edited_time",
+          direction: "descending",
+        },
+      ],
+    });
+
+    let data = response.results.map((res) => {
+      return {
+        name: res.properties.Name.title[0].plain_text,
+        stack: res.properties.Stack.rich_text[0].plain_text.split(","),
+        link: res.properties.Link.rich_text[0].href,
+        year: res.properties.Year.rich_text[0].plain_text,
+      };
+    });
+
+    return data;
   } catch (error) {
     console.log(error);
   }

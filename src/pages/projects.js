@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { getLatestProjects } from "./api/notion";
 
 const animate = {
   initial: {
@@ -18,85 +19,8 @@ const animate = {
   },
 };
 
-const projects = [
-  {
-    name: "Portfolio Website",
-    stack: [
-      "Next.js",
-      "Tailwind",
-      "Framer Motion",
-      "Redis",
-      "Notion API",
-      "Spotify API",
-    ],
-    link: "https://github.com/adarshdoesntcode/portfolio-v2",
-    year: "2024",
-  },
-  {
-    name: "Portfolio API",
-    stack: ["Node.js", "Express", "Redis", "Strava API"],
-    link: "https://github.com/adarshdoesntcode/Portfolio_API",
-    year: "2023",
-  },
-  {
-    name: "WorldWise",
-    stack: ["React", "CSS Modules", "Context API"],
-    link: "https://github.com/adarshdoesntcode/worldwise",
-    year: "2023",
-  },
-  {
-    name: "usePopcorn",
-    stack: ["React", "CSS", "IMDb API"],
-    link: "https://github.com/adarshdoesntcode/usePopcorn",
-    year: "2023",
-  },
-  {
-    name: "Bloodlink API",
-    stack: [
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Chart.js",
-      "Khalti API",
-      "SendGrid",
-    ],
-    link: "https://github.com/adarshdoesntcode/bloodlink",
-    year: "2023",
-  },
-  {
-    name: "Facetime Clone",
-    stack: ["Node.js", "Express", "WebRTC", "Socket.io"],
-    link: "https://github.com/adarshdoesntcode/asstime-webRTC",
-    year: "2023",
-  },
-  {
-    name: "Crowdfundr.",
-    stack: ["Node.js", "Express", "Khalti API", "MongoDB"],
-    link: "https://github.com/adarshdoesntcode/crowdfundr",
-    year: "2022",
-  },
-  {
-    name: "RentAWheel",
-    stack: ["Node.js", "Express", "MongoDB"],
-    link: "https://github.com/adarshdoesntcode/rentawheel-nodejs",
-    year: "2022",
-  },
-  {
-    name: "COVID19WORLD.",
-    stack: ["HTML", "CSS", "JS"],
-    link: "https://github.com/adarshdoesntcode/COVID19WORLD.",
-    year: "2021",
-  },
-
-  {
-    name: "Planets.",
-    stack: ["HTML", "CSS", "JS"],
-    link: "https://github.com/adarshdoesntcode/basic-planets",
-    year: "2021",
-  },
-];
-
-function ProjectsPage() {
+function ProjectsPage({ projects }) {
+  if (!projects) return <div>loading...</div>;
   return (
     <article className="bg-gray-100 dark:bg-gray-900">
       <div className="mx-auto max-w-4xl p-8 px-6 tracking-wider text-gray-500">
@@ -257,6 +181,12 @@ function TableRows({ project }) {
       </td>
     </tr>
   );
+}
+
+export async function getStaticProps() {
+  const projects = await getLatestProjects();
+
+  return { props: { projects }, revalidate: 30 };
 }
 
 export default ProjectsPage;

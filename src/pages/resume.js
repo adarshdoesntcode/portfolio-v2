@@ -1,9 +1,3 @@
-// function ResumePage() {
-//   return <object data="/resume.pdf" width="800" height="500"></object>;
-// }
-
-// export default ResumePage;
-
 import Link from "next/link";
 import { motion } from "framer-motion";
 
