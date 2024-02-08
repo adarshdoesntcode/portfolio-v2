@@ -29,8 +29,8 @@ function Spotify({ track }) {
             className="aspect-square w-14 rounded-full"
             src={track.trackImage.url}
             alt="spotify track album art"
-            width={track.trackImage.width}
-            height={track.trackImage.height}
+            width={56}
+            height={56}
             priority
           />
         </a>
