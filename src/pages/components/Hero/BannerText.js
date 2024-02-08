@@ -215,8 +215,9 @@ function BannerText({ sketch, book, theme, setTheme }) {
           </Reveal>
         </div>
       </div>
-      <BookModal book={book} active={bookHovered} />
-      <SketchModal sketch={sketch} active={sketchHovered} />
+
+      {bookHovered && <BookModal book={book} active={bookHovered} />}
+      {sketchHovered && <SketchModal sketch={sketch} active={sketchHovered} />}
     </>
   );
 }

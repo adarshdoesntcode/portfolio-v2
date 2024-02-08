@@ -30,7 +30,7 @@ function BookModal({ book, active }) {
       variants={anim}
       initial="initial"
       animate={active ? "enter" : "exit"}
-      className="pointer-events-none fixed w-[400px]  border bg-gradient-to-br from-gray-100 to-white p-6 shadow-xl dark:border-gray-800   dark:from-gray-900 dark:to-black"
+      className="pointer-events-none  fixed w-[400px] border  bg-gradient-to-br from-gray-100 to-white p-6 shadow-xl dark:border-gray-800 dark:from-gray-900   dark:to-black "
     >
       <div className="flex gap-6">
         <div className="relative h-full w-1/3">
