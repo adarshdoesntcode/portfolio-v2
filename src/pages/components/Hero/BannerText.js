@@ -22,6 +22,7 @@ function BannerText({ sketch, book, theme, setTheme }) {
   const [playswitch] = useSound("/switch.mp3");
   const clickControls = useAnimationControls();
   const clackControls = useAnimationControls();
+  const [resolution, setResolution] = useState(639);
 
   const toggleDarkMode = () => {
     playswitch();
@@ -35,6 +36,10 @@ function BannerText({ sketch, book, theme, setTheme }) {
       setTheme("dark");
     }
   };
+
+  useEffect(() => {
+    setResolution(window.innerWidth);
+  }, []);
 
   const playkeyClick = async () => {
     play();
@@ -225,8 +230,12 @@ function BannerText({ sketch, book, theme, setTheme }) {
         </div>
       </div>
 
-      {bookHovered && <BookModal book={book} active={bookHovered} />}
-      {sketchHovered && <SketchModal sketch={sketch} active={sketchHovered} />}
+      {resolution >= 640 && bookHovered && (
+        <BookModal book={book} active={bookHovered} />
+      )}
+      {resolution >= 640 && sketchHovered && (
+        <SketchModal sketch={sketch} active={sketchHovered} />
+      )}
     </>
   );
 }
