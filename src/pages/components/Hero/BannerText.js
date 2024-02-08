@@ -195,12 +195,12 @@ function BannerText({ sketch, book, theme, setTheme }) {
               </div>
               <div className="relative">
                 <Link href="/resume" aria-label="Go to Adasrh's Resume Page">
-                  <div className="group flex cursor-pointer items-center gap-1 rounded-full  bg-green-600 px-7 py-3 font-serif tracking-wider text-white transition-all hover:bg-green-500 hover:dark:bg-green-500">
+                  <div className="group flex cursor-pointer items-center gap-1 rounded-full  bg-green-500 px-7 py-3 font-serif font-semibold tracking-wider text-black transition-all hover:bg-green-500 hover:dark:bg-green-500">
                     Resume{" "}
                     <svg
                       viewBox="0 0 8 8"
                       fill="none"
-                      className="h-3 w-3 stroke-gray-200 transition-transform duration-200 group-hover:-translate-y-[3px] group-hover:translate-x-[3px]"
+                      className="h-3 w-3 stroke-gray-900 transition-transform duration-200 group-hover:-translate-y-[3px] group-hover:translate-x-[3px]"
                     >
                       <path
                         d="M6.8291 6.82849L6.8291 1.17163M6.8291 1.17163L1.17225 1.17163M6.8291 1.17163L1.17188 6.82849"
