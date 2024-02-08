@@ -17,7 +17,7 @@ function RevealBulb({ children }) {
     enter: {
       opacity: 1,
       y: 0,
-      transition: { delay: 1 },
+      transition: { delay: 0.6 },
     },
   };
   return (

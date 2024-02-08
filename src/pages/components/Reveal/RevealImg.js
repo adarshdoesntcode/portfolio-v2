@@ -17,7 +17,7 @@ function RevealImg({ children }) {
     enter: {
       opacity: 1,
       rotate: 1.6,
-      transition: { delay: 0.2, duration: 1, ease: [0.65, 0, 0.35, 1] },
+      transition: { delay: 0.1, duration: 1, ease: [0.65, 0, 0.35, 1] },
     },
   };
   return (
