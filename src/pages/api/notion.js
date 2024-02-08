@@ -65,7 +65,7 @@ export const getLatestSketch = async () => {
       let filterdData = {
         width: data.width.number,
         height: data.height.number,
-        Image: data.Image.files[0].file.url,
+        Image: data.optimizedurl.url,
       };
 
       return filterdData;

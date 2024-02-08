@@ -25,18 +25,6 @@ function SketchModal({ sketch, active }) {
     return () => window.removeEventListener("mousemove", movement);
   }, []);
 
-  function calculateNewSize(originalWidth, originalHeight, newWidth) {
-    const aspectRatio = originalWidth / originalHeight;
-    const newHeight = aspectRatio * newWidth;
-    return { newWidth, newHeight };
-  }
-
-  const { newWidth, newHeight } = calculateNewSize(
-    sketch.width,
-    sketch.height,
-    sketch.width > sketch.height ? 600 : 400,
-  );
-
   return (
     <motion.div
       ref={modalRef}
@@ -52,8 +40,8 @@ function SketchModal({ sketch, active }) {
       )}
       <Image
         src={sketch.Image}
-        width={newWidth}
-        height={newHeight}
+        width={sketch.width}
+        height={sketch.height}
         onLoad={() => setIsLoading(false)}
         alt="latest image of my sketch"
       />
