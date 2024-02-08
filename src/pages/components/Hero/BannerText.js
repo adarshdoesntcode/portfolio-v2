@@ -167,18 +167,27 @@ function BannerText({ sketch, book, theme, setTheme }) {
             <div className="flex flex-row items-center justify-between sm:items-end">
               <div className="relative flex w-fit items-center gap-4 text-3xl text-gray-500 transition-all">
                 <div className="w-7 ">
-                  <a href="https://github.com/adarshdoesntcode" target="_blank">
+                  <a
+                    href="https://github.com/adarshdoesntcode"
+                    aria-label="Go to Adarsh's Github Profile"
+                    target="_blank"
+                  >
                     <Github />
                   </a>
                 </div>
                 <div className="w-7">
-                  <a href="mailto:adarsh.191605@ncit.edu.np" target="_top">
+                  <a
+                    href="mailto:adarsh.191605@ncit.edu.np"
+                    aria-label="Mail adarsh"
+                    target="_top"
+                  >
                     <Envelope />
                   </a>
                 </div>
                 <div className="w-7">
                   <a
                     href="https://www.linkedin.com/in/adarsh-undefined-59859b243/"
+                    aria-label="Adarsh's LinkedIn Profile"
                     target="_blank"
                   >
                     <Linkedin />
@@ -193,8 +202,8 @@ function BannerText({ sketch, book, theme, setTheme }) {
                 </div>
               </div>
               <div className="relative">
-                <Link href="/resume">
-                  <div className="group flex cursor-pointer items-center gap-1 rounded-full bg-green-500 px-7 py-3 font-serif tracking-wider text-white transition-all hover:bg-green-400 dark:bg-green-600 hover:dark:bg-green-500">
+                <Link href="/resume" aria-label="Go to Adasrh's Resume Page">
+                  <div className="group flex cursor-pointer items-center gap-1 rounded-full  bg-green-600 px-7 py-3 font-serif tracking-wider text-white transition-all hover:bg-green-500 hover:dark:bg-green-500">
                     Resume{" "}
                     <svg
                       viewBox="0 0 8 8"

@@ -4,7 +4,10 @@ import Reveal from "../Reveal/Reveal";
 function Roadmap() {
   return (
     <div className="blog group order-1 col-span-12  cursor-pointer border-x border-b p-8 font-serif dark:border-gray-800 md:order-2 md:col-span-6 md:border-b-0">
-      <Link href="/roadmap">
+      <Link
+        href="/roadmap"
+        aria-label="Go to Blog page of Adarsh's Plans for the year and  his skillsets"
+      >
         <Reveal>
           <h2 className="flex items-center gap-2 font-serif text-lg font-semibold uppercase leading-none tracking-wide text-gray-800 dark:text-gray-200">
             <div className="w-6 ">

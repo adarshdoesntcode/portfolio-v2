@@ -4,7 +4,10 @@ import Reveal from "../Reveal/Reveal";
 function BackStory() {
   return (
     <div className="blog group order-2 col-span-12 cursor-pointer border-x p-8 font-serif dark:border-gray-800  md:order-1 md:col-span-6 md:border-r-0">
-      <Link href="/backstory">
+      <Link
+        href="/backstory"
+        aria-label="Go to Blog page of Adarsh's backstory of how he got into coding"
+      >
         <Reveal>
           <h2 className="flex items-center gap-2 font-serif text-lg font-semibold uppercase leading-none tracking-wide text-gray-800 dark:text-gray-200">
             <div className="w-6 ">

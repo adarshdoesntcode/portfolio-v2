@@ -15,6 +15,7 @@ function Spotify({ track }) {
           href={track.trackLink}
           target="_blank"
           className=" flex items-center gap-3 py-2 text-right"
+          aria-label="Go to Spotify"
         >
           <div>
             <h2 className="pb-1 text-lg leading-none tracking-wide text-gray-500  dark:text-gray-200">

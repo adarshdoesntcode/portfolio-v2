@@ -125,6 +125,7 @@ function RoadmapPage() {
                 <a
                   href="https://www.udemy.com/course/nextjs-react-the-complete-guide/"
                   target="_blank"
+                  aria-label="Go to Udemy Page for Next.js 14 & React - The Complete Guide"
                 >
                   Next.js 14 & React - The Complete Guide
                 </a>
@@ -133,6 +134,7 @@ function RoadmapPage() {
                 <a
                   href="https://www.udemy.com/course/the-ultimate-react-course/"
                   target="_blank"
+                  aria-label="Go to Udemy Page for The Ultimate React Course 2024: React, Redux & More"
                 >
                   The Ultimate React Course 2024: React, Redux & More
                 </a>
@@ -141,6 +143,7 @@ function RoadmapPage() {
                 <a
                   href="https://www.udemy.com/course/the-complete-nodejs-developer-course-2/"
                   target="_blank"
+                  aria-label="Go to Udemy Page for The Complete Node.js Developer Course (3rd Edition)"
                 >
                   The Complete Node.js Developer Course (3rd Edition)
                 </a>
@@ -149,6 +152,7 @@ function RoadmapPage() {
                 <a
                   href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
                   target="_blank"
+                  aria-label="Go to Udemy Page for The Complete 2024 Web Development Bootcamp"
                 >
                   The Complete 2024 Web Development Bootcamp
                 </a>

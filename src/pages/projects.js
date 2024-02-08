@@ -103,6 +103,7 @@ function TableRows({ project }) {
             className="hover: group/link inline-flex items-baseline text-base font-medium leading-tight hover:text-green-500  focus-visible:text-green-500 sm:hidden"
             href={project.link}
             target="_blank"
+            aria-label={`Go to github page of ${project.name}`}
           >
             <span>
               <span className="inline-block">
@@ -156,6 +157,7 @@ function TableRows({ project }) {
               className="hover: group/link inline-flex items-baseline text-sm  font-medium leading-tight text-slate-400 hover:text-green-500  focus-visible:text-green-500"
               href={project.link}
               target="_blank"
+              aria-label={`Go to github page of ${project.name}`}
             >
               <span>
                 <span className="inline-block">

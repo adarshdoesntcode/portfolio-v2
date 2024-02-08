@@ -25,6 +25,7 @@ function Projects() {
               href="https://github.com/adarshdoesntcode/crowdfundr"
               target="_blank"
               className="group col-span-6 cursor-pointer rounded-xl border bg-gradient-to-br from-gray-100 via-white to-gray-100 p-5  hover:from-gray-200 hover:via-white  hover:to-gray-200 dark:border-gray-800 dark:from-gray-900 dark:via-black dark:to-gray-900 hover:dark:from-gray-800 hover:dark:via-black hover:dark:to-gray-800 sm:p-7 lg:col-span-2"
+              aria-label="Go to github page of CrowdFundr Project"
             >
               <Reveal delay={0.5} duration={1}>
                 <div className="flex h-full flex-col justify-between">
@@ -78,6 +79,7 @@ function Projects() {
               href="https://github.com/adarshdoesntcode/asstime-webRTC"
               target="_blank"
               className="group col-span-6 cursor-pointer rounded-xl border bg-gradient-to-br from-gray-100 via-white to-gray-100 p-5  hover:from-gray-200 hover:via-white  hover:to-gray-200 dark:border-gray-800 dark:from-gray-900 dark:via-black dark:to-gray-900 hover:dark:from-gray-800 hover:dark:via-black hover:dark:to-gray-800 sm:p-7 lg:col-span-2"
+              aria-label="Go to github page of Facetime Clone Project"
             >
               <Reveal delay={0.55} duration={1}>
                 <div className="flex h-full flex-col justify-between">
@@ -132,6 +134,7 @@ function Projects() {
               href="https://github.com/adarshdoesntcode/portfolio-v2"
               target="_blank"
               className="group col-span-6 cursor-pointer rounded-xl border bg-gradient-to-br from-gray-100 via-white to-gray-100 p-5  hover:from-gray-200 hover:via-white  hover:to-gray-200 dark:border-gray-800 dark:from-gray-900 dark:via-black dark:to-gray-900 hover:dark:from-gray-800 hover:dark:via-black hover:dark:to-gray-800 sm:p-7 lg:col-span-2"
+              aria-label="Go to github page of Portfolio Project"
             >
               <Reveal delay={0.6} duration={1}>
                 <div className="flex h-full flex-col justify-between">
@@ -187,7 +190,9 @@ function Projects() {
 
           <div className="group ml-auto mt-5 flex w-fit items-center transition-all ">
             <div className="cursor-pointer text-sm font-bold leading-none text-gray-800 underline decoration-green-500 underline-offset-4 dark:text-gray-200 group-hover:dark:text-white">
-              <Link href="/projects">View Full Project Archive</Link>
+              <Link href="/projects" aria-label="Go to All Projects">
+                View Full Project Archive
+              </Link>
             </div>
             <div className="flex items-center justify-center p-2">
               <svg
