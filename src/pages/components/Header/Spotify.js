@@ -5,11 +5,8 @@ import useSWR from "swr";
 
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
-function Spotify({ track }) {
-  const [song, setTrack] = useState(track);
-  if (!track) {
-    return <div>Loading...</div>;
-  }
+function Spotify() {
+  const [song, setTrack] = useState(null);
 
   const { data } = useSWR("/api/spotify", fetcher, { refreshInterval: 4000 });
 
@@ -17,6 +14,12 @@ function Spotify({ track }) {
     if (!data) return;
     setTrack(data);
   }, [data]);
+
+  if (!song) {
+    return (
+      <div className="col-span-6 hidden  flex-col items-end justify-end overflow-hidden border-r bg-gradient-to-br from-gray-100  to-white px-5 pb-2 pt-5 dark:border-gray-800 dark:bg-black dark:from-gray-900 dark:to-black md:col-span-5 md:flex lg:col-span-4"></div>
+    );
+  }
 
   return (
     <div className="col-span-6 hidden  flex-col items-end justify-end overflow-hidden border-r bg-gradient-to-br from-gray-100  to-white px-5 pb-2 pt-5 dark:border-gray-800 dark:bg-black dark:from-gray-900 dark:to-black md:col-span-5 md:flex lg:col-span-4">
