@@ -22,7 +22,7 @@
 
 .keycaps {
   position: relative;
-  width: 130px;
+  width: 110px;
   height: 70px;
   padding: 8px 20px;
   background: linear-gradient(#e3e3e3, #ededed);
@@ -52,7 +52,7 @@
 
 .dark .keycaps {
   position: relative;
-  width: 130px;
+  width: 110px;
   height: 70px;
   padding: 8px 20px;
   background: linear-gradient(#282828, #202020);
@@ -179,4 +179,13 @@
 .progressBar::-webkit-progress-value {
   background-color: #22c55e;
   border-radius: 7px;
+}
+
+@media (min-width: 1280px) {
+  .keycaps {
+    width: 130px;
+  }
+  .dark .keycaps {
+    width: 130px;
+  }
 }

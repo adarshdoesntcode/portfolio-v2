@@ -52,7 +52,7 @@ function BannerText({ sketch, book, theme, setTheme }) {
       <div className="order-2 col-span-12 border-l border-r bg-gradient-to-bl from-gray-100 to-white p-4 py-8 font-tanker tracking-wider text-gray-700 dark:border-gray-800 dark:from-gray-900 dark:to-black sm:p-8 md:order-1 md:col-span-7 lg:pr-12">
         <div className="flex h-full flex-col justify-between">
           <div className="relative">
-            <div className="absolute -top-8 right-0 w-10  sm:right-5 sm:w-14 lg:right-4 xl:right-6">
+            <div className="absolute -top-8 right-0 w-10   sm:right-5 sm:w-12 lg:right-4 lg:w-14 xl:right-6">
               <RevealBulb>
                 <Bulb toggleDarkMode={toggleDarkMode} />
 
@@ -186,7 +186,7 @@ function BannerText({ sketch, book, theme, setTheme }) {
                   </a>
                 </div>
 
-                <div className="relative hidden p-4 sm:block ">
+                <div className="relative hidden p-4 lg:block ">
                   <div className="find-me-text select-none font-cursive text-xl text-gray-800 dark:text-gray-400 ">
                     find me !!
                   </div>
@@ -195,7 +195,7 @@ function BannerText({ sketch, book, theme, setTheme }) {
               </div>
               <div className="relative">
                 <Link href="/resume" aria-label="Go to Adasrh's Resume Page">
-                  <div className="group flex cursor-pointer items-center gap-1 rounded-full  bg-green-500 px-7 py-3 font-serif font-medium tracking-wide text-black transition-all hover:bg-green-500 hover:dark:bg-green-500">
+                  <div className="group flex cursor-pointer select-none items-center gap-1 rounded-full  bg-green-500 px-7 py-3 font-serif font-medium tracking-wide text-black transition-all ">
                     Resume{" "}
                     <svg
                       viewBox="0 0 8 8"
