@@ -195,7 +195,7 @@ function BannerText({ sketch, book, theme, setTheme }) {
               </div>
               <div className="relative">
                 <Link href="/resume" aria-label="Go to Adasrh's Resume Page">
-                  <div className="group flex cursor-pointer items-center gap-1 rounded-full  bg-green-500 px-7 py-3 font-serif font-semibold tracking-wider text-black transition-all hover:bg-green-500 hover:dark:bg-green-500">
+                  <div className="group flex cursor-pointer items-center gap-1 rounded-full  bg-green-500 px-7 py-3 font-serif font-medium tracking-wide text-black transition-all hover:bg-green-500 hover:dark:bg-green-500">
                     Resume{" "}
                     <svg
                       viewBox="0 0 8 8"

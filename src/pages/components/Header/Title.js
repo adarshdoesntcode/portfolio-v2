@@ -16,7 +16,7 @@ function Title() {
           </h1>
 
           <div
-            className="absolute right-0 top-0 inline-block -translate-y-1/4 translate-x-full rounded-full bg-green-500 px-4 py-3 font-serif text-xs font-semibold  leading-4 tracking-wide  text-black md:-translate-y-0 md:text-base"
+            className="absolute right-0 top-0 inline-block -translate-y-1/4 translate-x-full rounded-full bg-green-500 px-4 py-3 font-serif text-sm font-medium  leading-4 tracking-wide  text-black md:-translate-y-0 "
             style={{ opacity: "1" }}
           >
             <span className="inline-block ">{greeting}</span>
