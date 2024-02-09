@@ -14,10 +14,10 @@ function AuthorPolaroid() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    canvas.width = 417;
-    canvas.height = 489;
-    canvas.style.width = "417px";
-    canvas.style.height = "489px";
+    canvas.width = 452;
+    canvas.height = 524;
+    canvas.style.width = "452px";
+    canvas.style.height = "524px";
     const context = canvas.getContext("2d");
 
     context.lineCap = "round";
