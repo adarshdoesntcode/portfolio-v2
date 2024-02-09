@@ -21,7 +21,7 @@ const refreshToken = async () => {
       Authorization:
         "Basic " +
         Buffer.from(
-          process.env.CLIENT_ID + ":" + process.env.CLIENT_SECRET_ID
+          process.env.CLIENT_ID + ":" + process.env.CLIENT_SECRET_ID,
         ).toString("base64"),
     },
     body: new URLSearchParams({
@@ -33,7 +33,7 @@ const refreshToken = async () => {
   try {
     const response = await fetch(
       "https://accounts.spotify.com/api/token",
-      authOptions
+      authOptions,
     );
     const body = await response.json();
 
@@ -46,7 +46,7 @@ const refreshToken = async () => {
       "SPOTIFY_ACCESS_TOKEN",
       body.access_token,
       "EX",
-      body.expires_in - 5
+      body.expires_in - 5,
     );
   } catch (error) {
     console.error("Error refreshing token:", error.message);
@@ -85,13 +85,13 @@ export async function getPlayerState() {
   try {
     current_response = await fetchSpotify(
       "https://api.spotify.com/v1/me/player/currently-playing",
-      process.env.SPOTIFY_ACCESS_TOKEN
+      process.env.SPOTIFY_ACCESS_TOKEN,
     );
 
     if (current_response.status === 204) {
       recent_response = await fetchSpotify(
         "https://api.spotify.com/v1/me/player/recently-played",
-        process.env.SPOTIFY_ACCESS_TOKEN
+        process.env.SPOTIFY_ACCESS_TOKEN,
       );
       const data = await recent_response.json();
       const recentTrack = data.items[0].track;
@@ -113,7 +113,7 @@ export async function getPlayerState() {
       if (data.currently_playing_type === "episode") {
         recent_response = await fetchSpotify(
           "https://api.spotify.com/v1/me/player/recently-played",
-          process.env.locals.SPOTIFY_ACCESS_TOKEN
+          process.env.SPOTIFY_ACCESS_TOKEN,
         );
         const data = await recent_response.json();
         const recentTrack = data.items[0].track;
@@ -122,7 +122,8 @@ export async function getPlayerState() {
           artists: recentTrack.artists.map((artist) => artist.name),
           trackLink: recentTrack.external_urls.spotify,
           trackAudio: recentTrack.preview_url,
-          trackImage: recentTrack.album.images,
+
+          trackImage: recentTrack.album.images[0],
 
           isPlaying: false,
           status: 200,
