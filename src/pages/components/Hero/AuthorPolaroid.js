@@ -14,10 +14,10 @@ function AuthorPolaroid() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    canvas.width = 460;
-    canvas.height = 532;
-    canvas.style.width = "460px";
-    canvas.style.height = "532px";
+    canvas.width = 417;
+    canvas.height = 489;
+    canvas.style.width = "417px";
+    canvas.style.height = "489px";
     const context = canvas.getContext("2d");
 
     context.lineCap = "round";
@@ -34,6 +34,7 @@ function AuthorPolaroid() {
   };
 
   const finishDrawing = () => {
+    if (!isDrawing) return;
     setHasDrawn(true);
     contextRef.current.closePath();
     setIsDrawing(false);
@@ -76,6 +77,7 @@ function AuthorPolaroid() {
         <canvas
           onMouseDown={startDrawig}
           onMouseUp={finishDrawing}
+          onMouseLeave={finishDrawing}
           onMouseMove={draw}
           className="absolute inset-0 z-10 hidden h-full  w-full cursor-draw min-[1139px]:block"
           ref={canvasRef}

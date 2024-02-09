@@ -11,7 +11,7 @@ function Title() {
     <div className="col-span-10 border-x px-4 py-5  dark:border-gray-800 sm:px-8 md:col-span-3">
       <div className="relative w-fit">
         <Reveal delay={0.2} duration={1}>
-          <h1 className="select-none font-tanker text-5xl font-bold leading-none tracking-wide text-gray-800 dark:text-gray-200 sm:tracking-wider md:text-8xl">
+          <h1 className="select-none py-2 font-tanker text-5xl font-bold leading-none  tracking-wide text-gray-800 dark:text-gray-200 sm:tracking-wider md:text-8xl">
             adarsh.
           </h1>
 

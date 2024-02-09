@@ -24,7 +24,7 @@ function Projects() {
             <a
               href="https://github.com/adarshdoesntcode/crowdfundr"
               target="_blank"
-              className="group col-span-6 cursor-pointer rounded-xl border bg-gradient-to-br from-gray-100 via-white to-gray-100 p-5  hover:from-gray-200 hover:via-white  hover:to-gray-200 dark:border-gray-800 dark:from-gray-900 dark:via-black dark:to-gray-900 hover:dark:from-gray-800 hover:dark:via-black hover:dark:to-gray-800 sm:p-7 lg:col-span-2"
+              className="group col-span-6 cursor-pointer rounded-xl border bg-gradient-to-br from-gray-100 via-white to-gray-100 p-5  hover:from-gray-200 hover:via-white  hover:to-gray-200 dark:border-gray-800 dark:from-gray-900 dark:via-black dark:to-gray-900 hover:dark:from-gray-800 hover:dark:via-black hover:dark:to-gray-800 sm:p-7 md:col-span-3 lg:col-span-2"
               aria-label="Go to github page of CrowdFundr Project"
             >
               <Reveal delay={0.5} duration={1}>
@@ -78,7 +78,7 @@ function Projects() {
             <a
               href="https://github.com/adarshdoesntcode/asstime-webRTC"
               target="_blank"
-              className="group col-span-6 cursor-pointer rounded-xl border bg-gradient-to-br from-gray-100 via-white to-gray-100 p-5  hover:from-gray-200 hover:via-white  hover:to-gray-200 dark:border-gray-800 dark:from-gray-900 dark:via-black dark:to-gray-900 hover:dark:from-gray-800 hover:dark:via-black hover:dark:to-gray-800 sm:p-7 lg:col-span-2"
+              className="group col-span-6 cursor-pointer rounded-xl border bg-gradient-to-br from-gray-100 via-white to-gray-100 p-5  hover:from-gray-200 hover:via-white  hover:to-gray-200 dark:border-gray-800 dark:from-gray-900 dark:via-black dark:to-gray-900 hover:dark:from-gray-800 hover:dark:via-black hover:dark:to-gray-800 sm:p-7 md:col-span-3 lg:col-span-2"
               aria-label="Go to github page of Facetime Clone Project"
             >
               <Reveal delay={0.55} duration={1}>

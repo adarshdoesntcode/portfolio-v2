@@ -26,7 +26,7 @@ function RevealImg({ children }) {
       variants={slide}
       initial="initial"
       animate={mainControls}
-      className="polaroid relative mx-auto select-none bg-white p-4  dark:bg-gray-200 lg:p-5"
+      className="polaroid relative mx-auto select-none bg-white p-4  dark:bg-gray-200 "
     >
       {children}
     </motion.div>

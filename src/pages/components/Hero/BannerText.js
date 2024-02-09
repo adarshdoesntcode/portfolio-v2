@@ -111,13 +111,11 @@ function BannerText({ sketch, book, theme, setTheme }) {
                   Full
                 </span>
               </div>
-            </Reveal>
-            <Reveal>
+
               <p className=" inline-block select-none pb-5 text-4xl underline decoration-green-500 decoration-2 underline-offset-8 dark:text-gray-200 sm:text-5xl">
                 <span className="hidden lg:inline">Full</span> Stack Developer.
               </p>
-            </Reveal>
-            <Reveal>
+
               <div className="text-md select-none  font-serif tracking-wide text-gray-500 dark:text-gray-500 md:text-lg">
                 <p className="pb-3">
                   I’m from Kathmandu and doing my Bachelors
