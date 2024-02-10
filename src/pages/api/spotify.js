@@ -93,6 +93,7 @@ export async function getPlayerState() {
         "https://api.spotify.com/v1/me/player/recently-played",
         process.env.SPOTIFY_ACCESS_TOKEN,
       );
+
       const data = await recent_response.json();
       const recentTrack = data.items[0].track;
 

@@ -3,7 +3,7 @@ import useSound from "use-sound";
 import Reveal from "../Reveal/Reveal";
 import RevealBulb from "../Reveal/RevealBulb";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import BookModal from "../Modal/BookModal";
 import SketchModal from "../Modal/SketchModal";
 
@@ -18,12 +18,14 @@ const animate = {
 function BannerText({ sketch, book, theme, setTheme }) {
   const [bookHovered, setBookHovered] = useState(false);
   const [sketchHovered, setSketchHovered] = useState(false);
+  const bulbswitch = useRef(null);
   const [play] = useSound("/key.mp3");
   const [playswitch] = useSound("/switch.mp3");
   const clickControls = useAnimationControls();
   const clackControls = useAnimationControls();
+  const switchControls = useAnimationControls();
 
-  const toggleDarkMode = () => {
+  const toggleDarkMode = async () => {
     playswitch();
     if (localStorage.getItem("theme") === "dark") {
       document.documentElement.classList.remove("dark");
@@ -34,6 +36,8 @@ function BannerText({ sketch, book, theme, setTheme }) {
       localStorage.setItem("theme", "dark");
       setTheme("dark");
     }
+    await switchControls.start({ y: 4.5, transition: { duration: 0.15 } });
+    await switchControls.start({ y: 0, transition: { duration: 0.15 } });
   };
 
   const playkeyClick = async () => {
@@ -54,7 +58,11 @@ function BannerText({ sketch, book, theme, setTheme }) {
           <div className="relative">
             <div className="absolute -top-8 right-5 w-10   sm:w-12 lg:right-4 lg:w-14 xl:right-6">
               <RevealBulb>
-                <Bulb toggleDarkMode={toggleDarkMode} />
+                <Bulb
+                  toggleDarkMode={toggleDarkMode}
+                  bulbswitch={bulbswitch}
+                  switchControls={switchControls}
+                />
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -221,7 +229,7 @@ function BannerText({ sketch, book, theme, setTheme }) {
   );
 }
 
-function Bulb({ toggleDarkMode }) {
+function Bulb({ toggleDarkMode, bulbswitch, switchControls }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -288,12 +296,12 @@ function Bulb({ toggleDarkMode }) {
         cy={111}
         r={10.7}
       />
-      <g className="switch">
+      <motion.g className="switch" ref={bulbswitch} animate={switchControls}>
         <path
           style={{
             fill: "none",
             stroke: "#9ca3af",
-            strokeWidth: 1,
+            strokeWidth: 2,
             strokeMiterlimit: 10,
           }}
           d="M49 100v23"
@@ -307,9 +315,9 @@ function Bulb({ toggleDarkMode }) {
           }}
           cx={49}
           cy={125}
-          r={1.6}
+          r={2}
         />
-      </g>
+      </motion.g>
       <path
         style={{
           fill: "url(#a)",
