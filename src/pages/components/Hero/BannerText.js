@@ -3,7 +3,7 @@ import useSound from "use-sound";
 import Reveal from "../Reveal/Reveal";
 import RevealBulb from "../Reveal/RevealBulb";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BookModal from "../Modal/BookModal";
 import SketchModal from "../Modal/SketchModal";
 
@@ -18,12 +18,47 @@ const animate = {
 function BannerText({ sketch, book, theme, setTheme }) {
   const [bookHovered, setBookHovered] = useState(false);
   const [sketchHovered, setSketchHovered] = useState(false);
+  const [clickSequence, setClickSequence] = useState([]);
+
   const bulbswitch = useRef(null);
+  const fullRef = useRef(null);
+  const stackRef = useRef(null);
   const [play] = useSound("/key.mp3");
   const [playswitch] = useSound("/switch.mp3");
   const clickControls = useAnimationControls();
   const clackControls = useAnimationControls();
   const switchControls = useAnimationControls();
+  const fullControls = useAnimationControls();
+  const stackControls = useAnimationControls();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setClickSequence([]);
+    }, 1000);
+    if (clickSequence.length === 2) {
+      tiggerClickClack();
+      setClickSequence([]);
+    }
+    return () => clearTimeout(timer);
+  }, [clickSequence]);
+
+  const tiggerClickClack = async () => {
+    console.log("triggered");
+    await fullControls.start({ scale: 1.2, transition: { delay: 0.2 } });
+    await fullControls.start({ scale: 1 });
+    await stackControls.start({ scale: 1.2 });
+    await stackControls.start({ scale: 1 });
+  };
+
+  const handleClick = (index) => {
+    if (clickSequence.length === 0 && index === 1) {
+      setClickSequence([1]);
+    } else if (clickSequence.length === 1 && index === 2) {
+      setClickSequence([1, 2]);
+    } else {
+      setClickSequence([]);
+    }
+  };
 
   const toggleDarkMode = async () => {
     playswitch();
@@ -99,6 +134,7 @@ function BannerText({ sketch, book, theme, setTheme }) {
                 </span>
                 <motion.span
                   onMouseDown={playkeyClick}
+                  onClick={() => handleClick(1)}
                   variants={animate}
                   initial="initial"
                   animate={clickControls}
@@ -108,6 +144,7 @@ function BannerText({ sketch, book, theme, setTheme }) {
                 </motion.span>
                 <motion.span
                   onMouseDown={playkeyClack}
+                  onClick={() => handleClick(2)}
                   variants={animate}
                   initial="initial"
                   animate={clackControls}
@@ -120,8 +157,22 @@ function BannerText({ sketch, book, theme, setTheme }) {
                 </span>
               </div>
 
-              <p className=" inline-block select-none pb-5 text-4xl underline decoration-green-500 decoration-2 underline-offset-8 dark:text-gray-200 sm:text-5xl">
-                <span className="hidden lg:inline">Full</span> Stack Developer.
+              <p className=" mb-5 inline-block select-none border-b-2 border-green-500 pb-1 text-4xl  dark:text-gray-200 sm:text-5xl">
+                <motion.span
+                  className="hidden   lg:inline-block"
+                  animate={fullControls}
+                  ref={fullRef}
+                >
+                  Full
+                </motion.span>{" "}
+                <motion.span
+                  className="inline-block  "
+                  animate={stackControls}
+                  ref={stackRef}
+                >
+                  Stack
+                </motion.span>{" "}
+                Developer.
               </p>
 
               <div className="text-md select-none  font-serif tracking-wide text-gray-500 dark:text-gray-500 md:text-lg">
