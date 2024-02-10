@@ -62,10 +62,10 @@ function ResumePage() {
           <div className="my-10 w-fit  rounded-full bg-white px-4 py-2 text-xs font-bold tracking-tight  dark:bg-gray-800 dark:text-gray-400 ">
             Feb 1, 2024
           </div>
-          <object
-            data="/resume.pdf"
+          <iframe
+            src="/resume.pdf"
             className="h-[70svh] w-full sm:h-svh"
-          ></object>
+          ></iframe>
         </motion.div>
       </div>
     </article>

@@ -53,7 +53,11 @@ function BannerText({ sketch, book, theme, setTheme }) {
   const handleClick = (index) => {
     if (clickSequence.length === 0 && index === 1) {
       setClickSequence([1]);
-    } else if (clickSequence.length === 1 && index === 2) {
+    } else if (
+      clickSequence.length === 1 &&
+      clickSequence[0] === 1 &&
+      index === 2
+    ) {
       setClickSequence([1, 2]);
     } else {
       setClickSequence([]);
