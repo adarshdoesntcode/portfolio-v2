@@ -36,7 +36,7 @@ function BannerText({ sketch, book, theme, setTheme }) {
       localStorage.setItem("theme", "dark");
       setTheme("dark");
     }
-    await switchControls.start({ y: 4.5, transition: { duration: 0.15 } });
+    await switchControls.start({ y: 3, transition: { duration: 0.15 } });
     await switchControls.start({ y: 0, transition: { duration: 0.15 } });
   };
 
