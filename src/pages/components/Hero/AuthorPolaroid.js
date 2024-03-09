@@ -40,7 +40,6 @@ function AuthorPolaroid() {
   };
 
   const draw = ({ nativeEvent }) => {
-    console.log(nativeEvent);
     if (!isDrawing) {
       return;
     }

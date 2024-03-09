@@ -22,5 +22,5 @@ export async function getStaticProps() {
   const book = await getCurrentlyReading();
   const sketch = await getLatestSketch();
 
-  return { props: { book, sketch }, revalidate: 4 };
+  return { props: { book, sketch }, revalidate: 30 };
 }

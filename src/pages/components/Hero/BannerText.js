@@ -207,9 +207,19 @@ function BannerText({ sketch, book, theme, setTheme }) {
                     read books
                   </span>{" "}
                   <span className=" inline  font-medium  decoration-green-500 decoration-2 underline-offset-4  lg:hidden">
-                    read books
-                  </span>{" "}
+                    read books,
+                  </span>
                   <br className="hidden  md:inline" />
+                  {/* <span
+                    onMouseEnter={() => setBookHovered(true)}
+                    onMouseLeave={() => setBookHovered(false)}
+                    className=" hidden cursor-none font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300 lg:inline"
+                  >
+                    ride bike
+                  </span>{" "}
+                  <span className=" inline  font-medium  decoration-green-500 decoration-2 underline-offset-4  lg:hidden">
+                    ride bike
+                  </span>{" "} */}
                   and nerd over supercars.
                 </p>
               </div>

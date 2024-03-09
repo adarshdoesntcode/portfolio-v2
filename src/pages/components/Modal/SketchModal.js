@@ -3,9 +3,9 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const anim = {
-  initial: { scale: 0, y: "-50%", x: "-50%" },
-  enter: { scale: 1, y: "-50%", x: "-50%" },
-  exit: { scale: 0, y: "-50%", x: "-50%", transition: { duration: 0 } },
+  initial: { scale: 0, y: "-60%", x: "-50%" },
+  enter: { scale: 1, y: "-60%", x: "-50%" },
+  exit: { scale: 0, y: "-60%", x: "-50%", transition: { duration: 0 } },
 };
 
 function SketchModal({ sketch, active }) {
