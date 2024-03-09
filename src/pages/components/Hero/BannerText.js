@@ -278,8 +278,8 @@ function BannerText({ sketch, book, theme, setTheme }) {
         </div>
       </div>
 
-      {bookHovered && <BookModal book={book} active={bookHovered} />}
-      {sketchHovered && <SketchModal sketch={sketch} active={sketchHovered} />}
+      <BookModal book={book} active={bookHovered} />
+      <SketchModal sketch={sketch} active={sketchHovered} />
     </>
   );
 }

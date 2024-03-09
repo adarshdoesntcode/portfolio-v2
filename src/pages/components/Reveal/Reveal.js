@@ -17,7 +17,7 @@ function Reveal({ children }) {
     enter: {
       opacity: 1,
       y: 0,
-      transition: { delay: 0.1, duration: 0.6, ease: [0.65, 0, 0.35, 1] },
+      transition: { delay: 0, duration: 0.5, ease: [0.65, 0, 0.35, 1] },
     },
   };
   return (

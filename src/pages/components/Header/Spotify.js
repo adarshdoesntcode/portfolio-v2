@@ -5,9 +5,7 @@ import Reveal from "../Reveal/Reveal";
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
 function Spotify() {
-  const { data, isLoading } = useSWR("/api/spotify", fetcher, {
-    refreshInterval: 4000,
-  });
+  const { data, isLoading } = useSWR("/api/spotify", fetcher);
 
   if (isLoading) {
     return (
