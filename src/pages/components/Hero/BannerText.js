@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import BookModal from "../Modal/BookModal";
 import SketchModal from "../Modal/SketchModal";
+import StravaModal from "../Modal/StravaModal";
 
 const animate = {
   initial: {
@@ -15,9 +16,10 @@ const animate = {
   tap: { scale: 0.95, y: 3, transition: { duration: 0.05 } },
 };
 
-function BannerText({ sketch, book, theme, setTheme }) {
+function BannerText({ sketch, book, theme, stravaData, setTheme }) {
   const [bookHovered, setBookHovered] = useState(false);
   const [sketchHovered, setSketchHovered] = useState(false);
+  const [stravaHovered, setStravaHovered] = useState(false);
   const [clickSequence, setClickSequence] = useState([]);
 
   const bulbswitch = useRef(null);
@@ -207,20 +209,20 @@ function BannerText({ sketch, book, theme, setTheme }) {
                     read books
                   </span>{" "}
                   <span className=" inline  font-medium  decoration-green-500 decoration-2 underline-offset-4  lg:hidden">
-                    read books,
+                    read books
                   </span>
                   <br className="hidden  md:inline" />
-                  {/* <span
-                    onMouseEnter={() => setBookHovered(true)}
-                    onMouseLeave={() => setBookHovered(false)}
+                  and{" "}
+                  <span
+                    onMouseEnter={() => setStravaHovered(true)}
+                    onMouseLeave={() => setStravaHovered(false)}
                     className=" hidden cursor-none font-medium text-gray-800 underline decoration-green-500 decoration-2 underline-offset-4 dark:text-gray-300 lg:inline"
                   >
-                    ride bike
+                    ride my bike
                   </span>{" "}
                   <span className=" inline  font-medium  decoration-green-500 decoration-2 underline-offset-4  lg:hidden">
-                    ride bike
-                  </span>{" "} */}
-                  and nerd over supercars.
+                    ride my bike.
+                  </span>{" "}
                 </p>
               </div>
             </Reveal>
@@ -289,6 +291,7 @@ function BannerText({ sketch, book, theme, setTheme }) {
       </div>
 
       <BookModal book={book} active={bookHovered} />
+      <StravaModal stravaData={stravaData} active={stravaHovered} />
       <SketchModal sketch={sketch} active={sketchHovered} />
     </>
   );

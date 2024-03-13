@@ -1,6 +1,6 @@
 import Redis from "ioredis";
 
-const client = new Redis(process.env.REDIS_URL);
+export const client = new Redis(process.env.REDIS_URL);
 
 const getTokens = async () => {
   let SPOTIFY_ACCESS_TOKEN = await client.get("SPOTIFY_ACCESS_TOKEN");
