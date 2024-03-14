@@ -1,35 +1,31 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { GiCycling } from "react-icons/gi";
+
 function formatDate(dateString) {
-  // Create a Date object from the provided date string
   const date = new Date(dateString);
 
-  // Extract the date and month from the Date object
   const day = date.getDate();
 
-  // Array of month names
   const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
     "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
 
-  // Get the month name from the month index
-  const monthIndex = date.getMonth(); // Month index starts from 0 (0 for January, 1 for February, etc.)
+  const monthIndex = date.getMonth();
   const month = monthNames[monthIndex];
+  const year = date.getFullYear();
 
-  // Return the formatted date
-  return `${month} ${day}`;
+  return `${month} ${day}, ${year}`;
 }
 
 const anim = {
@@ -63,13 +59,11 @@ function StravaModal({ stravaData, active }) {
       className="pointer-events-none fixed z-50  border   bg-gradient-to-br from-gray-100 to-white p-4 shadow-xl dark:border-gray-800 dark:from-gray-900   dark:to-black "
     >
       <div className="  text-gray-700 dark:text-gray-300">
-        <div className="mb-2 w-full border-b pb-2  text-sm text-gray-400 dark:border-gray-800 ">
-          Last ride on {formatDate(stravaData.start_date_local)}
+        <div className="mb-2 w-full border-b border-green-500  pb-2 text-sm text-gray-400 ">
+          Last Ride on {formatDate(stravaData.start_date_local)}
         </div>
-        <p className="flex justify-end border-b-4 border-green-600 text-right text-5xl ">
-          <GiCycling />
-        </p>
-        <div className="mt-2 flex justify-evenly gap-2">
+
+        <div className="mt-2 flex justify-evenly gap-2 ">
           <div className="flex flex-col items-center  p-2">
             <div className="text-lg leading-none">
               {(stravaData.distance / 1000).toFixed(2)}
