@@ -39,8 +39,8 @@ const anim = {
 };
 
 function StravaModal({ stravaData, active }) {
+  if (!stravaData) return;
   const modalRef = useRef(null);
-  if (!stravaData) return <div></div>;
 
   useEffect(() => {
     function movement({ clientX, clientY }) {
