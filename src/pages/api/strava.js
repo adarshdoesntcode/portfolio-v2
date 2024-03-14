@@ -38,9 +38,9 @@ export const getActivities = async () => {
     }
   } catch (e) {
     console.log(e);
+  } finally {
+    return returnData;
   }
-
-  return returnData;
 };
 
 const refreshToken = async () => {
@@ -65,8 +65,9 @@ const refreshToken = async () => {
     process.env.STRAVA_REFRESH_TOKEN = data.refresh_token;
   } catch (error) {
     console.log(error);
+  } finally {
+    return accessToken;
   }
-  return accessToken;
 };
 
 async function handler(req, res) {
