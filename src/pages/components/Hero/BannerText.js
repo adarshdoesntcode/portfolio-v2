@@ -35,8 +35,9 @@ function BannerText({ sketch, book, theme, stravaData, setTheme }) {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setClickSequence([]);
+      if (clickSequence.length > 0) setClickSequence([]);
     }, 1000);
+
     if (clickSequence.length === 2) {
       tiggerClickClack();
       setClickSequence([]);
@@ -45,7 +46,6 @@ function BannerText({ sketch, book, theme, stravaData, setTheme }) {
   }, [clickSequence]);
 
   const tiggerClickClack = async () => {
-    console.log("triggered");
     await fullControls.start({ scale: 1.2, transition: { delay: 0.2 } });
     await fullControls.start({ scale: 1 });
     await stackControls.start({ scale: 1.2 });
