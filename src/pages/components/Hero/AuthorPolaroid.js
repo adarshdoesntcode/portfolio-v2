@@ -26,10 +26,10 @@ function AuthorPolaroid() {
   }, []);
 
   const startDrawig = ({ nativeEvent }) => {
+    setIsDrawing(true);
     const { offsetX, offsetY } = nativeEvent;
     contextRef.current.beginPath();
     contextRef.current.moveTo(offsetX, offsetY);
-    setIsDrawing(true);
   };
 
   const finishDrawing = () => {
@@ -47,6 +47,10 @@ function AuthorPolaroid() {
     contextRef.current.lineTo(offsetX, offsetY);
     contextRef.current.stroke();
   };
+
+  function touchstart(event) {}
+  function touchmove(event) {}
+  function touchend(event) {}
 
   return (
     <div className="order-1 col-span-12 border-x border-b dark:border-gray-800 md:order-2 md:col-span-5 md:border-b-0 md:border-l-0 md:border-r ">
@@ -66,14 +70,13 @@ function AuthorPolaroid() {
           hello there!!
         </div>
         <canvas
-          onPointerDown={startDrawig}
-          onPointerUp={finishDrawing}
-          onPointerLeave={finishDrawing}
-          onPointerMove={draw}
-          onTouchStart={startDrawig}
-          onTouchEnd={finishDrawing}
-          onTouchCancel={finishDrawing}
-          onTouchMove={draw}
+          onMouseDown={startDrawig}
+          onMouseUp={finishDrawing}
+          onMouseLeave={finishDrawing}
+          onMouseMove={draw}
+          onTouchStart={touchstart}
+          onTouchEnd={touchend}
+          onTouchMove={touchmove}
           className="absolute inset-0 z-10 hidden h-full  w-full cursor-draw min-[1139px]:block"
           ref={canvasRef}
         ></canvas>
