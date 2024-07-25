@@ -251,7 +251,7 @@ function BannerText({ sketch, book, theme, stravaData, setTheme }) {
                 </div>
                 <div className="w-7">
                   <a
-                    href="https://www.linkedin.com/in/adarsh-undefined-59859b243/"
+                    href="https://www.linkedin.com/in/adarshcodes/"
                     aria-label="Adarsh's LinkedIn Profile"
                     target="_blank"
                   >
